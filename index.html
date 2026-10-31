@@ -115,6 +115,7 @@ body[data-theme=sepia]{--uh:rgba(138,75,18,.16);--uhb:rgba(138,75,18,.6)}
 .doc h3{font:600 .9em/1.35 var(--ui);letter-spacing:.03em;color:var(--link);margin:1em 0 .6em}
 .doc p.dnx{margin:2.4em 0 1em;text-align:center;font:600 16px var(--ui)}
 .row.one.med{margin-top:12px}
+.doc b.mtit{display:block;margin-top:1.6em;padding-top:1em;border-top:1px solid var(--bd)}.doc p.mtitp{margin-top:2.2em;padding-top:1em;border-top:1px solid var(--bd)}
 .mtop .dhero{text-align:center}.mtop .dnum{font-size:clamp(72px,20vw,120px)}.mtop .dmon{font-size:clamp(22px,5.8vw,32px)}
 .mbh{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}.mbh .sh{margin:0;font-size:15px}.mbh .cap{margin:0}
 .mrd b{font:600 12px var(--ui);letter-spacing:.05em;text-transform:uppercase;color:var(--mut)}.mrd span{color:var(--link);font-weight:600}
@@ -480,6 +481,9 @@ function renderUH(){
   $('#uxcp').onclick=async()=>{const b=$('#uxcp'),ok=await copyText(uhMD(uhByBook()));b.textContent=ok?'✓ Copiado':'No se pudo copiar';setTimeout(()=>b.textContent='📋 Copiar todo',1800)};
 }
 
+/* Hablar con Dios (libro del Diario): separar cada meditación de la anterior */
+function hcdSep(doc){if(doc!=='HCD')return;document.querySelectorAll('#dx b>span[style*="1.17em"]').forEach(sp=>{const b=sp.parentElement,p=b.closest('p');if(!p)return;const r=document.createRange();r.setStart(p,0);r.setEndBefore(b);if(r.toString().trim())b.classList.add('mtit');else p.classList.add('mtitp')})}
+
 function renderDocs(){const MB=['MedOD','SCE','HCD'].filter(d=>DOCS[d]),IC={MedOD:'🕯️',SCE:'📿',HCD:'🙏'},SUB={MedOD:'Libro de meditaciones · 7 tomos',SCE:'F. Espa y otros · 9 tomos en uno',HCD:'F. Fernández-Carvajal · con enlaces a la Biblia'};const names=Object.keys(DOCS).filter(d=>!MB.includes(d));const nu=uhGroups().length;
   $('#main').innerHTML='<h2 class="t">Libros</h2><h3 class="thm" style="margin-top:0">Libros de meditación</h3><div class="bkm">'+MB.map(d=>`<a class="btn bk" href="#/dp/${d}/0"><span class="ic">${IC[d]}</span><span>${esc(dTitle(d))}<small>${SUB[d]} · ${Math.round(DOCS[d].kb/102.4)/10} MB</small></span></a>`).join('')+'</div><div class="row" style="margin-top:4px"><a class="btn" href="#/med">🙏 Meditación de hoy</a><a class="btn" href="#/resaltados">🖍 Mis resaltados'+(nu?' ('+nu+')':'')+'</a></div><p class="mut" style="margin:14px 0 0">En cualquier libro puedes buscar con 🔍 y resaltar: selecciona un texto y pulsa «🖍 Resaltar».</p><h3 class="thm">Comentarios y libros enlazados</h3><p class="mut">Se abren también desde los números de versículo de la Biblia y desde los enlaces del propio texto.</p><div class="grid">'+names.map(d=>`<a class="btn bk" href="#/dp/${d}/0" style="flex-direction:column"><span>${esc(dTitle(d))}</span><small class="mut">${Math.round(DOCS[d].kb/102.4)/10} MB</small></a>`).join('')+'</div>'}
 const dcache=new Map();
@@ -490,7 +494,7 @@ async function renderDoc(doc,o){
   const hs=location.hash;const k=o.k!==undefined?Math.min(Math.max(o.k,0),DOCS[doc].starts.length-1):o.page!==undefined?Math.min(Math.max(o.page,0),DOCS[doc].starts.length-1):chunkOf(doc,o.off);
   setHead(dTitle(doc),'#/docs','doc');M.innerHTML='<p class="mut" style="text-align:center">Cargando…</p>';
   const t=await loadChunk(doc,k);if(location.hash!==hs)return;
-  M.innerHTML='<div class="doc'+(doc==='Misal'||doc==='Comentarios'?'':' just')+'" id="dx">'+t+'</div>';sfDoc=doc;$('#sfab').style.display=doc==='Comentarios'?'none':'';$('#hstar').style.display=doc==='ElYo'?'':'none';if(doc==='ElYo')eyMarkAll();uhApply(doc,k);if(o.i!==undefined)focusPar(o.i,o.q);
+  M.innerHTML='<div class="doc'+(doc==='Misal'||doc==='Comentarios'?'':' just')+'" id="dx">'+t+'</div>';sfDoc=doc;$('#sfab').style.display=doc==='Comentarios'?'none':'';$('#hstar').style.display=doc==='ElYo'?'':'none';if(doc==='ElYo')eyMarkAll();hcdSep(doc);uhApply(doc,k);if(o.i!==undefined)focusPar(o.i,o.q);
   if(o.off){let e=M.querySelector('#o'+o.off);let p=e&&(e.closest('p')||e);if(p&&!p.textContent.trim()&&!p.dataset.o){p=p.nextElementSibling||p}
     if(!p){const ps=[...M.querySelectorAll('p[data-o]')];for(const q of ps){if(+q.dataset.o<=o.off)p=q;else break}}
     if(p){p.scrollIntoView({block:'start'});window.scrollBy&&window.scrollBy(0,-70);p.classList.add('flash')}}

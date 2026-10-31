@@ -98,7 +98,7 @@ def parchear(src, metas, medi, js):
     rep("$('#fab').style.display='';$('#sfab').style.display='none';$('#hstar').style.display='none';bar(null);window.scrollTo(0,0);",
         "$('#fab').style.display='';$('#sfab').style.display='none';$('#hstar').style.display='none';bar(null);window.scrollTo(0,0);uhCur=null;$('#hlb').classList.remove('on');$('#pop').classList.remove('on');")
     rep("if(doc==='ElYo')eyMarkAll();if(o.i!==undefined)focusPar(o.i,o.q);",
-        "if(doc==='ElYo')eyMarkAll();uhApply(doc,k);if(o.i!==undefined)focusPar(o.i,o.q);")
+        "if(doc==='ElYo')eyMarkAll();hcdSep(doc);uhApply(doc,k);if(o.i!==undefined)focusPar(o.i,o.q);")
     # pantalla Libros
     a = src.index('function renderDocs(){'); b = src.index('\n', a)
     src = src[:a] + RENDER_DOCS + src[b:]
@@ -122,6 +122,7 @@ body[data-theme=sepia]{--uh:rgba(138,75,18,.16);--uhb:rgba(138,75,18,.6)}
 .doc h3{font:600 .9em/1.35 var(--ui);letter-spacing:.03em;color:var(--link);margin:1em 0 .6em}
 .doc p.dnx{margin:2.4em 0 1em;text-align:center;font:600 16px var(--ui)}
 .row.one.med{margin-top:12px}
+.doc b.mtit{display:block;margin-top:1.6em;padding-top:1em;border-top:1px solid var(--bd)}.doc p.mtitp{margin-top:2.2em;padding-top:1em;border-top:1px solid var(--bd)}
 .mtop .dhero{text-align:center}.mtop .dnum{font-size:clamp(72px,20vw,120px)}.mtop .dmon{font-size:clamp(22px,5.8vw,32px)}
 .mbh{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}.mbh .sh{margin:0;font-size:15px}.mbh .cap{margin:0}
 .mrd b{font:600 12px var(--ui);letter-spacing:.05em;text-transform:uppercase;color:var(--mut)}.mrd span{color:var(--link);font-weight:600}

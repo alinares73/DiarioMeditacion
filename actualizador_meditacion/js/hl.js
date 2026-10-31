@@ -66,3 +66,6 @@ function renderUH(){
   const hoy=isoOf(new Date());$('#uxmd').onclick=()=>dlFile('Resaltados_'+hoy+'.md','text/markdown;charset=utf-8',uhMD(uhByBook()));
   $('#uxcp').onclick=async()=>{const b=$('#uxcp'),ok=await copyText(uhMD(uhByBook()));b.textContent=ok?'✓ Copiado':'No se pudo copiar';setTimeout(()=>b.textContent='📋 Copiar todo',1800)};
 }
+
+/* Hablar con Dios (libro del Diario): separar cada meditación de la anterior */
+function hcdSep(doc){if(doc!=='HCD')return;document.querySelectorAll('#dx b>span[style*="1.17em"]').forEach(sp=>{const b=sp.parentElement,p=b.closest('p');if(!p)return;const r=document.createRange();r.setStart(p,0);r.setEndBefore(b);if(r.toString().trim())b.classList.add('mtit');else p.classList.add('mtitp')})}
