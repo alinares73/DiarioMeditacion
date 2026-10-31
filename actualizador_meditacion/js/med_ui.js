@@ -13,7 +13,7 @@ function medFor(iso){
 function renderMed(arg){
   const today=isoOf(new Date()),iso=/^\d{4}-\d\d-\d\d$/.test(arg||'')?arg:today;
   const [y,m,d]=iso.split('-').map(Number),dt=new Date(y,m-1,d),E=EPA[iso],D=DAY[iso];
-  setHead('Meditación diaria','#/');
+  setHead('Meditación diaria',iso===today?'#/':'#/dia/'+iso);
   const {L,out}=medFor(iso);
   let h=`<div class="mtop"><div class="dhero"><div class="dnum">${d}</div><div class="dmon">${MESES[m-1]}</div><div class="dwk">${DIAS[dt.getDay()]} · ${y}</div></div></div>`;
   h+=`<div class="dnav"><a class="btn" href="#/med/${addDays(iso,-1)}" aria-label="Día anterior">‹</a><a class="btn" href="#/med">Hoy</a><a class="btn" href="#/med/${addDays(iso,1)}" aria-label="Día siguiente">›</a></div>`;

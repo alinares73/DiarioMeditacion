@@ -87,7 +87,7 @@ def parchear(src, metas, medi, js):
     rep('<div id="sheet">', '<div id="hlb"><button class="btn" id="hlb-do">🖍 Resaltar</button><button class="btn" id="hlb-cp">Copiar</button></div>\n<div id="pop"></div>\n<div id="sheet">')
     # portada: botón nuevo justo debajo de «Sagrada Escritura»
     rep('''<div class="row one"><a class="btn" href="#/biblia">📖 Sagrada Escritura</a></div>''',
-        '''<div class="row one"><a class="btn" href="#/biblia">📖 Sagrada Escritura</a></div><div class="row one med"><a class="btn" href="#/med">🙏 Meditación diaria</a></div>''')
+        '''<div class="row one"><a class="btn" href="#/biblia">📖 Sagrada Escritura</a></div><div class="row one med"><a class="btn" href="#/med/\'+iso+\'">🙏 Meditación diaria</a></div>''')
     # rutas
     rep("  else if(k==='docs'){setHead('Libros enlazados','#/','doc');renderDocs()}",
         "  else if(k==='docs'){setHead('Libros','#/','doc');renderDocs()}\n  else if(k==='med'){renderMed(h[1])}\n  else if(k==='resaltados'){renderUH()}")
