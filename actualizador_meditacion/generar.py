@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Genera la app «Diario · Meditación» a partir de la app Diario (sin tocarla) y de los ePub de meditaciones.
+Genera la app «Diario» (con meditación diaria) a partir de la app «Epacta» (carpeta «Diario app», sin tocarla) y de los ePub de meditaciones.
 
 Uso:   python generar.py                      (rutas de config.json)
        python generar.py --diario "C:/.../Diario app" --medis "C:/.../medis" --destino ".."
@@ -81,6 +81,10 @@ def parchear(src, metas, medi, js):
     for k, v in metas.items(): C['docs'][k] = v
     J = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':'))
     src = src.replace('const CAT=' + m.group(1) + ';\n', 'const CAT=' + J(C) + ';\nconst MEDI=' + J(medi) + ';\n', 1)
+    # nombre de la app: «Diario» (la app de origen se llama ahora «Epacta»)
+    src = re.sub(r'<title>[^<]*</title>', '<title>Diario</title>', src, count=1)
+    src = re.sub(r'<h1 id="ht">[^<]*</h1>', '<h1 id="ht">Diario</h1>', src, count=1)
+    src = re.sub(r"setHead\('(?:Epacta|Diario)',iso===today\?'':'#/'\)", "setHead('Diario',iso===today?'':'#/')", src, count=1)
     rep('<meta name="theme-color" content="#101a2a">', '<meta name="theme-color" content="#101a2a">\n<meta name="description" content="Diario con meditación diaria">')
     rep("const TITLES={", "const TITLES={MedOD:'Meditaciones (7 tomos)',SCE:'Siempre con Él',")
     rep('</style>', CSS + '</style>')
@@ -197,7 +201,7 @@ def main():
     sw = parchear_sw(open(os.path.join(DIA, 'sw.js'), encoding='utf-8').read(), metas, C['docs'])
     write_if_changed(os.path.join(DST, 'sw.js'), sw)
     man = json.load(open(os.path.join(DIA, 'manifest.webmanifest'), encoding='utf-8'))
-    man.update(name='Diario · Meditación', short_name='Meditación')
+    man.update(name='Diario', short_name='Diario')
     write_if_changed(os.path.join(DST, 'manifest.webmanifest'), json.dumps(man, ensure_ascii=False))
     log('Listo.')
 
