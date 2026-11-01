@@ -15,7 +15,7 @@ Qué hace:
   4. Escribe sw.js y manifest propios (caché independiente de la app Diario).
 Sin librerías externas: Python 3.8 o superior.
 """
-import os, sys, re, json, glob, shutil, hashlib, argparse, time
+import os, sys, re, json, glob, shutil, hashlib, argparse, time, base64
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, 'lib'))
 from epublib import read_epub
@@ -165,12 +165,13 @@ header #hval{width:24px;height:24px;min-width:24px;border:0;padding:0;margin:0 1
 .achips .chip.tG{border-left-color:#4f9d69}.achips .chip.tJ{border-left-color:#e8862b}.achips .chip.on{background:var(--link);color:var(--bg);border-color:var(--link)}
 .mapw{position:relative;height:min(58vh,620px);border:1px solid var(--bd);border-radius:14px;overflow:hidden;background:var(--card)}
 #amap{width:100%;height:100%;display:block;touch-action:none;user-select:none;-webkit-user-select:none;cursor:grab}
-#amap .aland{fill:var(--card)}#amap .asea{fill:var(--link);fill-opacity:.13}#amap .acoast{fill:none;stroke:var(--link);stroke-opacity:.45;stroke-width:1.2;vector-effect:non-scaling-stroke}
-#amap .alake{fill:var(--link);fill-opacity:.22;stroke:var(--link);stroke-opacity:.5;stroke-width:1;vector-effect:non-scaling-stroke}
-#amap .ariv{fill:none;stroke:var(--link);stroke-opacity:.5;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round;vector-effect:non-scaling-stroke}
-#amap .areg text{font:600 calc(var(--s,1)*12px) var(--ui);letter-spacing:.25em;fill:var(--mut);opacity:.55;text-anchor:middle}
-#amap .amt path{fill:var(--mut);opacity:.35}#amap .amt text{font:italic calc(var(--s,1)*10px) var(--ff);fill:var(--mut);opacity:.7}
-#amap .awat text{font:italic calc(var(--s,1)*12px) var(--ff);fill:var(--link);opacity:.6;text-anchor:middle;letter-spacing:.08em}
+#amap{--asea:#3b6279;--ariv:#6497b8}body[data-theme=light] #amap{--asea:#c3dfee;--ariv:#6ea5c8}body[data-theme=sepia] #amap{--asea:#bdd5db;--ariv:#6c9cb0}
+#amap .aland{fill:var(--card)}#amap .asea{fill:var(--asea)}#amap .acoast{fill:none;stroke:var(--ariv);stroke-opacity:.8;stroke-width:1.2;vector-effect:non-scaling-stroke}
+#amap .alake{fill:var(--asea);stroke:var(--ariv);stroke-opacity:.8;stroke-width:1;vector-effect:non-scaling-stroke}
+#amap .ariv{fill:none;stroke:var(--ariv);stroke-opacity:.9;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round;vector-effect:non-scaling-stroke}
+#amap .areg text{font:600 calc(var(--s,1)*12px) var(--ui);letter-spacing:.25em;fill:var(--mut);opacity:.75;text-anchor:middle;paint-order:stroke;stroke:var(--card);stroke-width:2px;stroke-opacity:.6}
+#amap .amt path{fill:var(--mut);opacity:0}#amap .amt text{font:italic calc(var(--s,1)*10px) var(--ff);fill:var(--mut);opacity:.7}
+#amap .awat text{font:italic calc(var(--s,1)*12px) var(--ff);fill:var(--fg);opacity:.55;text-anchor:middle;letter-spacing:.08em}
 #amap .asyr rect{fill:none;stroke:var(--mut);stroke-dasharray:4 4;stroke-opacity:.6;vector-effect:non-scaling-stroke}#amap .asyr text{font:calc(var(--s,1)*9px) var(--ui);fill:var(--mut);text-anchor:middle}
 #amap .ascale path{stroke:var(--fg);stroke-width:1.5;fill:none;vector-effect:non-scaling-stroke}#amap .ascale text{font:11px var(--ui);fill:var(--mut)}#amap .anor{font:700 calc(var(--s,1)*12px) var(--ui);fill:var(--mut)}
 .doc .vwh+p{scroll-margin-top:3.5em}
@@ -274,6 +275,8 @@ def main():
     # 3. index.html
     js = '\n'.join(open(os.path.join(HERE, 'js', f), encoding='utf-8').read() for f in ('liturgia.js', 'med_ui.js', 'hl.js', 'valtorta.js', 'atlas.js'))
     js = js.replace("if(typeof module!=='undefined')module.exports=LIT;", '')
+    rel_img = os.path.join(HERE, 'relieve.webp')
+    js = js.replace('__RELIEVE__', ('data:image/webp;base64,' + base64.b64encode(open(rel_img, 'rb').read()).decode()) if os.path.exists(rel_img) else '')
     src = open(os.path.join(DIA, 'index.html'), encoding='utf-8').read()
     EY = None
     epy = glob.glob(os.path.join(DIA, 'actualizador', 'pdb_diario', '*sentir*.epub'))

@@ -33,7 +33,7 @@ const GEO={
 function apath(pts,close){return pts.map((p,i)=>(i?'L':'M')+AX(p[1]).toFixed(1)+' '+AY(p[0]).toFixed(1)).join('')+(close?'Z':'')}
 function atlBase(){
   const sea=apath(GEO.coast)+`L${AX(33.0)} ${AY(31.24)}L-200 ${AY(31.24)}L-200 -200L${AX(35.47)} -200Z`;
-  let s=`<rect x="-400" y="-400" width="1600" height="1800" class="aland"/><path class="asea" d="${sea}"/><path class="acoast" d="${apath(GEO.coast)}"/>`;
+  let s=`<rect x="-400" y="-400" width="1600" height="1800" class="aland"/>${ATL_REL?`<image href="${ATL_REL}" x="-100" y="-60" width="1000" height="1110" preserveAspectRatio="none"/>`:''}<path class="asea" d="${sea}"/><path class="acoast" d="${apath(GEO.coast)}"/>`;
   s+=GEO.rivers.map(r=>`<path class="ariv" d="${apath(r)}"/>`).join('');
   s+=`<path class="alake" d="${apath(GEO.galilee,1)}"/><path class="alake" d="${apath(GEO.dead,1)}"/><path class="alake" d="${apath(GEO.huleh,1)}"/>`;
   s+=`<g class="areg">`+GEO.reg.map(r=>`<text x="${AX(r[1])}" y="${AY(r[0])}">${r[2]}</text>`).join('')+`</g>`;
@@ -45,7 +45,7 @@ function atlBase(){
 }
 
 /* ---------- mapa ---------- */
-let AM=null;
+let AM=null;const ATL_REL='__RELIEVE__';
 function renderMapa(a,b){
   if(!ATLX)return notFound();
   setHead('Mapa de los viajes','#/docs','doc');$('#fab').style.display='none';
