@@ -1,0 +1,9012 @@
+{
+"lugares": {
+"achzib": [
+"Aczib",
+33.05,
+35.102,
+"Fenicia"
+],
+"aera": [
+"Aera",
+32.99,
+35.96,
+"Gaulanítide"
+],
+"alexandroscene": [
+"Alexandroscene",
+33.15,
+35.15,
+"Fenicia"
+],
+"antigonea": [
+"Antigonia (Siria)",
+36.18,
+36.1,
+"Siria"
+],
+"antioch": [
+"Antioquía (Siria)",
+36.2,
+36.16,
+"Siria"
+],
+"aphek": [
+"Afeq",
+32.78,
+35.7,
+"Decápolis"
+],
+"arbela": [
+"Arbela",
+32.818,
+35.497,
+"Galilea"
+],
+"arimathea": [
+"Arimatea",
+32.05,
+35.01,
+"Judea"
+],
+"ashkelon": [
+"Ascalón",
+31.667,
+34.565,
+"Llanura filistea"
+],
+"ashkelon plain": [
+"Llanura de Ascalón",
+31.64,
+34.64,
+"Llanura filistea"
+],
+"azotus": [
+"Azoto",
+31.8,
+34.645,
+"Llanura filistea"
+],
+"beeroth": [
+"Beerot",
+31.905,
+35.212,
+"Judea"
+],
+"beth-hoglah": [
+"Bet-Hoglá",
+31.82,
+35.51,
+"Judea"
+],
+"beth-horon": [
+"Bet-Horón",
+31.88,
+35.12,
+"Judea"
+],
+"bethabara": [
+"Betábara (Jordán)",
+31.838,
+35.55,
+"Perea"
+],
+"bethany": [
+"Betania",
+31.771,
+35.261,
+"Judea"
+],
+"bethel": [
+"Betel",
+31.93,
+35.222,
+"Judea"
+],
+"bether": [
+"Beter",
+31.73,
+35.137,
+"Judea"
+],
+"bethjabbok": [
+"Betjaboc",
+32.15,
+35.57,
+"Perea"
+],
+"bethlehem": [
+"Belén",
+31.705,
+35.2,
+"Judea"
+],
+"bethlehem of galilee": [
+"Belén de Galilea",
+32.735,
+35.191,
+"Galilea"
+],
+"bethphage": [
+"Betfagé",
+31.779,
+35.25,
+"Judea"
+],
+"bethsaida": [
+"Betsaida",
+32.91,
+35.63,
+"Galilea"
+],
+"bethzur": [
+"Bet-Sur",
+31.59,
+35.1,
+"Judea"
+],
+"bozrah": [
+"Bosra",
+32.518,
+36.481,
+"Auranítide"
+],
+"caesarea": [
+"Cesarea Marítima",
+32.5,
+34.892,
+"Samaria"
+],
+"caesarea philippi": [
+"Cesarea de Filipo",
+33.248,
+35.694,
+"Tetrarquía de Filipo"
+],
+"callirhoe": [
+"Calírroe",
+31.6,
+35.565,
+"Perea"
+],
+"cameleer": [
+"Fuente del Camellero",
+32.38,
+36.15,
+"Decápolis"
+],
+"cana": [
+"Caná",
+32.747,
+35.339,
+"Galilea"
+],
+"capernaum": [
+"Cafarnaúm",
+32.881,
+35.575,
+"Galilea"
+],
+"chuza": [
+"Finca de Cusa",
+32.69,
+35.585,
+"Galilea"
+],
+"clear water": [
+"Agua Clara",
+31.92,
+35.58,
+"Perea"
+],
+"decapolis": [
+"Decápolis",
+32.7,
+35.78,
+"Decápolis"
+],
+"doco": [
+"Doc",
+31.875,
+35.43,
+"Judea"
+],
+"dora": [
+"Dora",
+32.615,
+34.918,
+"Samaria"
+],
+"dothan": [
+"Dotán",
+32.42,
+35.24,
+"Samaria"
+],
+"ekron": [
+"Ecrón",
+31.78,
+34.85,
+"Llanura filistea"
+],
+"emmaus": [
+"Emaús del monte",
+31.836,
+35.13,
+"Judea"
+],
+"emmaus of tiberias": [
+"Emaús de Tiberíades",
+32.775,
+35.545,
+"Galilea"
+],
+"emmaus on mt": [
+"Emaús del monte",
+31.836,
+35.13,
+"Judea"
+],
+"emmaus on the plain": [
+"Emaús de la llanura",
+31.839,
+34.989,
+"Judea"
+],
+"en-shemesh": [
+"En-Semes",
+31.77,
+35.29,
+"Judea"
+],
+"endor": [
+"Endor",
+32.632,
+35.395,
+"Galilea"
+],
+"engannim": [
+"En-Ganim",
+32.46,
+35.3,
+"Samaria"
+],
+"engedi": [
+"Engadí",
+31.462,
+35.392,
+"Judea"
+],
+"enon": [
+"Enón",
+32.37,
+35.545,
+"Samaria"
+],
+"ephraim": [
+"Efraím",
+31.955,
+35.3,
+"Judea"
+],
+"esdraelon": [
+"Llanura de Esdrelón",
+32.605,
+35.245,
+"Galilea"
+],
+"gadara": [
+"Gádara",
+32.655,
+35.678,
+"Decápolis"
+],
+"galilee": [
+"Galilea",
+32.8,
+35.35,
+"Galilea"
+],
+"gamala": [
+"Gamala",
+32.902,
+35.736,
+"Gaulanítide"
+],
+"gerasa": [
+"Gerasa",
+32.272,
+35.891,
+"Decápolis"
+],
+"gherghesa": [
+"Gergesa",
+32.83,
+35.64,
+"Decápolis"
+],
+"gibeon": [
+"Gabaón",
+31.847,
+35.185,
+"Judea"
+],
+"giscala": [
+"Giscala",
+33.02,
+35.45,
+"Galilea"
+],
+"hebron": [
+"Hebrón",
+31.53,
+35.1,
+"Judea"
+],
+"heshbon": [
+"Jesbón",
+31.8,
+35.808,
+"Perea"
+],
+"hippo": [
+"Hipos",
+32.778,
+35.661,
+"Decápolis"
+],
+"jabesh-gilead": [
+"Jabés de Galaad",
+32.37,
+35.63,
+"Decápolis"
+],
+"jabneel": [
+"Yamnia",
+31.867,
+34.745,
+"Llanura filistea"
+],
+"jala": [
+"Jala",
+31.72,
+35.18,
+"Judea"
+],
+"jericho": [
+"Jericó",
+31.871,
+35.444,
+"Judea"
+],
+"jerusalem": [
+"Jerusalén",
+31.778,
+35.235,
+"Judea"
+],
+"jezreel": [
+"Jezrael",
+32.557,
+35.33,
+"Galilea"
+],
+"jiphthahel": [
+"Jiftael",
+32.85,
+35.26,
+"Galilea"
+],
+"joppa": [
+"Jope",
+32.054,
+34.752,
+"Llanura filistea"
+],
+"jordan ford": [
+"Vado del Jordán",
+31.84,
+35.545,
+"Judea"
+],
+"jordan near doco": [
+"Jordán, cerca de Doc",
+31.87,
+35.53,
+"Judea"
+],
+"judean countryside": [
+"Campiña de Judea",
+31.7,
+35.15,
+"Judea"
+],
+"jutta": [
+"Yuta",
+31.45,
+35.095,
+"Judea"
+],
+"kedesh": [
+"Cades de Neftalí",
+33.112,
+35.53,
+"Galilea"
+],
+"kerioth": [
+"Keriot",
+31.36,
+35.11,
+"Judea"
+],
+"korazim": [
+"Corozaín",
+32.911,
+35.564,
+"Galilea"
+],
+"korazim plain": [
+"Llanura de Corozaín",
+32.93,
+35.55,
+"Galilea"
+],
+"lake merom": [
+"Lago Merón",
+33.07,
+35.61,
+"Galilea"
+],
+"lebonah": [
+"Lebona",
+32.07,
+35.24,
+"Samaria"
+],
+"machaerus": [
+"Maqueronte",
+31.562,
+35.627,
+"Perea"
+],
+"magdala": [
+"Magdala",
+32.825,
+35.516,
+"Galilea"
+],
+"magdalgad": [
+"Magdalgad",
+31.62,
+34.7,
+"Llanura filistea"
+],
+"masada": [
+"Masada",
+31.316,
+35.354,
+"Judea"
+],
+"megiddo": [
+"Meguido",
+32.585,
+35.185,
+"Galilea"
+],
+"merom": [
+"Merón",
+32.995,
+35.41,
+"Galilea"
+],
+"modin": [
+"Modín",
+31.93,
+35.02,
+"Judea"
+],
+"mt adomin": [
+"Monte Adomín",
+31.81,
+35.33,
+"Judea"
+],
+"mt carmel": [
+"Monte Carmelo",
+32.735,
+35.045,
+"Galilea"
+],
+"mt cherith": [
+"Monte Querit",
+31.85,
+35.4,
+"Judea"
+],
+"mt nebo": [
+"Monte Nebo",
+31.768,
+35.725,
+"Perea"
+],
+"mt of fasting": [
+"Monte del Ayuno",
+31.64,
+35.3,
+"Judea"
+],
+"mt tabor": [
+"Monte Tabor",
+32.687,
+35.39,
+"Galilea"
+],
+"nain": [
+"Naím",
+32.63,
+35.348,
+"Galilea"
+],
+"nazareth": [
+"Nazaret",
+32.702,
+35.297,
+"Galilea"
+],
+"nike": [
+"Casa de Nike (Jericó)",
+31.85,
+35.46,
+"Judea"
+],
+"nob": [
+"Nob",
+31.792,
+35.238,
+"Judea"
+],
+"pella": [
+"Pela",
+32.449,
+35.616,
+"Decápolis"
+],
+"philistine plain": [
+"Llanura filistea",
+31.75,
+34.76,
+"Llanura filistea"
+],
+"ptolemais": [
+"Tolemaida",
+32.923,
+35.07,
+"Fenicia"
+],
+"ramah": [
+"Ramá",
+32.94,
+35.37,
+"Galilea"
+],
+"ramoth gilead": [
+"Ramot de Galaad",
+32.55,
+35.85,
+"Perea"
+],
+"samaria": [
+"Samaria",
+32.28,
+35.195,
+"Samaria"
+],
+"saphet": [
+"Safed",
+32.965,
+35.496,
+"Galilea"
+],
+"sea of galilee": [
+"Mar de Galilea",
+32.82,
+35.59,
+"Galilea"
+],
+"seleucia": [
+"Seleucia (Siria)",
+36.12,
+35.93,
+"Siria"
+],
+"sephoris": [
+"Séforis",
+32.753,
+35.279,
+"Galilea"
+],
+"shechem": [
+"Siquem",
+32.213,
+35.282,
+"Samaria"
+],
+"shiloh": [
+"Siló",
+32.055,
+35.29,
+"Samaria"
+],
+"sicaminon": [
+"Sicaminón",
+32.83,
+34.975,
+"Fenicia"
+],
+"solomon's village": [
+"Aldea de Salomón",
+31.86,
+35.62,
+"Perea"
+],
+"steps of tyre": [
+"Escala de Tiro",
+33.09,
+35.11,
+"Fenicia"
+],
+"sychar": [
+"Sicar",
+32.21,
+35.295,
+"Samaria"
+],
+"tarichea": [
+"Tariquea",
+32.715,
+35.572,
+"Galilea"
+],
+"tebesh": [
+"Tebes",
+32.32,
+35.35,
+"Samaria"
+],
+"tekoah": [
+"Tecoa",
+31.633,
+35.218,
+"Judea"
+],
+"tiberias": [
+"Tiberíades",
+32.795,
+35.531,
+"Galilea"
+],
+"tirzah": [
+"Tirsá",
+32.288,
+35.36,
+"Samaria"
+],
+"tyre": [
+"Tiro",
+33.272,
+35.196,
+"Fenicia"
+],
+"wilderness of temptation": [
+"Desierto de las tentaciones",
+31.875,
+35.425,
+"Judea"
+],
+"woods of mattathias": [
+"Bosque de Matatías",
+32.72,
+35.37,
+"Galilea"
+]
+},
+"ciclos": [
+[
+"Comienzo de la vida pública",
+"dic. 30 – mar. 31",
+"C"
+],
+[
+"Primer ministerio en Galilea",
+"abr. – jun. 31",
+"G"
+],
+[
+"Primer ministerio en Judea",
+"jun. – jul. 31",
+"J"
+],
+[
+"Segundo ministerio en Galilea · Siro-Fenicia",
+"jul. – nov. 31",
+"G"
+],
+[
+"Segundo ministerio en Judea · Samaria",
+"nov. 31 – ene. 32",
+"J"
+],
+[
+"Tercer ministerio en Galilea · Tetrarquía de Filipo, Samaria",
+"ene. – abr. 32",
+"G"
+],
+[
+"Tercer ministerio en Judea",
+"abr. – jun. 32",
+"J"
+],
+[
+"Cuarto ministerio en Galilea · Siro-Fenicia, Decápolis, Tetrarquía de Filipo",
+"jun. – sep. 32",
+"G"
+],
+[
+"Cuarto ministerio en Judea · Perea, Decápolis",
+"oct. – nov. 32",
+"J"
+],
+[
+"Quinto ministerio en Galilea · Siro-Fenicia, Filipo, Decápolis, Perea",
+"nov. 32 – mar. 33",
+"G"
+],
+[
+"Quinto ministerio en Judea · Perea, Decápolis, Samaria del norte",
+"mar. – jun. 33",
+"J"
+],
+[
+"Sexto ministerio en Galilea · Decápolis, Filipo, Siro-Fenicia, Samaria",
+"jun. – oct. 33",
+"G"
+],
+[
+"Sexto ministerio en Judea · Perea, Samaria · Pasión y Resurrección",
+"oct. 33 – abr. 34",
+"J"
+]
+],
+"pasos": [
+[
+0,
+"nazareth",
+"Finales de diciembre del año 30",
+0,
+44,
+"Adiós a la Madre y salida de Nazaret. Llanto y oración de la Corredentora.",
+0
+],
+[
+0,
+"bethabara",
+"Mediados de enero del año 31",
+70,
+45,
+"Predicación de Juan el Bautista y Bautismo de Jesús. La manifestación divina.",
+0
+],
+[
+0,
+"mt of fasting",
+"Mediados de enero del año 31",
+30,
+46,
+"Jesús tentado por Satanás en el desierto. Cómo se vencen las tentaciones.",
+0
+],
+[
+0,
+"wilderness of temptation",
+"Finales de febrero del año 31",
+15,
+46,
+"Jesús tentado por Satanás en el desierto. Cómo se vencen las tentaciones.",
+0
+],
+[
+0,
+"jordan ford",
+"Finales de febrero del año 31",
+8,
+47,
+"El encuentro con Juan y Santiago.",
+0
+],
+[
+0,
+"jordan ford",
+"Finales de febrero del año 31",
+0,
+47,
+"El encuentro con Juan y Santiago.",
+0
+],
+[
+0,
+"bethsaida",
+"Finales de febrero del año 31 · viernes",
+80,
+48,
+"Juan y Santiago refieren a Pedro su encuentro con el Mesías.",
+0
+],
+[
+0,
+"capernaum",
+"Finales de febrero del año 31 · viernes",
+3,
+49,
+"El encuentro con Pedro y Andrés",
+0
+],
+[
+0,
+"bethsaida",
+"Finales de febrero del año 31 · sábado a domingo",
+3,
+50,
+"En Betsaida, en casa de Pedro. Encuentro con Felipe y Natanael",
+0
+],
+[
+0,
+"bethsaida",
+"Finales de febrero del año 31 · domingo",
+0,
+51,
+"María manda a Judas Tadeo a invitar a Jesús a las bodas de Cana.",
+0
+],
+[
+0,
+"tiberias",
+"Principios de marzo del año 31 · lunes",
+10,
+52,
+"Las bodas de Caná. El Hijo, no sujeto ya a la Madre, lleva a cabo para Ella el primer milagro.",
+1
+],
+[
+0,
+"cana",
+"Principios de marzo del año 31 · lunes",
+12,
+52,
+"Las bodas de Caná. El Hijo, no sujeto ya a la Madre, lleva a cabo para Ella el primer milagro.",
+0
+],
+[
+0,
+"tiberias",
+"Marzo del año 31",
+12,
+0,
+"",
+0
+],
+[
+0,
+"capernaum",
+"Marzo del año 31",
+8,
+0,
+"",
+1
+],
+[
+0,
+"jerusalem",
+"Finales de marzo del año 31",
+80,
+53,
+"Los mercaderes expulsados del Templo.",
+0
+],
+[
+0,
+"jerusalem",
+"Finales de marzo del año 31",
+0,
+54,
+"El encuentro con Judas de Keriot y con Tomás. Simón Zelote curado de la lepra.",
+0
+],
+[
+0,
+"jerusalem",
+"Finales de marzo del año 31",
+0,
+55,
+"Un encargo confiado a Tomás.",
+0
+],
+[
+0,
+"jordan near doco",
+"Principios de abril del año 31",
+25,
+56,
+"Simón Zelote y Judas Tadeo unidos en común destino.",
+0
+],
+[
+1,
+"nazareth",
+"Principios de abril del año 31",
+60,
+57,
+"En Nazaret con Judas Tadeo y con otros seis discípulos.",
+0
+],
+[
+1,
+"mt carmel",
+"Abril del año 31",
+20,
+0,
+"",
+0
+],
+[
+1,
+"mt tabor",
+"Abril del año 31",
+24,
+0,
+"",
+0
+],
+[
+1,
+"capernaum",
+"Finales de abril del año 31 · sábado",
+16,
+59,
+"Curación de un endemoniado en la sinagoga de Cafarnaúm.",
+0
+],
+[
+1,
+"capernaum",
+"Abril del año 31",
+0,
+0,
+"",
+0
+],
+[
+1,
+"korazim plain",
+"Abril del año 31",
+5,
+0,
+"",
+0
+],
+[
+1,
+"bethsaida",
+"Abril del año 31",
+4,
+0,
+"",
+0
+],
+[
+1,
+"capernaum",
+"Mediados de mayo del año 31 · sábado",
+2,
+60,
+"Curación de la suegra de Simón Pedro.",
+0
+],
+[
+1,
+"capernaum",
+"Mediados de mayo del año 31 · sábado",
+0,
+61,
+"Jesús agracia a los pobres después de exponer la parábola del caballo amado por el rey.",
+0
+],
+[
+1,
+"capernaum",
+"Mediados de mayo del año 31 · domingo",
+1,
+62,
+"Los discípulos buscan a Jesús, que está orando en la noche.",
+0
+],
+[
+1,
+"korazim",
+"Mediados de mayo del año 31 · domingo",
+1,
+63,
+"El leproso curado cerca de Corazín.",
+0
+],
+[
+1,
+"capernaum",
+"Finales de mayo del año 31",
+1,
+58,
+"Curación de un ciego en Cafarnaúm.",
+0
+],
+[
+1,
+"capernaum",
+"Finales de mayo del año 31",
+0,
+64,
+"El paralítico curado en Cafarnaúm.",
+0
+],
+[
+1,
+"capernaum",
+"Finales de mayo del año 31",
+1,
+65,
+"La pesca milagrosa y la elección de los primeros cuatro apóstoles.",
+1
+],
+[
+2,
+"jerusalem",
+"Junio del año 31",
+85,
+0,
+"",
+0
+],
+[
+2,
+"jerusalem",
+"Mediados de junio del año 31",
+0,
+66,
+"Judas de Keriot en Getsemaní se hace discípulo.",
+0
+],
+[
+2,
+"jerusalem",
+"Mediados de junio del año 31",
+0,
+67,
+"El milagro de los puñales partidos, en la Puerta de los Peces.",
+0
+],
+[
+2,
+"jerusalem",
+"Mediados de junio del año 31",
+0,
+68,
+"Jesús enseña en el Templo estando con Judas Iscariote.",
+0
+],
+[
+2,
+"jerusalem",
+"Mediados de junio del año 31",
+0,
+69,
+"Jesús instruye a Judas Iscariote.",
+0
+],
+[
+2,
+"jerusalem",
+"Mediados de junio del año 31",
+0,
+70,
+"En Getsemaní con Juan de Zebedeo. Comparación entre el Predilecto y Judas de Keriot.",
+0
+],
+[
+2,
+"jerusalem",
+"Mediados de junio del año 31",
+0,
+71,
+"Judas Iscariote presentado a Juan y a Simón Zelote.",
+0
+],
+[
+2,
+"bethlehem",
+"Finales de junio del año 31",
+8,
+72,
+"Hacia Belén con Juan, Simón Zelote y Judas Iscariote.",
+0
+],
+[
+2,
+"bethlehem",
+"Finales de junio del año 31",
+0,
+73,
+"En Belén, en casa de un campesino y en la gruta de la Natividad.",
+0
+],
+[
+2,
+"bethlehem",
+"Finales de junio del año 31",
+0,
+74,
+"En la posada de Belén y en las ruinas de la casa de Ana.",
+0
+],
+[
+2,
+"bethlehem",
+"Finales de junio del año 31",
+10,
+75,
+"Jesús encuentra a los pastores Elías y Leví.",
+0
+],
+[
+2,
+"jutta",
+"Finales de junio del año 31",
+20,
+76,
+"En Yuttá, en casa del pastor Isaac. Sara y sus niños.",
+0
+],
+[
+2,
+"hebron",
+"Finales de junio del año 31",
+10,
+77,
+"En Hebrón en casa de Zacarías. El encuentro con Áglae.",
+0
+],
+[
+2,
+"kerioth",
+"Principios de julio del año 31",
+15,
+78,
+"En Keriot. Muerte del anciano Saúl.",
+0
+],
+[
+2,
+"jutta",
+"Julio del año 31",
+9,
+0,
+"",
+0
+],
+[
+2,
+"hebron",
+"Principios de julio del año 31",
+8,
+79,
+"Volviendo donde los pastores. Las joyas de Áglae y una parábola sobre su conversión.",
+0
+],
+[
+2,
+"mt of fasting",
+"Principios de julio del año 31",
+10,
+80,
+"En el monte del ayuno y en la peña de la tentación",
+0
+],
+[
+2,
+"wilderness of temptation",
+"Principios de julio del año 31",
+15,
+80,
+"En el monte del ayuno y en la peña de la tentación",
+0
+],
+[
+2,
+"jordan ford",
+"Principios de julio del año 31",
+15,
+81,
+"En el vado del Jordán con los pastores Simeón, Juan y Matías. Un plan para liberar a Juan el Bautista",
+0
+],
+[
+2,
+"jericho",
+"Principios de julio del año 31",
+15,
+82,
+"En Jericó. Judas Iscariote cuenta cómo ha vendido las joyas de Áglae",
+0
+],
+[
+2,
+"bethphage",
+"Mediados de julio del año 31 · jueves",
+5,
+83,
+"Jesús sufre a causa de Judas, que es enseñanza viva para los apóstoles de todos los tiempos",
+0
+],
+[
+2,
+"bethany",
+"Mediados de julio del año 31 · sábado",
+8,
+84,
+"El encuentro con Lázaro de Betania",
+0
+],
+[
+2,
+"jerusalem",
+"Mediados de julio del año 31 · domingo",
+2,
+85,
+"Antes de ir al Getsemaní, Jesús y el Zelote suben al Templo, donde está hablando Judas Iscariote",
+0
+],
+[
+2,
+"jerusalem",
+"Mediados de julio del año 31 · lunes",
+0,
+86,
+"El encuentro con el soldado Alejandro en la Puerta de los Peces",
+0
+],
+[
+2,
+"doco",
+"Mediados de julio del año 31",
+16,
+87,
+"Con pastores y discípulos en las cercanías de Doco. Isaac se queda en Judea",
+0
+],
+[
+3,
+"esdraelon",
+"Finales de julio del año 31",
+65,
+88,
+"Donde el pastor Jonás, en la llanura de Esdrelón",
+0
+],
+[
+3,
+"esdraelon",
+"Finales de julio del año 31 · domingo",
+10,
+89,
+"Adiós a Jonás y llegada de Jesús a Nazaret",
+0
+],
+[
+3,
+"nazareth",
+"Finales de julio del año 31 · lunes",
+0,
+90,
+"La llegada a Nazaret de los discípulos con los pastores",
+0
+],
+[
+3,
+"nazareth",
+"Finales de julio del año 31 · miércoles",
+0,
+91,
+"Primera lección a los discípulos en Nazaret, en un olivar",
+0
+],
+[
+3,
+"nazareth",
+"Finales de julio del año 31 · jueves",
+0,
+92,
+"Segunda lección a los discípulos en Nazaret, junto a la casa",
+0
+],
+[
+3,
+"nazareth",
+"Principios de agosto del año 31 · viernes",
+0,
+93,
+"Tercera lección a los discípulos en Nazaret, en el huerto de la casa. Palabras de consuelo a Judas de Alfeo.",
+0
+],
+[
+3,
+"tiberias",
+"Principios de agosto del año 31 · viernes",
+12,
+0,
+"",
+0
+],
+[
+3,
+"capernaum",
+"Principios de agosto del año 31 · sábado",
+7,
+94,
+"Curación de la Beldad de Corazín. Jesús habla en la sinagoga de Cafarnaúm",
+1
+],
+[
+3,
+"capernaum",
+"Principios de agosto del año 31 · lunes",
+0,
+95,
+"Santiago de Alfeo recibido como discípulo. Jesús habla junto al banco de Mateo",
+0
+],
+[
+3,
+"bethsaida",
+"Principios de agosto del año 31 · miércoles",
+3,
+96,
+"Jesús responde a la acusación de haber curado en sábado a la Beldad de Corazín",
+1
+],
+[
+3,
+"capernaum",
+"Principios de agosto del año 31 · jueves",
+3,
+97,
+"La llamada de Mateo",
+1
+],
+[
+3,
+"sea of galilee",
+"Mediados de agosto del año 31 · martes",
+5,
+98,
+"Encuentro con la Magdalena en el lago y lección a los discípulos cerca de Tiberíades",
+1
+],
+[
+3,
+"tiberias",
+"Mediados de agosto del año 31 · martes",
+5,
+99,
+"En Tiberíades en la casa de Cusa",
+1
+],
+[
+3,
+"cana",
+"Agosto del año 31",
+12,
+0,
+"",
+0
+],
+[
+3,
+"nazareth",
+"Mediados de agosto del año 31 · martes",
+4,
+100,
+"En Nazaret en casa del anciano y enfermo Alfeo. No es fácil la vida del apóstol",
+0
+],
+[
+3,
+"nazareth",
+"Mediados de agosto del año 31 · miércoles",
+0,
+101,
+"Jesús pregunta a su Madre acerca de los discípulos",
+0
+],
+[
+3,
+"nazareth",
+"Mediados de agosto del año 31 · lunes",
+4,
+102,
+"Encuentro con el ex pastor Jonatán y curación de Juana de Cusa",
+0
+],
+[
+3,
+"ptolemais",
+"Principios de septiembre del año 31",
+40,
+104,
+"Aava reconciliada con su marido. Noticias sobre la muerte de Alfeo y sobre el rescate de Jonás.",
+0
+],
+[
+3,
+"nazareth",
+"Principios de septiembre del año 31",
+23,
+105,
+"En Nazaret por la muerte de Alfeo. Lenta conversión del primo Simón",
+0
+],
+[
+3,
+"nazareth",
+"Mediados de septiembre del año 31 · sábado",
+0,
+106,
+"Expulsión de Nazaret. Jesús consuela a su Madre. Reflexiones sobre cuatro contemplaciones",
+0
+],
+[
+3,
+"tiberias",
+"Mediados de septiembre del año 31",
+21,
+107,
+"Jesús y su Madre en casa de Juana de Cusa",
+0
+],
+[
+3,
+"capernaum",
+"Septiembre del año 31",
+8,
+0,
+"",
+1
+],
+[
+3,
+"korazim plain",
+"Octubre del año 31",
+5,
+108,
+"Discurso a los vendimiadores y curación del niño paralítico",
+0
+],
+[
+3,
+"esdraelon",
+"Principios de noviembre del año 31",
+26,
+109,
+"En los campos de Jocanán y en los de Doras. Muerte de Jonás",
+0
+],
+[
+3,
+"nazareth",
+"Principios de noviembre del año 31",
+7,
+109,
+"En los campos de Jocanán y en los de Doras. Muerte de Jonás",
+0
+],
+[
+3,
+"lake merom",
+"Principios de noviembre del año 31",
+38,
+110,
+"En casa de Jacob en las cercanías del lago Merón",
+0
+],
+[
+3,
+"bethsaida",
+"Principios de noviembre del año 31",
+7,
+0,
+"",
+0
+],
+[
+4,
+"bethjabbok",
+"Principios de noviembre del año 31",
+50,
+0,
+"",
+0
+],
+[
+4,
+"jordan ford",
+"Principios de noviembre del año 31 · lunes",
+18,
+111,
+"Encuentro con Salomón en el vado del Jordán. Parábola sobre la conversión de los corazones",
+0
+],
+[
+4,
+"jericho",
+"Principios de noviembre del año 31",
+5,
+111,
+"Encuentro con Salomón en el vado del Jordán. Parábola sobre la conversión de los corazones",
+0
+],
+[
+4,
+"jericho",
+"Mediados de noviembre del año 31",
+18,
+112,
+"De Jericó a Betania. El encuentro con Marta, que habla de María",
+0
+],
+[
+4,
+"bethany",
+"Mediados de noviembre del año 31",
+0,
+112,
+"De Jericó a Betania. El encuentro con Marta, que habla de María",
+0
+],
+[
+4,
+"jerusalem",
+"Noviembre del año 31",
+2,
+0,
+"",
+0
+],
+[
+4,
+"bethany",
+"Mediados de noviembre del año 31",
+2,
+113,
+"Regreso a Betania después de la fiesta de los Tabernáculos",
+0
+],
+[
+4,
+"arimathea",
+"Finales de noviembre del año 31 · sábado",
+28,
+114,
+"En el convite de José de Arimatea. Encuentro con Gamaliel y Nicodemo",
+0
+],
+[
+4,
+"judean countryside",
+"Noviembre del año 31",
+0,
+0,
+"",
+0
+],
+[
+4,
+"jerusalem",
+"Finales de noviembre del año 31 · sábado",
+16,
+115,
+"Curación del niño arrollado por el caballo de Alejandro. Jesús expulsado del Templo",
+0
+],
+[
+4,
+"jerusalem",
+"Principios de diciembre del año 31 · lunes",
+0,
+116,
+"En Getsemaní con Jesús, los discípulos hablan de los paganos y de la \"velada\". El coloquio con Nicodemo",
+0
+],
+[
+4,
+"bethany",
+"Principios de diciembre del año 31 · martes",
+2,
+117,
+"Lázaro pone a disposición de Jesús una casita en el llano de Agua Especiosa",
+0
+],
+[
+4,
+"clear water",
+"Principios de diciembre del año 31 · jueves",
+25,
+118,
+"Comienzo de vida común en Agua Especiosa. Discurso de apertura",
+0
+],
+[
+4,
+"clear water",
+"Principios de diciembre del año 31 · viernes",
+0,
+119,
+"Los discursos en Agua Especiosa: Yo soy el Señor tu Dios. Jesús bautiza como Juan",
+0
+],
+[
+4,
+"clear water",
+"Principios de diciembre del año 31 · sábado",
+0,
+120,
+"Los discursos en Agua Especiosa: Yo soy el Señor tu Dios. Jesús bautiza como Juan",
+0
+],
+[
+4,
+"clear water",
+"Principios de diciembre del año 31 · lunes",
+0,
+121,
+"Los discursos en Agua Especiosa: No profieras en vano mi Nombre. La visita de Manahén",
+0
+],
+[
+4,
+"clear water",
+"Principios de diciembre del año 31 · martes",
+0,
+122,
+"Los discursos en Agua Especiosa: Honra a tu padre y a tu madre. Curación de un deficiente mental",
+0
+],
+[
+4,
+"clear water",
+"Principios de diciembre del año 31 · miércoles",
+0,
+123,
+"Los discursos en Agua Especiosa: No fornicarás. La afrenta de cinco hombres notables",
+0
+],
+[
+4,
+"clear water",
+"Mediados de diciembre del año 31 · jueves",
+0,
+124,
+"Se da alojamiento a la \"velada\" en la casita de Agua Especiosa",
+0
+],
+[
+4,
+"clear water",
+"Mediados de diciembre del año 31 · domingo",
+0,
+125,
+"Los discursos en Agua Especiosa: Santifica las fiestas. El niño de las piernas fracturadas",
+0
+],
+[
+4,
+"clear water",
+"Mediados de diciembre del año 31 · lunes",
+0,
+126,
+"Los discursos en Agua Especiosa: No matarás. Muerte de Doras",
+0
+],
+[
+4,
+"clear water",
+"Mediados de diciembre del año 31 · martes",
+0,
+127,
+"Los discursos en Agua Especiosa: No tentarás al Señor tu Dios. Testimonio de Juan el Bautista",
+0
+],
+[
+4,
+"clear water",
+"Mediados de diciembre del año 31 · miércoles",
+0,
+128,
+"Los discursos en Agua Especiosa: No desearás la mujer del prójimo. El joven lujurioso",
+0
+],
+[
+4,
+"clear water",
+"Mediados de diciembre del año 31 · jueves",
+0,
+129,
+"La curación, en Agua Especiosa, de un romano endemoniado",
+0
+],
+[
+4,
+"clear water",
+"Mediados de diciembre del año 31 · viernes",
+0,
+130,
+"Los discursos en Agua Especiosa: No dirás falsos testimonios. El pequeño Asrael",
+0
+],
+[
+4,
+"clear water",
+"Finales de diciembre del año 31",
+0,
+131,
+"Los discursos en Agua Especiosa: No robes y no desees los bienes ajenos. El pecado de Herodes",
+0
+],
+[
+4,
+"clear water",
+"Finales de diciembre del año 31",
+0,
+132,
+"Discurso de conclusión, en Agua Especiosa, antes de la fiesta de la Purificación",
+0
+],
+[
+4,
+"bethany",
+"Finales de diciembre del año 31 · miércoles",
+0,
+133,
+"El trabajo oculto de Andrés. Una carta a Jesús de su Madre. Jesús debe dejar Agua Especiosa",
+0
+],
+[
+4,
+"doco",
+"Finales de diciembre del año 31 · jueves",
+10,
+134,
+"La curación de Jerusa en Doco",
+0
+],
+[
+4,
+"bethany",
+"Finales de diciembre del año 31 · viernes",
+15,
+135,
+"Llegada a Betania. La Magdalena escucha el discurso de Jesús",
+0
+],
+[
+4,
+"bethany",
+"Mediados de enero del año 32",
+0,
+136,
+"En la fiesta de las Encenias, en casa de Lázaro, se hace memoria del nacimiento de Jesús",
+0
+],
+[
+4,
+"clear water",
+"Mediados de enero del año 32",
+25,
+137,
+"Jesús regresa a Agua Especiosa, pero debe abandonar el lugar",
+0
+],
+[
+4,
+"galilee",
+"Mediados de enero del año 32",
+0,
+138,
+"Despedida del encargado de Agua Especiosa, y del arquisinagogo Timoneo, que se hace discípulo",
+0
+],
+[
+4,
+"emmaus",
+"Mediados de enero del año 32",
+20,
+139,
+"En los montes de las cercanías de Emaús. El carácter de Judas Iscariote y las cualidades de los buenos",
+0
+],
+[
+4,
+"emmaus",
+"Mediados de enero del año 32",
+5,
+140,
+"En Emaús, en casa del arquisinagogo Cleofás. Un caso de incesto. Fin del primer año",
+0
+],
+[
+4,
+"arimathea",
+"Mediados de enero del año 32",
+2,
+141,
+"Yendo hacia Arimatea con los discípulos y con José de Emaús.",
+0
+],
+[
+4,
+"samaria",
+"Mediados de enero del año 32",
+0,
+142,
+"Con los doce hacia Samaria",
+0
+],
+[
+4,
+"sychar",
+"Mediados de enero del año 32",
+25,
+143,
+"La samaritana Fotinai",
+0
+],
+[
+4,
+"sychar",
+"Mediados de enero del año 32",
+0,
+144,
+"Los samaritanos invitan a Jesús a Sicar",
+0
+],
+[
+4,
+"sychar",
+"Mediados de enero del año 32",
+0,
+145,
+"El primer día en Sicar",
+0
+],
+[
+4,
+"sychar",
+"Finales de enero del año 32",
+0,
+146,
+"El segundo día en Sicar. Jesús se despide de los samaritanos",
+0
+],
+[
+4,
+"sychar",
+"Finales de enero del año 32",
+0,
+147,
+"Curación de una mujer de Sicar y conversión de Fotinai",
+0
+],
+[
+4,
+"enon",
+"Finales de enero del año 32",
+25,
+148,
+"Jesús visita a Juan el Bautista en las cercanías de Enón",
+0
+],
+[
+4,
+"nazareth",
+"Finales de enero del año 32",
+0,
+149,
+"La visita a Juan el Bautista, motivo de instrucción a los apóstoles",
+0
+],
+[
+5,
+"nazareth",
+"Finales de enero del año 32",
+45,
+150,
+"Jesús en Nazaret, en casa de su Madre. Ella deberá seguir a su Hijo",
+0
+],
+[
+5,
+"cana",
+"Finales de enero del año 32",
+10,
+151,
+"En Caná en casa de Susana, que se hará discípula. El oficial del rey.",
+0
+],
+[
+5,
+"bethsaida",
+"Finales de enero del año 32",
+25,
+152,
+"María Salomé es recibida como discípula.",
+0
+],
+[
+5,
+"bethsaida",
+"Finales de enero del año 32",
+0,
+153,
+"Las mujeres allegadas a los discípulos al servicio de Jesús.",
+0
+],
+[
+5,
+"caesarea",
+"Principios de febrero del año 32",
+60,
+154,
+"Jesús en Cesárea Marítima habla a los galeotes. Las fatigas del apostolado",
+0
+],
+[
+5,
+"caesarea",
+"Principios de febrero del año 32",
+0,
+155,
+"Curación de la niña romana en Cesárea",
+0
+],
+[
+5,
+"nazareth",
+"Principios de febrero del año 32",
+30,
+156,
+"Analía, la primera de las vírgenes consagradas",
+0
+],
+[
+5,
+"nazareth",
+"Principios de febrero del año 32",
+0,
+157,
+"Instrucciones a las discípulas en Nazaret",
+0
+],
+[
+5,
+"sea of galilee",
+"Febrero del año 32",
+25,
+0,
+"",
+0
+],
+[
+5,
+"tiberias",
+"Principios de febrero del año 32",
+7,
+158,
+"En el lago de Genesaret con Juana de Cusa.",
+1
+],
+[
+5,
+"gherghesa",
+"Principios de febrero del año 32",
+8,
+159,
+"Discurso en Guerguesa. La respuesta sobre el ayuno a los discípulos de Juan el Bautista.",
+1
+],
+[
+5,
+"merom",
+"Febrero del año 32",
+18,
+0,
+"",
+0
+],
+[
+5,
+"giscala",
+"Mediados de febrero del año 32",
+10,
+160,
+"Encuentro con Gamaliel en el camino de Neftalí a Yiscala.",
+0
+],
+[
+5,
+"capernaum",
+"Mediados de febrero del año 32",
+15,
+161,
+"Curación del nieto del fariseo Elí de Cafarnaúm",
+0
+],
+[
+5,
+"capernaum",
+"Mediados de febrero del año 32",
+0,
+162,
+"Las conversiones humanas del fariseo Elí y de Simón de Alfeo",
+0
+],
+[
+5,
+"capernaum",
+"Mediados de febrero del año 32",
+0,
+163,
+"Comiendo en casa del fariseo Elí de Cafarnaúm",
+0
+],
+[
+5,
+"tiberias",
+"Febrero del año 32",
+8,
+0,
+"",
+0
+],
+[
+5,
+"magdala",
+"Finales de febrero del año 32",
+3,
+164,
+"El retiro en el monte para la elección de los Apóstoles.",
+0
+],
+[
+5,
+"magdala",
+"Finales de febrero del año 32 · domingo",
+0,
+165,
+"Elección de los doce Apóstoles",
+0
+],
+[
+5,
+"magdala",
+"Finales de febrero del año 32 · domingo",
+0,
+166,
+"Los milagros después de la elección apostólica. Simón el Zelote y Juan predican por primera vez",
+0
+],
+[
+5,
+"tiberias",
+"Finales de febrero del año 32 · domingo",
+3,
+167,
+"Jesús concurre con las romanas en el jardín de Juana de Cusa.",
+0
+],
+[
+5,
+"nazareth",
+"Finales de febrero del año 32",
+0,
+168,
+"Áglae en casa de María, en Nazaret",
+0
+],
+[
+5,
+"arbela",
+"Finales de febrero del año 32 · domingo",
+5,
+169,
+"Primer discurso de la Montaña: la misión de los apóstoles y de los discípulos",
+0
+],
+[
+5,
+"arbela",
+"Principios de marzo del año 32 · lunes",
+0,
+170,
+"Segundo discurso de la Montaña: el don de la Gracia; las bienaventuranzas",
+0
+],
+[
+5,
+"arbela",
+"Principios de marzo del año 32 · martes",
+0,
+171,
+"Tercer discurso de la Montaña: los consejos evangélicos que perfeccionan la Ley",
+0
+],
+[
+5,
+"arbela",
+"Principios de marzo del año 32 · miércoles",
+0,
+172,
+"Cuarto discurso de la Montaña: el juramento, la oración, el ayuno. El anciano Ismael y Sara",
+0
+],
+[
+5,
+"arbela",
+"Principios de marzo del año 32 · jueves",
+0,
+173,
+"Quinto discurso de la Montaña: el uso de las riquezas; la limosna; la confianza en Dios.",
+0
+],
+[
+5,
+"arbela",
+"Principios de marzo del año 32 · viernes",
+0,
+174,
+"Sexto discurso de la Montaña: la elección entre el Bien y el Mal; el adulterio; el divorcio. La llegada",
+0
+],
+[
+5,
+"arbela",
+"Principios de marzo del año 32 · viernes",
+0,
+175,
+"El leproso curado al pie del Monte. Generosidad del escriba Juan",
+0
+],
+[
+5,
+"arbela",
+"Principios de marzo del año 32 · sábado",
+0,
+176,
+"Durante el descanso sabático, el último discurso de la Montaña: amar la voluntad de Dios",
+0
+],
+[
+5,
+"capernaum",
+"Principios de marzo del año 32",
+7,
+177,
+"La curación del siervo del centurión",
+0
+],
+[
+5,
+"capernaum",
+"Mediados de marzo del año 32",
+0,
+178,
+"Tres hombres que quieren seguir a Jesús",
+0
+],
+[
+5,
+"bethsaida",
+"Mediados de marzo del año 32",
+3,
+179,
+"La parábola del sembrador. En Corazín con el nuevo discípulo Elías",
+1
+],
+[
+5,
+"korazim",
+"Mediados de marzo del año 32",
+4,
+179,
+"La parábola del sembrador. En Corazín con el nuevo discípulo Elías",
+0
+],
+[
+5,
+"bethsaida",
+"Mediados de marzo del año 32",
+3,
+180,
+"Controversia en la cocina de Pedro en Betsaida. Explicación de la parábola del sembrador. La noticia de la",
+1
+],
+[
+5,
+"capernaum",
+"Marzo del año 32",
+5,
+0,
+"",
+1
+],
+[
+5,
+"korazim",
+"Mediados de marzo del año 32",
+2,
+181,
+"La parábola del trigo y la cizaña",
+0
+],
+[
+5,
+"magdala",
+"Mediados de marzo del año 32",
+8,
+182,
+"Palabras a algunos pastores con el huerfanito Zacarías",
+0
+],
+[
+5,
+"magdala",
+"Mediados de marzo del año 32",
+0,
+183,
+"La curación de un hombre herido en casa de María de Magdala",
+0
+],
+[
+5,
+"magdala",
+"Mediados de marzo del año 32",
+0,
+184,
+"El pequeño Benjamín de Magdala y dos parábolas sobre el Reino de los Cielos",
+0
+],
+[
+5,
+"sea of galilee",
+"Mediados de marzo del año 32",
+3,
+185,
+"La tempestad calmada. Una lección sobre sus preliminares",
+1
+],
+[
+5,
+"sea of galilee",
+"Marzo del año 32",
+0,
+0,
+"",
+0
+],
+[
+5,
+"capernaum",
+"Principios de abril del año 32 · jueves",
+9,
+186,
+"Los dos endemoniados de la región de los Gerasenos",
+1
+],
+[
+5,
+"tarichea",
+"Abril del año 32",
+8,
+0,
+"",
+1
+],
+[
+5,
+"mt tabor",
+"Principios de abril del año 32 · jueves",
+0,
+187,
+"Hacia Jerusalén para la Pascua. De Tariquea al monte Tabor",
+0
+],
+[
+5,
+"mt tabor",
+"Abril del año 32",
+0,
+0,
+"",
+0
+],
+[
+5,
+"mt tabor",
+"Principios de abril del año 32 · viernes",
+0,
+188,
+"En Endor. La gruta de la maga y el encuentro con Félix, llamado luego Juan",
+0
+],
+[
+5,
+"nain",
+"Principios de abril del año 32 · viernes",
+2,
+189,
+"En Naím. Resurrección del hijo de una viuda",
+0
+],
+[
+5,
+"esdraelon",
+"Principios de abril del año 32 · viernes",
+12,
+190,
+"La llegada a la llanura de Esdrelón durante la puesta del sol del viernes",
+0
+],
+[
+5,
+"esdraelon",
+"Principios de abril del año 32 · sábado",
+0,
+191,
+"El sábado en Esdrelón. El pequeño Yabés. Parábola del rico Epulón",
+0
+],
+[
+5,
+"megiddo",
+"Principios de abril del año 32 · lunes",
+8,
+192,
+"Una predicción a Santiago de Alfeo. La Regada a Engannim tras un alto en Meguido",
+0
+],
+[
+5,
+"engannim",
+"Principios de abril del año 32 · lunes",
+11,
+192,
+"Una predicción a Santiago de Alfeo. La Regada a Engannim tras un alto en Meguido",
+0
+],
+[
+5,
+"shechem",
+"Principios de abril del año 32 · martes a miércoles",
+22,
+193,
+"Llegada a Siquem tras dos días de camino",
+0
+],
+[
+6,
+"jerusalem",
+"Abril del año 32",
+0,
+0,
+"",
+0
+],
+[
+6,
+"beeroth",
+"Principios de abril del año 32 · jueves",
+25,
+194,
+"La revelación al pequeño Yabés durante el camino de Siquem a Berot",
+0
+],
+[
+6,
+"jerusalem",
+"Principios de abril del año 32 · viernes",
+0,
+195,
+"Una lección de Juan de Endor a Judas Iscariote. Llegada a Jerusalén",
+0
+],
+[
+6,
+"jerusalem",
+"Principios de abril del año 32 · sábado",
+8,
+196,
+"El sábado en Getsemaní. Jesús habla de su Madre y de los amores de distintas potencias",
+0
+],
+[
+6,
+"jerusalem",
+"Principios de abril del año 32 · sábado",
+0,
+197,
+"En el Templo con José de Arimatea. La hora del incienso",
+0
+],
+[
+6,
+"bethany",
+"Principios de abril del año 32 · sábado",
+2,
+198,
+"El encuentro con la Madre en Betania. Yabés cambia su nombre por el de Margziam",
+0
+],
+[
+6,
+"jerusalem",
+"Mediados de abril del año 32 · domingo",
+2,
+199,
+"Donde los leprosos de Siloán y Ben Hinnom. Pedro obtiene a Margziam por medio de María.",
+0
+],
+[
+6,
+"bethany",
+"Mediados de abril del año 32 · lunes",
+2,
+200,
+"Coloquio de Áglae con el Salvador",
+0
+],
+[
+6,
+"jerusalem",
+"Mediados de abril del año 32 · miércoles",
+2,
+201,
+"El examen de la mayoría de edad de Margziam",
+0
+],
+[
+6,
+"jerusalem",
+"Mediados de abril del año 32 · jueves",
+0,
+202,
+"Judas Iscariote es reprendido. Llegada de los campesinos de Jocanán",
+0
+],
+[
+6,
+"jerusalem",
+"Mediados de abril del año 32 · jueves",
+0,
+203,
+"El Padrenuestro",
+0
+],
+[
+6,
+"bethany",
+"Abril del año 32",
+2,
+0,
+"",
+0
+],
+[
+6,
+"bethany",
+"Mediados de abril del año 32 · sábado",
+0,
+204,
+"La fe y el alma explicadas a los paganos con la parábola de los templos",
+0
+],
+[
+6,
+"bethany",
+"Mediados de abril del año 32",
+0,
+205,
+"La parábola del hijo pródigo",
+0
+],
+[
+6,
+"bethany",
+"Mediados de abril del año 32",
+0,
+206,
+"Con dos parábolas sobre el Reino de los Cielos, termina la permanencia en Betania.",
+0
+],
+[
+6,
+"bethlehem",
+"Mediados de abril del año 32",
+9,
+207,
+"En la gruta de Belén la Madre evoca el nacimiento de Jesús",
+0
+],
+[
+6,
+"jala",
+"Mediados de abril del año 32",
+1,
+0,
+"",
+0
+],
+[
+6,
+"bethzur",
+"Mediados de abril del año 32",
+11,
+208,
+"María Santísima ve de nuevo al pastor Elías y con Jesús va a Betsur donde Elisa",
+0
+],
+[
+6,
+"bethzur",
+"Finales de abril del año 32",
+0,
+209,
+"La fecundidad del dolor, en el discurso de Jesús junto a la casa de Elisa en Betsur",
+0
+],
+[
+6,
+"hebron",
+"Finales de abril del año 32",
+0,
+210,
+"Las inquietudes de Judas Iscariote durante el camino hacia Hebrón",
+0
+],
+[
+6,
+"hebron",
+"Finales de abril del año 32",
+4,
+211,
+"Regreso a Hebrón, patria del Bautista",
+0
+],
+[
+6,
+"jutta",
+"Finales de abril del año 32",
+8,
+212,
+"Una ola de amor a Jesús, que en Yuttá habla desde la casita de Isaac",
+0
+],
+[
+6,
+"kerioth",
+"Principios de mayo del año 32",
+9,
+213,
+"En Keriot una profecía de Jesús y el comienzo de la predicación apostólica",
+0
+],
+[
+6,
+"kerioth",
+"Principios de mayo del año 32",
+0,
+214,
+"La madre de Judas abre su corazón a María Stma., que ha llegado a Keriot con Simón Zelote",
+0
+],
+[
+6,
+"bethzur",
+"Mayo del año 32",
+18,
+0,
+"",
+0
+],
+[
+6,
+"ashkelon plain",
+"Finales de mayo del año 32 · viernes",
+0,
+216,
+"Las infidelidades de los discípulos en la parábola del diente de león",
+0
+],
+[
+6,
+"ashkelon plain",
+"Finales de mayo del año 32 · sábado",
+15,
+217,
+"Las espigas arrancadas un sábado",
+0
+],
+[
+6,
+"ashkelon",
+"Finales de mayo del año 32 · domingo",
+15,
+218,
+"La llegada a Ascalón, ciudad filistea",
+0
+],
+[
+6,
+"ashkelon",
+"Finales de mayo del año 32 · domingo",
+0,
+219,
+"Los distintos frutos de la predicación de los apóstoles en la ciudad de Ascalón",
+0
+],
+[
+6,
+"magdalgad",
+"Finales de mayo del año 32 · lunes",
+3,
+220,
+"Los idólatras de Magdalgad y la curación milagrosa de la parturienta",
+0
+],
+[
+6,
+"azotus",
+"Mayo del año 32",
+10,
+0,
+"",
+0
+],
+[
+6,
+"jabneel",
+"Finales de mayo del año 32 · martes",
+20,
+221,
+"Los prejuicios de los apóstoles respecto a los paganos y la parábola del hijo deforme",
+0
+],
+[
+6,
+"ekron",
+"Mayo del año 32",
+4,
+0,
+"",
+0
+],
+[
+6,
+"modin",
+"Finales de mayo del año 32",
+17,
+222,
+"Un secreto del apóstol Juan",
+0
+],
+[
+6,
+"bether",
+"Finales de mayo del año 32",
+0,
+223,
+"Una caravana nupcial se libra del asalto de bandidos después de un discurso de Jesús",
+0
+],
+[
+6,
+"bether",
+"Principios de junio del año 32",
+22,
+224,
+"En el apóstol Juan actúa el Amor. Llegada a Béter",
+0
+],
+[
+6,
+"jerusalem",
+"Principios de junio del año 32 · sábado",
+8,
+225,
+"El paralítico de la piscina de Betseida y la disputa sobre las obras del Hijo de Dios",
+0
+],
+[
+6,
+"bethany",
+"Principios de junio del año 32",
+2,
+226,
+"Un signo bueno por parte de María de Magdala. Muerte del anciano Ismael",
+0
+],
+[
+7,
+"nazareth",
+"Junio del año 32",
+75,
+0,
+"",
+0
+],
+[
+7,
+"cana",
+"Junio del año 32",
+4,
+0,
+"",
+0
+],
+[
+7,
+"tiberias",
+"Junio del año 32",
+17,
+0,
+"",
+0
+],
+[
+7,
+"bethsaida",
+"Mediados de junio del año 32",
+10,
+228,
+"Margziam confiado a Porfiria",
+1
+],
+[
+7,
+"bethsaida",
+"Mediados de junio del año 32",
+0,
+229,
+"Discurso a los habitantes de Betsaida sobre el gesto de caridad de Simón Pedro",
+0
+],
+[
+7,
+"capernaum",
+"Mediados de junio del año 32",
+3,
+230,
+"Curación de la hemorroisa y resurrección de la hija de Jairo",
+0
+],
+[
+7,
+"capernaum",
+"Mediados de junio del año 32",
+0,
+231,
+"En Cafarnaúm, Jesús y Marta hablan de la crisis que atormenta a María de Magdala",
+0
+],
+[
+7,
+"capernaum",
+"Mediados de junio del año 32",
+0,
+232,
+"Curación de dos ciegos y de un mudo endemoniado",
+0
+],
+[
+7,
+"capernaum",
+"Mediados de junio del año 32",
+0,
+233,
+"La parábola de la oveja perdida. María de Magdala también la oye",
+0
+],
+[
+7,
+"capernaum",
+"Junio del año 32",
+0,
+234,
+"Comentario de tres episodios sobre la conversión de María de Magdala",
+0
+],
+[
+7,
+"capernaum",
+"Mediados de junio del año 32",
+0,
+235,
+"Marta ha recibido de su hermana María la certidumbre de la conversión",
+0
+],
+[
+7,
+"tarichea",
+"Junio del año 32",
+12,
+0,
+"",
+1
+],
+[
+7,
+"nain",
+"Junio del año 32",
+18,
+0,
+"",
+0
+],
+[
+7,
+"nain",
+"Mediados de junio del año 32",
+0,
+236,
+"La cena en casa de Simón el fariseo y la absolución a María de Magdala",
+0
+],
+[
+7,
+"decapolis",
+"Junio del año 32",
+15,
+0,
+"",
+0
+],
+[
+7,
+"merom",
+"Finales de junio del año 32",
+35,
+237,
+"La petición de obreros para la mies, y la parábola del tesoro escondido en el campo. Marta todavía teme",
+0
+],
+[
+7,
+"capernaum",
+"Finales de junio del año 32",
+11,
+237,
+"La petición de obreros para la mies, y la parábola del tesoro escondido en el campo. Marta todavía teme",
+0
+],
+[
+7,
+"capernaum",
+"Finales de junio del año 32",
+0,
+238,
+"Llegada de María Stma. con María de Magdala a Cafarnaúm en medio de una tempestad",
+0
+],
+[
+7,
+"capernaum",
+"Finales de junio del año 32",
+0,
+239,
+"La parábola de los peces, la parábola de la perla, y del tesoro de las enseñanzas viejas y nuevas",
+0
+],
+[
+7,
+"bethsaida",
+"Finales de junio del año 32",
+3,
+240,
+"En Betsaida, en la casa de Simón, con Porfiria y Margziam, el cual enseña a la Magdalena la oración de Jesús",
+1
+],
+[
+7,
+"magdala",
+"Finales de junio del año 32",
+8,
+241,
+"Vocación de la hija de Felipe. Llegada a Magdala y parábola de la dracma perdida",
+1
+],
+[
+7,
+"capernaum",
+"Junio del año 32",
+3,
+0,
+"",
+1
+],
+[
+7,
+"tiberias",
+"Finales de junio del año 32",
+3,
+242,
+"Jesús habla sobre la Verdad al romano Crispo, el único que lo escucha de Tiberíades",
+1
+],
+[
+7,
+"cana",
+"Finales de junio del año 32",
+17,
+243,
+"En Caná en la casa de Susana. Las expresiones, los gestos y la voz de Jesús. Debate de los apóstoles acerca",
+0
+],
+[
+7,
+"nazareth",
+"Principios de julio del año 32 · viernes",
+0,
+244,
+"Juan repite un discurso de Jesús sobre la Creación y sobre los pueblos que esperan la Luz",
+0
+],
+[
+7,
+"nazareth",
+"Principios de julio del año 32 · viernes",
+4,
+245,
+"Una acusación de los nazarenos a Jesús, rechazada con la parábola del leproso curado",
+0
+],
+[
+7,
+"nazareth",
+"Principios de julio del año 32 · sábado",
+0,
+246,
+"Un apólogo para los habitantes de Nazaret, los cuales permanecen incrédulos",
+0
+],
+[
+7,
+"bethlehem of galilee",
+"Principios de julio del año 32 · domingo",
+0,
+247,
+"María Stma. instruye a la Magdalena en orden a la oración mental",
+0
+],
+[
+7,
+"bethlehem of galilee",
+"Principios de julio del año 32 · domingo",
+7,
+248,
+"En Belén de Galilea. Juicio ante un homicidio y parábola de los bosques petrificados",
+0
+],
+[
+7,
+"sicaminon",
+"Principios de julio del año 32 · lunes",
+0,
+249,
+"María Stma. instruye a Judas Iscariote sobre el deber preeminente de la fidelidad a Dios",
+0
+],
+[
+7,
+"sicaminon",
+"Principios de julio del año 32 · lunes",
+14,
+250,
+"A los discípulos que han venido con Isaac: la parábola del lodo transformado en llama. Juan de Endor es alma víctima",
+0
+],
+[
+7,
+"tyre",
+"Principios de julio del año 32 · jueves",
+35,
+251,
+"A los pescadores siro-fenicios: la parábola del minero perseverante. Hermasteo de Ascalón",
+1
+],
+[
+7,
+"sicaminon",
+"Principios de julio del año 32 · jueves",
+35,
+252,
+"El regreso de Tiro. Milagros. Parábola de la vid y el olmo",
+1
+],
+[
+7,
+"dora",
+"Mediados de julio del año 32",
+22,
+253,
+"María Santísima devela a María de Alfeo el sentido de la maternidad espiritualizada. La Magdalena debe",
+0
+],
+[
+7,
+"caesarea",
+"Mediados de julio del año 32",
+8,
+254,
+"El encuentro con Síntica, esclava griega y la llegada a Cesárea Marítima",
+0
+],
+[
+7,
+"caesarea",
+"Mediados de julio del año 32",
+0,
+255,
+"Despedida de las hermanas Marta y María, que parten con Síntica. Una lección a Judas Iscariote",
+0
+],
+[
+7,
+"caesarea",
+"Mediados de julio del año 32",
+0,
+256,
+"Parábola sobre la virtud de la esperanza, que sujeta la fe y la caridad",
+0
+],
+[
+7,
+"mt carmel",
+"Mediados de julio del año 32 · viernes",
+28,
+257,
+"Retiro de Jesús y Santiago de Alfeo en el monte Carmelo",
+0
+],
+[
+7,
+"mt carmel",
+"Mediados de julio del año 32 · sábado",
+0,
+258,
+"Jesús revela a Santiago de Alfeo cuál será su misión de apóstol",
+0
+],
+[
+7,
+"mt carmel",
+"Mediados de julio del año 32 · domingo",
+0,
+259,
+"Lección sobre la Iglesia y los Sacramentos a Santiago de Alfeo, que obra un milagro",
+0
+],
+[
+7,
+"esdraelon",
+"Mediados de julio del año 32 · domingo",
+10,
+260,
+"Dos parábolas de Pedro para los campesinos de la llanura de Esdrelón",
+0
+],
+[
+7,
+"esdraelon",
+"Mediados de julio del año 32 · lunes",
+0,
+261,
+"Exhortación a los campesinos de Doras, que ahora lo son de Jocanán",
+0
+],
+[
+7,
+"esdraelon",
+"Mediados de julio del año 32 · lunes",
+0,
+262,
+"Una hija no querida y el papel de la mujer redimida. El Iscariote solicita la ayuda de María",
+0
+],
+[
+7,
+"tiberias",
+"Julio del año 32",
+16,
+0,
+"",
+0
+],
+[
+7,
+"bethsaida",
+"Julio del año 32",
+3,
+0,
+"",
+1
+],
+[
+7,
+"capernaum",
+"Finales de julio del año 32 · sábado",
+3,
+263,
+"Curación del hombre del brazo atrofiado",
+1
+],
+[
+7,
+"nazareth",
+"Mediados de agosto del año 32",
+0,
+264,
+"Una jornada de Judas Iscariote en Nazaret",
+0
+],
+[
+7,
+"capernaum",
+"Mediados de agosto del año 32",
+0,
+265,
+"Instrucciones a los doce apóstoles al comienzo de su ministerio",
+0
+],
+[
+7,
+"capernaum",
+"Finales de agosto del año 32 · domingo",
+0,
+266,
+"Los discípulos del Bautista quieren verificar que Jesús es el Mesías. Testimonio sobre el Precursor e",
+0
+],
+[
+7,
+"machaerus",
+"Finales de agosto del año 32",
+0,
+0,
+"",
+0
+],
+[
+7,
+"korazim",
+"Finales de agosto del año 32 · lunes",
+1,
+267,
+"Jesús, carpintero en Corazín",
+0
+],
+[
+7,
+"capernaum",
+"Finales de agosto del año 32 · viernes",
+1,
+268,
+"Lección sobre la caridad con la parábola de los titos. El yugo de Jesús es ligero",
+0
+],
+[
+7,
+"capernaum",
+"Principios de septiembre del año 32 · viernes",
+0,
+269,
+"La disputa con escribas y fariseos en Cafarnaúm. Llegada de la Madre y de los hermanos",
+0
+],
+[
+7,
+"korazim",
+"Septiembre del año 32",
+1,
+0,
+"",
+0
+],
+[
+7,
+"capernaum",
+"Principios de septiembre del año 32 · viernes",
+1,
+270,
+"Jesús recibe la noticia de que han matado a Juan el Bautista",
+0
+],
+[
+7,
+"tarichea",
+"Principios de septiembre del año 32 · viernes",
+0,
+271,
+"Salida para Tariquea con los apóstoles, que han regresado a Cafarnaúm",
+0
+],
+[
+7,
+"tarichea",
+"Mediados de septiembre del año 32",
+14,
+272,
+"Reencarnación y vida eterna en el diálogo con un escriba",
+1
+],
+[
+7,
+"tarichea",
+"Mediados de septiembre del año 32",
+0,
+273,
+"La primera multiplicación de los panes",
+0
+],
+[
+7,
+"sea of galilee",
+"Mediados de septiembre del año 32",
+0,
+274,
+"Jesús camina sobre las aguas. Su prontitud en socorrer a quien le invoca",
+1
+],
+[
+7,
+"korazim plain",
+"Finales de septiembre del año 32",
+20,
+275,
+"Cuatro nuevos discípulos. Jesús habla sobre las obras de misericordia corporal y espiritual",
+0
+],
+[
+7,
+"tiberias",
+"Finales de septiembre del año 32",
+3,
+276,
+"El hombre avaro y la parábola del rico necio. Las inquietudes y la vigilancia en los siervos de Dios",
+0
+],
+[
+7,
+"magdala",
+"Finales de septiembre del año 32",
+3,
+277,
+"En Magdala, en los jardines de María. El amor y la corrección entre hermanos",
+0
+],
+[
+7,
+"magdala",
+"Finales de septiembre del año 32",
+0,
+278,
+"El perdón y la parábola del siervo inicuo. La misión confiada a setenta y dos discípulos",
+0
+],
+[
+8,
+"jerusalem",
+"Principios de octubre del año 32",
+85,
+279,
+"Encuentro con Lázaro en el campo de los Galileos",
+0
+],
+[
+8,
+"jerusalem",
+"Principios de octubre del año 32",
+0,
+280,
+"El regreso de los setenta y dos. Profecía sobre los místicos futuros",
+0
+],
+[
+8,
+"jerusalem",
+"Principios de octubre del año 32",
+0,
+281,
+"En el Templo durante la fiesta de los Tabernáculos. Las condiciones para seguir a Jesús. La parábola de los",
+0
+],
+[
+8,
+"bethany",
+"Mediados de octubre del año 32",
+2,
+282,
+"La delación al Sanedrín respecto a Hermasteo, Juan de Endor y Síntica",
+0
+],
+[
+8,
+"bethany",
+"Mediados de octubre del año 32",
+0,
+283,
+"Síntica habla de su encuentro con la Verdad",
+0
+],
+[
+8,
+"bethany",
+"Finales de octubre del año 32",
+0,
+284,
+"La casita donada por Salomón. Cuatro apóstoles se quedarán en Judea",
+0
+],
+[
+8,
+"bethany",
+"Finales de octubre del año 32",
+0,
+285,
+"Lázaro ofrece un refugio para Juan de Endor y Síntica. Viaje feliz hacia Jericó sin Judas Iscariote",
+0
+],
+[
+8,
+"jericho",
+"Octubre del año 32",
+12,
+0,
+"",
+0
+],
+[
+8,
+"gerasa",
+"Finales de octubre del año 32 · jueves",
+22,
+287,
+"De Ramot a Gerasa con la caravana del mercader",
+0
+],
+[
+8,
+"gerasa",
+"Finales de octubre del año 32 · viernes",
+0,
+288,
+"Palabras a los habitantes de Gerasa y alabanza de una mujer a la Madre de Jesús",
+0
+],
+[
+8,
+"gerasa",
+"Finales de octubre del año 32 · sábado",
+0,
+289,
+"El sábado a Gerasa. Asueto de Margziam. La pregunta de Síntica sobre la salvación de los paganos.",
+0
+],
+[
+8,
+"cameleer",
+"Finales de octubre del año 32 · domingo",
+19,
+290,
+"El hombre de los ojos ulcerosos. El alto en la \"fuente del Camellero\". Más sobre el recuerdo de las almas",
+0
+],
+[
+8,
+"bozrah",
+"Principios de noviembre del año 32 · lunes",
+0,
+291,
+"Margziam descubre por qué Jesús ora todos los días a la hora nona",
+0
+],
+[
+8,
+"bozrah",
+"Principios de noviembre del año 32 · martes",
+20,
+292,
+"Insidia de escribas y fariseos en Bosrá",
+0
+],
+[
+8,
+"bozrah",
+"Principios de noviembre del año 32 · martes",
+0,
+293,
+"Palabras de Jesús y milagros en Bosrá, después de la irrupción de dos fariseos. El don de la fe a Alejandro Misax",
+0
+],
+[
+8,
+"arbela",
+"Principios de noviembre del año 32 · miércoles",
+0,
+294,
+"La rica dádiva del mercader. Adiós a la Madre y a las discípulas.",
+0
+],
+[
+8,
+"arbela",
+"Principios de noviembre del año 32 · miércoles a jueves",
+36,
+295,
+"Palabras y milagros en Arbela, ya evangelizada por Felipe de Jacob",
+0
+],
+[
+8,
+"aera",
+"Principios de noviembre del año 32 · martes",
+44,
+296,
+"Llegada a Aera bajo la lluvia. Curación de los enfermos que allí esperan",
+0
+],
+[
+8,
+"aera",
+"Principios de noviembre del año 32",
+0,
+297,
+"Con el sermón de Aera termina el segundo gran viaje apostólico",
+0
+],
+[
+9,
+"lake merom",
+"Mediados de noviembre del año 32",
+34,
+298,
+"La ayuda prestada a los huerfanitos María y Matías y las enseñanzas que de ella se deducen",
+0
+],
+[
+9,
+"bethsaida",
+"Noviembre del año 32",
+8,
+0,
+"",
+0
+],
+[
+9,
+"tiberias",
+"Mediados de noviembre del año 32",
+11,
+299,
+"A Juana de Cusa le son confiados, para su tutela, los huerfanitos María y Matías",
+1
+],
+[
+9,
+"tarichea",
+"Noviembre del año 32",
+8,
+0,
+"",
+1
+],
+[
+9,
+"nain",
+"Finales de noviembre del año 32",
+18,
+189,
+"En Naím. Resurrección del hijo de una viuda",
+0
+],
+[
+9,
+"endor",
+"Finales de noviembre del año 32",
+2,
+301,
+"Parábola de las frentes destronadas y explicación de la parábola sobre lo no puro.",
+0
+],
+[
+9,
+"tarichea",
+"Finales de noviembre del año 32",
+16,
+302,
+"En Magdala, antes de mandar a todos a sus respectivas familias para las Encenias.",
+0
+],
+[
+9,
+"nazareth",
+"Finales de noviembre del año 32",
+21,
+303,
+"Jesús donde su Madre en Nazaret",
+0
+],
+[
+9,
+"nazareth",
+"Principios de diciembre del año 32",
+0,
+304,
+"Con Juan de Endor, Síntica y Margziam. María es Madre y Maestra.",
+0
+],
+[
+9,
+"nazareth",
+"Principios de diciembre del año 32",
+0,
+305,
+"Jesús consuela a Margziam con la parábola de los pajarillos",
+0
+],
+[
+9,
+"nazareth",
+"Principios de diciembre del año 32",
+0,
+306,
+"También Simón Zelote está en Nazaret. Lección sobre los daños del ocio.",
+0
+],
+[
+9,
+"nazareth",
+"Principios de diciembre del año 32",
+0,
+307,
+"Controversia en la casa de Nazaret acerca de las culpas de los nazarenos. Lección sobre la tendencia al",
+0
+],
+[
+9,
+"nazareth",
+"Principios de diciembre del año 32",
+0,
+308,
+"Curación del hijo de Simón de Alfeo. Margziam es el primero de los niños discípulos",
+0
+],
+[
+9,
+"cana",
+"Principios de diciembre del año 32",
+4,
+309,
+"Sacrificio de Margziam por la curación de una niña. Enmienda de Simón de Alfeo",
+0
+],
+[
+9,
+"nazareth",
+"Mediados de diciembre del año 32",
+4,
+310,
+"Con Pedro, en Nazaret, Jesús organiza la partida de Juan de Endor y Síntica",
+0
+],
+[
+9,
+"nazareth",
+"Mediados de diciembre del año 32",
+0,
+311,
+"La renuncia de Margziam es ocasión de una lección sobre los sacrificios hechos por amor",
+0
+],
+[
+9,
+"nazareth",
+"Finales de diciembre del año 32",
+0,
+312,
+"Jesús comunica a Juan de Endor la decisión de enviarle a Antioquía. Final del segundo año",
+0
+],
+[
+9,
+"nazareth",
+"Finales de diciembre del año 32",
+0,
+313,
+"Preparativos para salir de Nazaret, después de la visita de Simón de Alfeo con su familia. Durante el tercer",
+0
+],
+[
+9,
+"nazareth",
+"Finales de diciembre del año 32",
+0,
+314,
+"La cena en la casa de Nazaret. La dolorosa partida",
+0
+],
+[
+9,
+"jiphthahel",
+"Finales de diciembre del año 32",
+15,
+315,
+"El viaje hacia Yiftael y las reflexiones de Juan de Endor",
+0
+],
+[
+9,
+"jiphthahel",
+"Finales de diciembre del año 32",
+0,
+316,
+"Jesús se despide de Juan de Endor y de Síntica",
+0
+],
+[
+9,
+"jiphthahel",
+"Finales de diciembre del año 32",
+0,
+317,
+"La oración de Jesús por la salvación de Judas Iscariote",
+0
+],
+[
+9,
+"ptolemais",
+"Finales de diciembre del año 32",
+30,
+318,
+"En barca de Tolemaida a Tiro",
+0
+],
+[
+9,
+"tyre",
+"Finales de diciembre del año 32",
+0,
+319,
+"Partida de Tiro en la nave del cretense Nicomedes",
+0
+],
+[
+9,
+"seleucia",
+"Principios de enero del año 33",
+0,
+320,
+"Prodigios en la nave en medio de una tempestad",
+0
+],
+[
+9,
+"seleucia",
+"Principios de enero del año 33",
+230,
+321,
+"Arribo a Seleucia. Se despiden de Nicomedes",
+0
+],
+[
+9,
+"seleucia",
+"Principios de enero del año 33",
+30,
+322,
+"Partida de Seleucia en un carro y llegada a Antioquía.",
+0
+],
+[
+9,
+"antigonea",
+"Principios de enero del año 33",
+0,
+323,
+"La visita a Antigonio",
+0
+],
+[
+9,
+"antioch",
+"Principios de enero del año 33",
+0,
+324,
+"Las pláticas de los ocho apóstoles antes de dejar Antioquía. El adiós a Juan de Endor y a Síntica",
+0
+],
+[
+9,
+"ptolemais",
+"Mediados de enero del año 33",
+55,
+0,
+"",
+0
+],
+[
+9,
+"achzib",
+"Mediados de enero del año 33",
+10,
+325,
+"Los ocho apóstoles se reúnen con Jesús cerca de Akcib.",
+0
+],
+[
+9,
+"achzib",
+"Mediados de enero del año 33",
+17,
+325,
+"Los ocho apóstoles se reúnen con Jesús cerca de Akcib.",
+0
+],
+[
+9,
+"achzib",
+"Mediados de enero del año 33",
+0,
+326,
+"Un alto en Akcib",
+0
+],
+[
+9,
+"giscala",
+"Mediados de enero del año 33 · lunes",
+0,
+327,
+"En los confines de Fenicia. Palabras de Jesús sobre la igualdad de los pueblos. Parábola de la levadura",
+0
+],
+[
+9,
+"alexandroscene",
+"Mediados de enero del año 33 · lunes",
+12,
+328,
+"En Alejandrocena donde los hermanos de Hermiona",
+0
+],
+[
+9,
+"alexandroscene",
+"Mediados de enero del año 33 · martes",
+0,
+329,
+"En el mercado de Alejandrocena. La parábola de los obreros de la viña.",
+0
+],
+[
+9,
+"kedesh",
+"Mediados de enero del año 33 · jueves",
+24,
+330,
+"Santiago y Juan \"hijos del trueno\". Hacia Akcib con el pastor Anás.",
+0
+],
+[
+9,
+"achzib",
+"Finales de enero del año 33 · viernes",
+0,
+331,
+"La fe de la mujer cananea y otras conquistas. Llegada a Akcib.",
+0
+],
+[
+9,
+"achzib",
+"Finales de enero del año 33 · domingo",
+30,
+332,
+"La sufrida separación de Bartolomé, que con Felipe vuelve a unirse al Maestro.",
+0
+],
+[
+9,
+"ptolemais",
+"Finales de enero del año 33",
+10,
+333,
+"Con los diez apóstoles hacia Sicaminón",
+0
+],
+[
+9,
+"sicaminon",
+"Enero del año 33",
+20,
+0,
+"",
+0
+],
+[
+9,
+"sephoris",
+"Principios de febrero del año 33 · miércoles",
+24,
+334,
+"También Tomas y Judas Iscariote se unen de nuevo al grupo apostólico",
+0
+],
+[
+9,
+"esdraelon",
+"Febrero del año 33",
+20,
+0,
+"",
+0
+],
+[
+9,
+"megiddo",
+"Mediados de febrero del año 33 · sábado",
+13,
+335,
+"La falsa amistad de Ismael ben Fabí, y el hidrópico curado en sábado.",
+0
+],
+[
+9,
+"nazareth",
+"Mediados de febrero del año 33",
+17,
+336,
+"En Nazaret con cuatro apóstoles. El amor de Tomás por María Santísima.",
+0
+],
+[
+9,
+"tiberias",
+"Febrero del año 33",
+16,
+0,
+"",
+0
+],
+[
+9,
+"capernaum",
+"Febrero del año 33",
+8,
+0,
+"",
+1
+],
+[
+9,
+"korazim",
+"Mediados de febrero del año 33 · sábado",
+1,
+337,
+"El sábado en Corazín. Parábola sobre los corazones imposibles de labrar. Curación de una mujer encorvada.",
+0
+],
+[
+9,
+"saphet",
+"Mediados de febrero del año 33 · sábado",
+7,
+338,
+"Judas Iscariote pierde el poder de milagros. La parábola del cultivador",
+0
+],
+[
+9,
+"merom",
+"Mediados de febrero del año 33 · domingo",
+4,
+339,
+"La noche pecaminosa de Judas Iscariote",
+0
+],
+[
+9,
+"giscala",
+"Mediados de febrero del año 33 · domingo",
+4,
+340,
+"El enmendamiento de Judas Iscariote y el choque con los rabíes junto al sepulcro de Hil.lel.",
+0
+],
+[
+9,
+"giscala",
+"Finales de febrero del año 33 · lunes",
+8,
+341,
+"La mano herida de Jesús. Curación de un sordomudo en los confines sirofenicios.",
+0
+],
+[
+9,
+"kedesh",
+"Finales de febrero del año 33",
+4,
+342,
+"En Quedes. Los fariseos piden un signo. La profecía de Habacuc.",
+0
+],
+[
+9,
+"caesarea philippi",
+"Finales de febrero del año 33",
+13,
+343,
+"La levadura de los fariseos. El Hijo del hombre. El primado a Simón Pedro.",
+0
+],
+[
+9,
+"caesarea philippi",
+"Finales de febrero del año 33",
+6,
+344,
+"Encuentro con los discípulos en Cesárea de Filipo y explicación de la sedal de Jonás.",
+0
+],
+[
+9,
+"caesarea philippi",
+"Finales de febrero del año 33",
+0,
+345,
+"Milagro en el castillo de Cesárea Paneas",
+0
+],
+[
+9,
+"lake merom",
+"Finales de febrero del año 33",
+15,
+346,
+"Primer anuncio de la Pasión y reprensión a Simón Pedro.",
+0
+],
+[
+9,
+"bethsaida",
+"Finales de febrero del año 33",
+8,
+347,
+"En Betsaida. Profecía sobre el martirio de los Apóstoles y curación de un ciego.",
+0
+],
+[
+9,
+"capernaum",
+"Finales de febrero del año 33",
+3,
+348,
+"Manahén da algunas noticias acerca de Herodes Antipas, y desde Cafarnaúm va con Jesús a Nazaret.",
+0
+],
+[
+9,
+"magdala",
+"Finales de febrero del año 33",
+5,
+348,
+"Manahén da algunas noticias acerca de Herodes Antipas, y desde Cafarnaúm va con Jesús a Nazaret.",
+1
+],
+[
+9,
+"tiberias",
+"Finales de febrero del año 33",
+3,
+0,
+"",
+1
+],
+[
+9,
+"cana",
+"Principios de marzo del año 33",
+17,
+0,
+"",
+0
+],
+[
+9,
+"nazareth",
+"Principios de marzo del año 33",
+4,
+348,
+"Manahén da algunas noticias acerca de Herodes Antipas, y desde Cafarnaúm va con Jesús a Nazaret.",
+0
+],
+[
+9,
+"mt tabor",
+"Principios de marzo del año 33",
+9,
+349,
+"La Transfiguración en el monte Tabor y el epiléptico curado al pie del monte. Un comentario para los",
+0
+],
+[
+9,
+"nazareth",
+"Principios de marzo del año 33",
+9,
+350,
+"Lección a los discípulos sobre el poder de vencer a los demonios.",
+0
+],
+[
+9,
+"cana",
+"Marzo del año 33",
+4,
+0,
+"",
+0
+],
+[
+9,
+"tiberias",
+"Marzo del año 33",
+17,
+0,
+"",
+0
+],
+[
+9,
+"capernaum",
+"Principios de marzo del año 33",
+8,
+351,
+"El tributo al Templo pagado con la moneda hallada en la boca del pez.",
+1
+],
+[
+9,
+"magdala",
+"Marzo del año 33",
+5,
+0,
+"",
+1
+],
+[
+9,
+"capernaum",
+"Principios de marzo del año 33",
+5,
+352,
+"Un convertido de María de Magdala. Parábola para el pequeño Benjamín y lección sobre quién es grande",
+0
+],
+[
+9,
+"sea of galilee",
+"Marzo del año 33",
+5,
+0,
+"",
+1
+],
+[
+9,
+"decapolis",
+"Principios de marzo del año 33 · jueves",
+0,
+353,
+"La segunda multiplicación de los panes y el milagro de la multiplicación de la Palabra.",
+0
+],
+[
+9,
+"magdala",
+"Marzo del año 33",
+0,
+0,
+"",
+1
+],
+[
+9,
+"capernaum",
+"Marzo del año 33",
+0,
+0,
+"",
+0
+],
+[
+9,
+"capernaum",
+"Mediados de marzo del año 33 · viernes",
+15,
+354,
+"Jesús habla sobre el Pan del Cielo en la sinagoga de Cafarnaúm.",
+0
+],
+[
+9,
+"capernaum",
+"Mediados de marzo del año 33 · sábado",
+0,
+355,
+"El nuevo discípulo Nicolái de Antioquía y el segundo anuncio de la Pasión.",
+0
+],
+[
+9,
+"gadara",
+"Mediados de marzo del año 33 · domingo",
+25,
+356,
+"Hacia Gadara. Las herejías de Judas Iscariote y las renuncias de Juan, que quiere sólo amar.",
+1
+],
+[
+9,
+"gadara",
+"Mediados de marzo del año 33 · domingo",
+0,
+357,
+"Juan y las culpas de Judas Iscariote. Los fariseos y la cuestión del divorcio.",
+0
+],
+[
+9,
+"gadara",
+"Mediados de marzo del año 33 · lunes",
+0,
+357,
+"Juan y las culpas de Judas Iscariote. Los fariseos y la cuestión del divorcio.",
+0
+],
+[
+9,
+"pella",
+"Mediados de marzo del año 33 · lunes",
+20,
+358,
+"En Pel.la. El jovencito Yaia y la madre de Marcos de Josías",
+0
+],
+[
+9,
+"jabesh-gilead",
+"Mediados de marzo del año 33 · lunes a martes",
+4,
+359,
+"En la cabaña de Matías cerca de Yabés Galaad.",
+0
+],
+[
+9,
+"bethabara",
+"Mediados de marzo del año 33 · jueves a viernes",
+17,
+360,
+"El malhumor de los apóstoles y el descanso en una gruta. El encuentro con Rosa de Jericó.",
+0
+],
+[
+9,
+"bethabara",
+"Mediados de marzo del año 33 · sábado a domingo",
+25,
+361,
+"Los dos injertos que transformarán a los apóstoles. María de Magdala advierte a Jesús de un peligro.",
+0
+],
+[
+10,
+"bethel",
+"Finales de marzo del año 33",
+30,
+362,
+"La misión de las \"voces\" en la Iglesia futura. El encuentro con la Madre y las discípulas.",
+0
+],
+[
+10,
+"ramah",
+"Finales de marzo del año 33",
+4,
+363,
+"En Rama, en casa de la hermana de Tomás. Jesús habla sobre la salvación. Apóstrofe a Jerusalén.",
+0
+],
+[
+10,
+"jerusalem",
+"Finales de marzo del año 33",
+5,
+364,
+"En el Templo. Oración universal y parábola del hijo verdadero y los hijos bastardos.",
+0
+],
+[
+10,
+"jerusalem",
+"Finales de marzo del año 33",
+2,
+365,
+"Judas Iscariote insidia la inocencia de Margziam. Un nuevo discípulo, hermano de leche de Jesús. En",
+0
+],
+[
+10,
+"jerusalem",
+"Finales de marzo del año 33 · miércoles",
+2,
+366,
+"Anastática entre las discípulas. Las cartas de Antioquía.",
+0
+],
+[
+10,
+"jerusalem",
+"Finales de marzo del año 33 · jueves",
+0,
+367,
+"El jueves prepascual. Preparativos en el Getsemaní.",
+0
+],
+[
+10,
+"jerusalem",
+"Finales de marzo del año 33 · jueves",
+0,
+368,
+"El jueves prepascual. En Jerusalén y en el Templo.",
+0
+],
+[
+10,
+"jerusalem",
+"Finales de marzo del año 33 · jueves",
+0,
+369,
+"El jueves prepascual. Parábola de la lepra de las casas.",
+0
+],
+[
+10,
+"jerusalem",
+"Finales de marzo del año 33",
+0,
+370,
+"El jueves prepascual. En el convite de los pobres en el palacio de Cusa.",
+0
+],
+[
+10,
+"jerusalem",
+"Finales de marzo del año 33 · jueves",
+0,
+371,
+"El jueves prepascual. Por la noche en el palacio de Lázaro.",
+0
+],
+[
+10,
+"jerusalem",
+"Principios de abril del año 33 · viernes",
+0,
+372,
+"El día de la Parasceve. Despertar en el palacio de Lázaro.",
+0
+],
+[
+10,
+"jerusalem",
+"Principios de abril del año 33 · viernes",
+0,
+373,
+"El día de la Parasceve. En el Templo.",
+0
+],
+[
+10,
+"jerusalem",
+"Principios de abril del año 33 · viernes",
+0,
+374,
+"El día de la Parasceve. Por las calles de Jerusalén y en el barrio de Ofel.",
+0
+],
+[
+10,
+"jerusalem",
+"Principios de abril del año 33 · viernes",
+0,
+375,
+"La cena ritual en casa de Lázaro y el banquete sacrílego en la casa de Samuel.",
+0
+],
+[
+10,
+"jerusalem",
+"Principios de abril del año 33 · sábado",
+0,
+376,
+"Lección sobre la obra salvífica de los santos, y condena al Templo corrompido.",
+0
+],
+[
+10,
+"bethany",
+"Principios de abril del año 33",
+2,
+377,
+"Parábola del agua y del junco para María de Magdala, que ha elegido la mejor parte.",
+0
+],
+[
+10,
+"bethany",
+"Principios de abril del año 33",
+0,
+378,
+"La parábola de los pájaros, criticada por unos judíos enemigos que tienden una trampa.",
+0
+],
+[
+10,
+"mt adomin",
+"Principios de abril del año 33",
+0,
+379,
+"Una premonición del apóstol Juan.",
+0
+],
+[
+10,
+"mt cherith",
+"Mediados de abril del año 33",
+10,
+380,
+"El amor de los apóstoles, de la contemplación a la acción.",
+0
+],
+[
+10,
+"jericho",
+"Mediados de abril del año 33",
+0,
+381,
+"La parábola del administrador infiel y sagaz. Hipocresía de los fariseos y conversión de un esenio.",
+0
+],
+[
+10,
+"jericho",
+"Mediados de abril del año 33",
+4,
+382,
+"Un alto en casa de Nique.",
+0
+],
+[
+10,
+"jordan ford",
+"Mediados de abril del año 33",
+5,
+383,
+"Discurso sobre la muerte junto al vado del Jordán.",
+0
+],
+[
+10,
+"solomon's village",
+"Mediados de abril del año 33",
+3,
+384,
+"El anciano Ananías, guardián de la casita de Salomón.",
+0
+],
+[
+10,
+"solomon's village",
+"Finales de abril del año 33",
+0,
+385,
+"Parábola de la encrucijada y milagros cerca del pueblo de Salomón.",
+0
+],
+[
+10,
+"jordan ford",
+"Finales de abril del año 33",
+0,
+386,
+"Hacia la orilla occidental del Jordán.",
+0
+],
+[
+10,
+"jericho",
+"Finales de abril del año 33",
+2,
+387,
+"En Guilgal. El mendigo Ogla y los escribas tentadores. Los apóstoles comparados con las doce piedras del",
+0
+],
+[
+10,
+"engedi",
+"Finales de abril del año 33 · jueves",
+0,
+388,
+"Exhortación a Judas Iscariote, que irá a Betania con Simón Zelote.",
+0
+],
+[
+10,
+"engedi",
+"Finales de abril del año 33 · viernes",
+30,
+389,
+"Llegada a Engadí con diez apóstoles.",
+0
+],
+[
+10,
+"engedi",
+"Finales de abril del año 33 · viernes",
+0,
+390,
+"La fe de Abraham de Engadí y la parábola de la semilla de palma.",
+0
+],
+[
+10,
+"engedi",
+"Principios de mayo del año 33 · domingo",
+0,
+391,
+"Curación del leproso Eliseo de Engadí",
+0
+],
+[
+10,
+"masada",
+"Principios de mayo del año 33",
+15,
+392,
+"La hostilidad de Masada, ciudad-fortaleza.",
+0
+],
+[
+10,
+"kerioth",
+"Principios de mayo del año 33",
+14,
+393,
+"En la casa de campo de María de Keriot.",
+0
+],
+[
+10,
+"kerioth",
+"Mediados de mayo del año 33",
+1,
+394,
+"Parábola de las dos voluntades y despedida de los habitantes de Keriot.",
+0
+],
+[
+10,
+"kerioth",
+"Mediados de mayo del año 33",
+0,
+395,
+"Las dos madres infelices de Keriot. Adiós a la madre de Judas.",
+0
+],
+[
+10,
+"jutta",
+"Mediados de mayo del año 33",
+9,
+0,
+"",
+0
+],
+[
+10,
+"jutta",
+"Mediados de mayo del año 33",
+0,
+397,
+"Despedida de los fieles de Yuttá.",
+0
+],
+[
+10,
+"hebron",
+"Mediados de mayo del año 33",
+8,
+398,
+"Palabras de despedida en Hebrón. Los delirios de Judas Iscariote.",
+0
+],
+[
+10,
+"bethzur",
+"Mediados de mayo del año 33",
+4,
+399,
+"Palabras de despedida en Betsur. El amor materno de Elisa.",
+0
+],
+[
+10,
+"bether",
+"Mediados de mayo del año 33 · jueves",
+15,
+400,
+"En Béter, en casa de Juana de Cusa, la cual habla del daño provocado por Judas Iscariote ante Claudia.",
+0
+],
+[
+10,
+"bether",
+"Mediados de mayo del año 33 · viernes",
+0,
+401,
+"Pedro y Bartolomé en Béter por un grave motivo. Éxtasis de la escritora.",
+0
+],
+[
+10,
+"bether",
+"Finales de mayo del año 33 · sábado",
+0,
+402,
+"Judas Iscariote se siente descubierto durante el discurso de despedida en Béter.",
+0
+],
+[
+10,
+"bether",
+"Finales de mayo del año 33 · sábado",
+0,
+403,
+"Una lucha y victoria espiritual de Simón de Jonás.",
+0
+],
+[
+10,
+"emmaus on the plain",
+"Finales de mayo del año 33 · domingo",
+13,
+404,
+"En camino hacia Emaús de la llanura.",
+0
+],
+[
+10,
+"emmaus on the plain",
+"Finales de mayo del año 33 · domingo",
+0,
+405,
+"Descanso en un henil y discurso a la entrada de Emaús de la llanura. El pequeño Miguel.",
+0
+],
+[
+10,
+"joppa",
+"Finales de mayo del año 33",
+24,
+406,
+"En Joppe. Palabras inútiles a Judas de Keriot y diálogo sobre el alma con algunos Gentiles.",
+0
+],
+[
+10,
+"philistine plain",
+"Finales de mayo del año 33",
+22,
+407,
+"En los campos de Nicodemo. La parábola de los dos hijos.",
+0
+],
+[
+10,
+"philistine plain",
+"Finales de mayo del año 33 · jueves",
+9,
+408,
+"Multiplicación del trigo en los campos de José de Arimatea.",
+0
+],
+[
+10,
+"philistine plain",
+"Finales de mayo del año 33 · sábado",
+0,
+409,
+"El drama familiar del Anciano Juan.",
+0
+],
+[
+10,
+"jerusalem",
+"Finales de mayo del año 33 · domingo",
+0,
+410,
+"Provocaciones de Judas Iscariote en el grupo apostólico.",
+0
+],
+[
+10,
+"emmaus on the plain",
+"Finales de mayo del año 33",
+0,
+411,
+"Una lección extraída de la naturaleza y espigueo milagroso para una viejecita. Cómo ayudar a quien se",
+0
+],
+[
+10,
+"jerusalem",
+"Finales de mayo del año 33",
+0,
+412,
+"Elogio del lirio de los valles, símbolo de María. Pedro se sacrifica por el bien de Judas.",
+0
+],
+[
+10,
+"jerusalem",
+"Finales de mayo del año 33",
+25,
+413,
+"Llegada a Jerusalén para la fiesta de Pentecostés y disputa con los doctores del Templo.",
+0
+],
+[
+10,
+"jerusalem",
+"Finales de mayo del año 33",
+0,
+414,
+"Invectiva contra fariseos y doctores en el convite en casa del Anciano Elquías.",
+0
+],
+[
+10,
+"bethany",
+"Finales de mayo del año 33",
+2,
+415,
+"Un alto en el camino en Betania.",
+0
+],
+[
+10,
+"mt of fasting",
+"Mayo del año 33",
+20,
+0,
+"",
+0
+],
+[
+10,
+"jericho",
+"Principios de junio del año 33",
+0,
+416,
+"Un mendigo samaritano en el camino de Jericó.",
+0
+],
+[
+10,
+"jericho",
+"Junio del año 33",
+0,
+0,
+"",
+0
+],
+[
+10,
+"jericho",
+"Principios de junio del año 33",
+25,
+417,
+"Historia de Zacarías el leproso y conversión de Zaqueo el publicano.",
+0
+],
+[
+10,
+"solomon's village",
+"Principios de junio del año 33 · lunes",
+8,
+418,
+"Curación del discípulo José, herido en la cabeza y recogido en la casita de Salomón.",
+0
+],
+[
+10,
+"decapolis",
+"Principios de junio del año 33",
+0,
+419,
+"Curaciones en un pueblecito de la Decápolis. Parábola del escultor y de las estatuas.",
+0
+],
+[
+10,
+"decapolis",
+"Principios de junio del año 33",
+0,
+420,
+"Curación de un endemoniado completo. La vocación de la mujer al amor.",
+0
+],
+[
+10,
+"decapolis",
+"Principios de junio del año 33",
+0,
+421,
+"El endemoniado curado, los fariseos y la blasfemia contra el Espíritu Santo.",
+0
+],
+[
+10,
+"enon",
+"Principios de junio del año 33",
+30,
+422,
+"El Iscariote, con sus malos humores, ocasiona la lección sobre los deberes y los siervos inútiles.",
+0
+],
+[
+10,
+"megiddo",
+"Mediados de junio del año 33",
+0,
+423,
+"Partida del Iscariote, que ocasiona la lección sobre el amor y el perdón.",
+0
+],
+[
+10,
+"caesarea",
+"Finales de junio del año 33",
+44,
+424,
+"Pensamientos de gloria y martirio ante la vista de la costa mediterránea.",
+0
+],
+[
+10,
+"caesarea",
+"Finales de junio del año 33",
+1,
+425,
+"En Cesárea Marítima. Romanos mundanos y parábola de los hijos con destinos distintos.",
+0
+],
+[
+10,
+"caesarea",
+"Finales de junio del año 33",
+0,
+426,
+"Con las romanas en Cesárea Marítima. Profecía en Virgilio. La joven esclava salvada.",
+0
+],
+[
+11,
+"esdraelon",
+"Finales de junio del año 33",
+23,
+427,
+"Bartolomé instruye a Áurea Gala.",
+0
+],
+[
+11,
+"esdraelon",
+"Finales de junio del año 33 · viernes",
+0,
+428,
+"Parábola de la viña y del viñador, figuras del alma y del libre albedrío.",
+0
+],
+[
+11,
+"esdraelon",
+"Finales de junio del año 33 · sábado",
+0,
+429,
+"Con Judas Iscariote en la llanura de Esdrelón.",
+0
+],
+[
+11,
+"esdraelon",
+"Finales de junio del año 33 · sábado",
+0,
+430,
+"El nido caído y el escriba cruel. La letra y el espíritu de la Ley.",
+0
+],
+[
+11,
+"esdraelon",
+"Finales de junio del año 33 · sábado",
+0,
+431,
+"Tomás prepara el encuentro de Jesús con los campesinos de Jocanán.",
+0
+],
+[
+11,
+"sephoris",
+"Finales de junio del año 33 · sábado",
+12,
+432,
+"Con los campesinos de Jocanán, cerca de Sefori.",
+0
+],
+[
+11,
+"nazareth",
+"Finales de junio del año 33 · domingo",
+30,
+433,
+"Llegada a Nazaret. Alabanzas a la Virgen. Curación de Áurea.",
+0
+],
+[
+11,
+"nazareth",
+"Principios de julio del año 33",
+0,
+434,
+"Trabajos manuales en Nazaret y parábola de la madera barnizada.",
+0
+],
+[
+11,
+"nazareth",
+"Mediados de julio del año 33",
+0,
+435,
+"Comienzo del tercer sábado en Nazaret y llegada de Pedro con otros apóstoles.",
+0
+],
+[
+11,
+"nazareth",
+"Mediados de julio del año 33 · sábado",
+0,
+436,
+"En el huerto de Nazaret, revelado a apóstoles y discípulas el precio de la Redención.",
+0
+],
+[
+11,
+"nazareth",
+"Mediados de julio del año 33 · sábado",
+0,
+437,
+"Coloquio de Jesús con su Madre.",
+0
+],
+[
+11,
+"nazareth",
+"Mediados de julio del año 33",
+0,
+438,
+"María Santísima con María de Alfeo en Tiberíades, donde Valeria. Encuentro con Judas Iscariote.",
+0
+],
+[
+11,
+"nazareth",
+"Mediados de julio del año 33",
+0,
+439,
+"María Santísima enseña a Áurea a hacer la voluntad de Dios.",
+0
+],
+[
+11,
+"nazareth",
+"Finales de julio del año 33 · viernes",
+0,
+440,
+"Otro sábado en Nazaret. Obstinación de José de Alfeo.",
+0
+],
+[
+11,
+"bethlehem of galilee",
+"Finales de julio del año 33 · sábado",
+0,
+441,
+"Partida de Nazaret. Un incendio de brezos durante el viaje viene a ser el tema de una parábola.",
+0
+],
+[
+11,
+"bethlehem of galilee",
+"Julio del año 33",
+8,
+0,
+"",
+0
+],
+[
+11,
+"nazareth",
+"Finales de julio del año 33 · domingo",
+0,
+442,
+"Judas Iscariote en Nazaret en casa de María.",
+0
+],
+[
+11,
+"esdraelon",
+"Finales de julio del año 33",
+9,
+443,
+"La muerte del abuelo de Margziam.",
+0
+],
+[
+11,
+"tarichea",
+"Finales de julio del año 33",
+28,
+444,
+"Las dotes de Margziam. Lección sobre la caridad, sobre la salvación, sobre los méritos del Salvador.",
+0
+],
+[
+11,
+"tiberias",
+"Finales de julio del año 33",
+7,
+445,
+"Dos parábolas durante una tormenta en Tiberíades. Llegada de Maria Stma. e impenitencia de Judas",
+1
+],
+[
+11,
+"capernaum",
+"Finales de julio del año 33",
+8,
+446,
+"Llegada a Cafarnaúm en medio de un cálido recibimiento.",
+1
+],
+[
+11,
+"capernaum",
+"Finales de agosto del año 33",
+0,
+447,
+"En Cafarnaúm unas palabras de Jesús sobre la misericordia y el perdón no encuentran eco.",
+0
+],
+[
+11,
+"magdala",
+"Finales de agosto del año 33",
+5,
+448,
+"Encuentro de barcas en el lago y parábola sugerida por Simón Pedro.",
+1
+],
+[
+11,
+"capernaum",
+"Mediados de septiembre del año 33",
+5,
+449,
+"El pequeño Alfeo desamado de su madre.",
+1
+],
+[
+11,
+"hippo",
+"Mediados de septiembre del año 33 · lunes",
+8,
+450,
+"Milagros en el arrabal cercano a Ippo y curación del leproso Juan.",
+1
+],
+[
+11,
+"hippo",
+"Mediados de septiembre del año 33 · martes",
+0,
+451,
+"Discurso en el arrabal cercano a Ippo sobre los deberes de los cónyuges y de los hijos.",
+0
+],
+[
+11,
+"hippo",
+"Mediados de septiembre del año 33 · martes",
+0,
+452,
+"El ex leproso Juan se hace discípulo. Parábola de los diez monumentos.",
+0
+],
+[
+11,
+"hippo",
+"Finales de septiembre del año 33 · miércoles",
+1,
+453,
+"Llegada a Ippo y discurso en pro de los pobres. Curación de un esclavo paralítico.",
+0
+],
+[
+11,
+"gamala",
+"Finales de septiembre del año 33 · miércoles",
+0,
+454,
+"María Santísima y su amor perfecto. Conflicto de Judas Iscariote con el pequeño Alfeo.",
+0
+],
+[
+11,
+"gamala",
+"Finales de septiembre del año 33 · jueves",
+2,
+455,
+"La Iglesia es confiada a la maternidad de María. Discurso, al pie de Gamala, en pro de unos forzados.",
+0
+],
+[
+11,
+"aphek",
+"Finales de septiembre del año 33 · viernes",
+2,
+456,
+"Despedida de Gamala y llegada a Afeq. Advertencia a la viuda Sara y milagro en su casa.",
+0
+],
+[
+11,
+"aphek",
+"Finales de septiembre del año 33 · viernes",
+0,
+457,
+"Discurso en Afeq, tras una disputa entre creyentes y no creyentes. Sara se hace discípula.",
+0
+],
+[
+11,
+"gherghesa",
+"Finales de septiembre del año 33 · viernes",
+6,
+458,
+"Una curación espiritual en Guerguesa y lección sobre los dones de Dios.",
+0
+],
+[
+11,
+"capernaum",
+"Finales de septiembre del año 33 · viernes",
+8,
+458,
+"Una curación espiritual en Guerguesa y lección sobre los dones de Dios.",
+1
+],
+[
+11,
+"capernaum",
+"Finales de septiembre del año 33 · viernes",
+0,
+459,
+"El perdón a Samuel de Nazaret y lección sobre las malas amistades.",
+0
+],
+[
+11,
+"capernaum",
+"Finales de septiembre del año 33 · sábado",
+0,
+460,
+"Fariseos en Cafarnaúm con José y Simón de Alfeo. Jesús y su Madre preparados para el Sacrificio.",
+0
+],
+[
+11,
+"tiberias",
+"Finales de septiembre del año 33 · sábado",
+8,
+461,
+"Confabulación en casa de Cusa para elegir a Jesús rey. El griego Zenón y la carta de Síntica con la noticia de",
+1
+],
+[
+11,
+"emmaus of tiberias",
+"Finales de septiembre del año 33 · domingo",
+1,
+462,
+"Discurso y curaciones en las fuentes termales de Emaús de Tiberíades.",
+1
+],
+[
+11,
+"tarichea",
+"Finales de septiembre del año 33 · domingo",
+5,
+463,
+"En Tariquea. Cusa, a pesar del discurso sobre la naturaleza del reino mesiánico, invita a Jesús a su casa.",
+1
+],
+[
+11,
+"chuza",
+"Finales de septiembre del año 33 · domingo",
+3,
+464,
+"En la casa de campo de Cusa, intento de elegir rey a Jesús. El testimonio del Predilecto.",
+0
+],
+[
+11,
+"bethsaida",
+"Finales de septiembre del año 33 · lunes",
+20,
+465,
+"En Betsaida para un encargo secreto a Porfiria. Apresurada partida de Cafarnaún.",
+1
+],
+[
+11,
+"capernaum",
+"Finales de septiembre del año 33 · lunes",
+3,
+465,
+"En Betsaida para un encargo secreto a Porfiria. Apresurada partida de Cafarnaún.",
+0
+],
+[
+11,
+"lake merom",
+"Finales de septiembre del año 33 · lunes",
+12,
+466,
+"Un alto en la casa de los ancianos cónyuges Judas y Ana.",
+0
+],
+[
+11,
+"korazim",
+"Finales de septiembre del año 33 · lunes",
+10,
+467,
+"Parábola de la distribución de las aguas. Perdón condicionado para el campesino Jacob. Advertencias a los",
+0
+],
+[
+11,
+"korazim",
+"Finales de septiembre del año 33 · martes",
+0,
+468,
+"Un episodio de enmendamiento de Judas Iscariote, y otros que ilustran su figura.",
+0
+],
+[
+11,
+"korazim",
+"Finales de septiembre del año 33 · martes",
+0,
+469,
+"Despidiéndose de los pocos fieles de Corazín.",
+0
+],
+[
+11,
+"giscala",
+"Finales de septiembre del año 33 · viernes",
+11,
+470,
+"Lección a una suegra sobre los deberes del matrimonio.",
+0
+],
+[
+11,
+"ramah",
+"Finales de septiembre del año 33 · viernes",
+6,
+471,
+"Encuentro con el levita José, llamado Bernabé, y lección sobre Dios-Amor.",
+0
+],
+[
+11,
+"ramah",
+"Principios de octubre del año 33 · sábado",
+0,
+472,
+"Solicitud insidiosa de un juicio acerca de un hecho ocurrido en Yiscala.",
+0
+],
+[
+11,
+"ptolemais",
+"Principios de octubre del año 33",
+0,
+473,
+"Curación de un niño ciego de Sidón y una lección para las familias.",
+0
+],
+[
+11,
+"ptolemais",
+"Principios de octubre del año 33",
+0,
+474,
+"Una visión que se pierde en un arrobo de amor.",
+0
+],
+[
+11,
+"achzib",
+"Octubre del año 33",
+21,
+0,
+"",
+0
+],
+[
+11,
+"steps of tyre",
+"Octubre del año 33",
+6,
+0,
+"",
+0
+],
+[
+11,
+"alexandroscene",
+"Octubre del año 33",
+6,
+0,
+"",
+0
+],
+[
+11,
+"ptolemais",
+"Octubre del año 33",
+33,
+0,
+"",
+0
+],
+[
+11,
+"ptolemais",
+"Mediados de octubre del año 33",
+25,
+475,
+"Abel de Belén de Galilea pide el perdón para sus enemigos.",
+0
+],
+[
+11,
+"bethlehem of galilee",
+"Mediados de octubre del año 33",
+15,
+476,
+"Lección sobre el cuidado de las almas y perdón a los dos pecadores castigados con la lepra.",
+0
+],
+[
+11,
+"woods of mattathias",
+"Mediados de octubre del año 33",
+13,
+477,
+"Coloquio de Jesús con su Madre en el bosque de Matatías. Los sufrimientos morales de Jesús y María.",
+0
+],
+[
+11,
+"woods of mattathias",
+"Mediados de octubre del año 33",
+5,
+478,
+"Coloquio de Jesús con José y Simón de Alfeo, que van a la fiesta de los Tabernáculos.",
+0
+],
+[
+11,
+"jezreel",
+"Finales de octubre del año 33 · jueves",
+15,
+479,
+"Con Juan al pie de la torre de Yizreel en espera de los campesinos de Jocanán.",
+0
+],
+[
+11,
+"jezreel",
+"Finales de octubre del año 33 · viernes",
+0,
+480,
+"Parten de Yizreel tras la visita nocturna de los campesinos de Jocanán.",
+0
+],
+[
+11,
+"engannim",
+"Finales de octubre del año 33 · viernes",
+8,
+481,
+"Llegada a Enganním. Maquinaciones de Judas Iscariote para impedir una trama de los fariseos.",
+0
+],
+[
+11,
+"dothan",
+"Finales de octubre del año 33",
+8,
+482,
+"En camino con un pastor samaritano que ve premiada su fe.",
+0
+],
+[
+11,
+"tebesh",
+"Octubre del año 33",
+8,
+0,
+"",
+0
+],
+[
+11,
+"sychar",
+"Octubre del año 33",
+12,
+0,
+"",
+0
+],
+[
+11,
+"shechem",
+"Octubre del año 33",
+2,
+0,
+"",
+0
+],
+[
+11,
+"ephraim",
+"Finales de octubre del año 33",
+20,
+483,
+"Polémica de los apóstoles sobre el odio de los judíos. Los diez leprosos curados en Samaria.",
+0
+],
+[
+11,
+"ephraim",
+"Finales de octubre del año 33",
+0,
+484,
+"Alto obligado en las cercanías de Efraím y parábola de la granada.",
+0
+],
+[
+12,
+"en-shemesh",
+"Finales de octubre del año 33",
+14,
+485,
+"Jesús llega con los apóstoles a Betania, donde ya están algunos discípulos con Margziam.",
+0
+],
+[
+12,
+"bethany",
+"Finales de octubre del año 33",
+2,
+485,
+"Jesús llega con los apóstoles a Betania, donde ya están algunos discípulos con Margziam.",
+0
+],
+[
+12,
+"jerusalem",
+"Finales de octubre del año 33 · domingo",
+2,
+486,
+"En el Templo para la fiesta de los Tabernáculos. Discurso sobre la naturaleza del Reino.",
+0
+],
+[
+12,
+"jerusalem",
+"Finales de octubre del año 33 · lunes",
+0,
+487,
+"En el Templo para la fiesta de los Tabernáculos. Discurso sobre la naturaleza del Cristo.",
+0
+],
+[
+12,
+"jerusalem",
+"Principios de noviembre del año 33 · martes",
+0,
+488,
+"En el Templo para 1a fiesta de los Tabernáculos. Partida secreta hacia Nob después de la oración.",
+0
+],
+[
+12,
+"nob",
+"Principios de noviembre del año 33 · martes",
+2,
+489,
+"En Nob. Parábola del rey no comprendido por sus súbditos. Jesús calma el viento.",
+0
+],
+[
+12,
+"jerusalem",
+"Principios de noviembre del año 33 · miércoles",
+2,
+490,
+"En el campo de los Galileos con los primos apóstoles y encuentro con el levita Zacarías.",
+0
+],
+[
+12,
+"jerusalem",
+"Principios de noviembre del año 33 · jueves",
+0,
+491,
+"En el Templo el último día de la fiesta de los Tabernáculos. Sermón sobre el Agua viva.",
+0
+],
+[
+12,
+"bethany",
+"Principios de noviembre del año 33",
+2,
+492,
+"En Betania se evoca la memoria de Juan de Endor.",
+0
+],
+[
+12,
+"jerusalem",
+"Principios de noviembre del año 33",
+2,
+493,
+"Jesús habla cabe la fuente de En Royel, lugar en que hicieron un alto los tres Sabios.",
+0
+],
+[
+12,
+"jerusalem",
+"Principios de noviembre del año 33",
+0,
+494,
+"La mujer adúltera y la hipocresía de sus acusadores.",
+0
+],
+[
+12,
+"bethany",
+"Principios de noviembre del año 33",
+2,
+495,
+"Jesús instruye acerca del perdón de los pecadores, y se despide de sus discípulos en el camino de Betania.",
+0
+],
+[
+12,
+"bethabara",
+"Noviembre del año 33",
+19,
+0,
+"",
+0
+],
+[
+12,
+"solomon's village",
+"Principios de noviembre del año 33 · domingo",
+5,
+496,
+"Un alto en la casita de Salomón. Improvisa turbación de Judas Iscariote.",
+0
+],
+[
+12,
+"ramoth gilead",
+"Principios de noviembre del año 33 · miércoles",
+10,
+497,
+"Simón Pedro atraviesa una hora de abatimiento.",
+0
+],
+[
+12,
+"heshbon",
+"Mediados de noviembre del año 33",
+34,
+498,
+"Exhortación a Judas Tadeo y a Santiago de Zebedeo después de una discusión con Judas Iscariote.",
+0
+],
+[
+12,
+"heshbon",
+"Mediados de noviembre del año 33",
+6,
+499,
+"Fuga de Esebón y encuentro con un mercader de Petra.",
+0
+],
+[
+12,
+"mt nebo",
+"Noviembre del año 33",
+5,
+0,
+"",
+0
+],
+[
+12,
+"mt nebo",
+"Mediados de noviembre del año 33",
+0,
+500,
+"Reflexiones de Bartolomé y Juan después de un retiro en el monte Nebo.",
+0
+],
+[
+12,
+"mt nebo",
+"Mediados de noviembre del año 33",
+6,
+501,
+"Parábola de los hijos lejanos. Curación de dos hijos ciegos del hombre de Petra.",
+0
+],
+[
+12,
+"callirhoe",
+"Noviembre del año 33",
+30,
+0,
+"",
+0
+],
+[
+12,
+"bethabara",
+"Mediados de noviembre del año 33",
+18,
+502,
+"Otro abatimiento en Pedro. Lección sobre las posesiones (divinas y diabólicas).",
+0
+],
+[
+12,
+"beth-hoglah",
+"Noviembre del año 33",
+2,
+0,
+"",
+0
+],
+[
+12,
+"decapolis",
+"Noviembre del año 33",
+40,
+0,
+"",
+0
+],
+[
+12,
+"bethabara",
+"Noviembre del año 33",
+40,
+0,
+"",
+0
+],
+[
+12,
+"decapolis",
+"Noviembre del año 33",
+40,
+0,
+"",
+0
+],
+[
+12,
+"nike",
+"Noviembre del año 33",
+10,
+0,
+"",
+0
+],
+[
+12,
+"jerusalem",
+"Mediados de noviembre del año 33",
+14,
+505,
+"En el Templo, una gracia obtenida con la oración incesante y la parábola del juez y la viuda.",
+0
+],
+[
+12,
+"jerusalem",
+"Mediados de noviembre del año 33",
+0,
+506,
+"En el Templo, oposición al discurso que revela que Jesús es la Luz del mundo.",
+0
+],
+[
+12,
+"jerusalem",
+"Mediados de noviembre del año 33 · viernes",
+0,
+507,
+"El gran debate con los judíos. Huyen del Templo con la ayuda del levita Zacarías.",
+0
+],
+[
+12,
+"jerusalem",
+"Mediados de noviembre del año 33 · viernes",
+0,
+508,
+"Juan será la luz de Cristo hasta el final de los tiempos. El pequeño Marcial-Manasés acogido por José de",
+0
+],
+[
+12,
+"jerusalem",
+"Mediados de noviembre del año 33 · sábado",
+0,
+510,
+"La curación de un ciego de nacimiento.",
+0
+],
+[
+12,
+"nob",
+"Mediados de noviembre del año 33 · sábado",
+2,
+511,
+"En la casa de Juan de Nob, otra alabanza a la Corredentora. Embustes de Judas Iscariote.",
+0
+],
+[
+12,
+"ramah",
+"Noviembre del año 33",
+3,
+0,
+"",
+0
+],
+[
+12,
+"emmaus on mt",
+"Finales de noviembre del año 33",
+3,
+512,
+"Profecía ante un pueblo destruido.",
+0
+],
+[
+12,
+"emmaus on mt",
+"Finales de noviembre del año 33 · jueves",
+3,
+513,
+"En Emaús Montana, una parábola sobre la verdadera sabiduría y una advertencia a Israel.",
+0
+],
+[
+12,
+"beth-horon",
+"Finales de noviembre del año 33 · viernes",
+8,
+514,
+"Consejos sobre la santidad a un joven indeciso. Reprensión a los habitantes de Bet-Jorón después de la",
+0
+],
+[
+12,
+"gibeon",
+"Finales de noviembre del año 33 · viernes",
+3,
+515,
+"Las razones del dolor salvífico de Jesús. Elogio de la obediencia y lección sobre la humildad.",
+0
+],
+[
+12,
+"gibeon",
+"Finales de noviembre del año 33 · viernes",
+0,
+516,
+"En Gabaón, milagro del mudito y elogio de la sabiduría como amor a Dios.",
+0
+],
+[
+12,
+"nob",
+"Finales de noviembre del año 33",
+6,
+517,
+"Hacia Nob. Judas Iscariote, tras un momento polémico, reconoce su error.",
+0
+],
+[
+12,
+"jerusalem",
+"Principios de diciembre del año 33",
+2,
+518,
+"En Jerusalén, encuentro con el ciego curado y palabras que revelan a Jesús como buen Pastor.",
+0
+],
+[
+12,
+"bethany",
+"Principios de diciembre del año 33",
+2,
+519,
+"Inexplicable ausencia de Judas Iscariote y alto en Betania, en casa de Lázaro.",
+0
+],
+[
+12,
+"tekoah",
+"Mediados de diciembre del año 33",
+12,
+520,
+"Conversaciones en torno a Judas Iscariote, ausente. Llegada a Tecua con el anciano Elí-Ana.",
+0
+],
+[
+12,
+"tekoah",
+"Mediados de diciembre del año 33",
+0,
+521,
+"En Tecua, Jesús se despide de los habitantes del lugar y del anciano Elí-Ana.",
+0
+],
+[
+12,
+"jericho",
+"Mediados de diciembre del año 33",
+0,
+522,
+"Llegada a Jericó. El amor terreno de la muchedumbre y el amor sobrenatural del convertido Zaqueo.",
+0
+],
+[
+12,
+"jericho",
+"Mediados de diciembre del año 33",
+0,
+523,
+"En Jericó. La petición a Jesús de que juzgue a una mujer. La parábola del fariseo y el publicano tras una",
+0
+],
+[
+12,
+"jericho",
+"Mediados de diciembre del año 33",
+0,
+524,
+"En Jericó. En casa de Zaqueo con los pecadores convertidos.",
+0
+],
+[
+12,
+"jericho",
+"Mediados de diciembre del año 33",
+5,
+525,
+"El juicio sobre Sabea de Betlequí.",
+0
+],
+[
+12,
+"bethabara",
+"Mediados de diciembre del año 33 · martes",
+0,
+526,
+"Curaciones cerca del vado de Betabara y discurso en recuerdo de Juan el Bautista.",
+0
+],
+[
+12,
+"jerusalem",
+"Finales de diciembre del año 33",
+0,
+527,
+"Desconocimiento y tentaciones en la naturaleza humana de Cristo.",
+0
+],
+[
+12,
+"nob",
+"Finales de diciembre del año 33",
+2,
+528,
+"En Nob. Consuelo materno de Elisa y regreso inquietante de Judas Iscariote.",
+0
+],
+[
+12,
+"nob",
+"Finales de diciembre del año 33 · viernes",
+0,
+529,
+"Enseñanzas a los apóstoles mientras realizan trabajos manuales en casa de Juan de Nob.",
+0
+],
+[
+12,
+"nob",
+"Finales de diciembre del año 33 · martes",
+0,
+530,
+"Otra noche de pecado de Judas Iscariote.",
+0
+],
+[
+12,
+"nob",
+"Finales de diciembre del año 33",
+0,
+531,
+"En Nob, enfermos y peregrinos venidos de todas partes. Valeria y el divorcio. Curación del pequeño Leví.",
+0
+],
+[
+12,
+"nob",
+"Finales de diciembre del año 33",
+0,
+532,
+"Preparativos para las Encenias. Una prostituta enviada a tentar a Jesús, que deja Nob.",
+0
+],
+[
+12,
+"jerusalem",
+"Finales de diciembre del año 33 · jueves",
+2,
+533,
+"Hacia Jerusalén con Judas Iscariote.",
+0
+],
+[
+12,
+"jerusalem",
+"Finales de diciembre del año 33 · jueves",
+0,
+534,
+"Enseñanzas y curaciones en la sinagoga de los libertos romanos. Un encargo para los gentiles.",
+0
+],
+[
+12,
+"jerusalem",
+"Finales de diciembre del año 33 · jueves",
+0,
+535,
+"Judas Iscariote llamado a informar a casa de Caifás.",
+0
+],
+[
+12,
+"bethany",
+"Finales de diciembre del año 33 · jueves",
+0,
+536,
+"Curación de siete leprosos y llegada a Betania con los apóstoles ya reunidos. Marta y María preparadas por",
+0
+],
+[
+12,
+"jerusalem",
+"Finales de diciembre del año 33 · viernes",
+2,
+537,
+"En el Templo en la fiesta de la Dedicación, Jesús se manifiesta a los judíos, que intentan apedrearle.",
+0
+],
+[
+12,
+"bethlehem",
+"Finales de diciembre del año 33 · viernes",
+6,
+538,
+"Jesús, orante en la gruta de la Natividad, contemplado por los discípulos ex pastores.",
+0
+],
+[
+12,
+"bethlehem",
+"Principios de enero del año 34 · lunes",
+0,
+539,
+"Juan de Zebedeo se acusa de culpas inexistentes.",
+0
+],
+[
+12,
+"solomon's village",
+"Principios de enero del año 34",
+22,
+540,
+"La Madre confiada a Juan. Encuentro con Manahén y lección sobre el amor a los animales. Conclusión del",
+0
+],
+[
+12,
+"solomon's village",
+"Principios de enero del año 34 · martes",
+0,
+541,
+"Judíos en Betania de visita",
+0
+],
+[
+12,
+"bethany",
+"Principios de enero del año 34 · martes",
+0,
+542,
+"Los judíos en casa de Lázaro.",
+0
+],
+[
+12,
+"bethany",
+"Mediados de enero del año 34 · jueves",
+0,
+543,
+"Marta llama a un criado a llamar al Maestro.",
+0
+],
+[
+12,
+"solomon's village",
+"Mediados de enero del año 34 · jueves",
+0,
+545,
+"El criado de Betania refiere a Jesús el mensaje de Marta.",
+0
+],
+[
+12,
+"bethany",
+"Mediados de enero del año 34 · jueves",
+0,
+544,
+"La muerte de Lázaro.",
+0
+],
+[
+12,
+"solomon's village",
+"Mediados de enero del año 34 · domingo",
+0,
+547,
+"Jesús decide ir a Betania.",
+0
+],
+[
+12,
+"bethany",
+"Enero del año 34",
+1,
+0,
+"",
+0
+],
+[
+12,
+"jerusalem",
+"Mediados de enero del año 34 · martes",
+0,
+549,
+"Sesión del Sanedrín y audiencia en el palacio de Pilato.",
+0
+],
+[
+12,
+"bethany",
+"Mediados de enero del año 34 · viernes",
+0,
+550,
+"Misión de amor para Lázaro y contemplación absoluta para su hermana María. Jesús debe huir a Samaria.",
+0
+],
+[
+12,
+"jericho",
+"Finales de enero del año 34 · sábado",
+12,
+551,
+"Los apóstoles son informados, después de un alto donde Nique, del decreto del Sanedrín. Llegada a los",
+0
+],
+[
+12,
+"ephraim",
+"Finales de enero del año 34 · domingo",
+14,
+552,
+"Preparativos y recibimientos en Efraím.",
+0
+],
+[
+12,
+"ephraim",
+"Finales de enero del año 34 · viernes",
+0,
+553,
+"Comienzo del sábado en Efraím. Los ladrones del Adomín y la ayuda prestada a tres niños.",
+0
+],
+[
+12,
+"ephraim",
+"Finales de enero del año 34 · sábado",
+0,
+554,
+"El sábado en Efraím. Con los apóstoles y los tres niños en una pequeña isla del torrente.",
+0
+],
+[
+12,
+"ephraim",
+"Finales de enero del año 34 · sábado",
+0,
+555,
+"Lección nocturna a Simón Pedro sobre el perdón de los pecados y sobre el dolor de los santos y de los",
+0
+],
+[
+12,
+"ephraim",
+"Principios de febrero del año 34 · sábado",
+0,
+556,
+"Otro sábado en Efraím. Intolerancias de Judas Iscariote. Palabras a los samaritanos sobre el tiempo nuevo.",
+0
+],
+[
+12,
+"ephraim",
+"Principios de febrero del año 34",
+0,
+557,
+"Llegan de Siquem los parientes de los tres niños arrebatados a los bandoleros.",
+0
+],
+[
+12,
+"ephraim",
+"Principios de febrero del año 34",
+0,
+558,
+"Con la comitiva que regresa a Siquem. Parábola de la gota que excava la roca.",
+0
+],
+[
+12,
+"ephraim",
+"Principios de febrero del año 34",
+0,
+559,
+"En Efraím, peregrinos de la Decápolis y misión secreta de Manahén.",
+0
+],
+[
+12,
+"ephraim",
+"Principios de febrero del año 34 · viernes",
+0,
+560,
+"En las cercanías de Gofená, coloquio durante la noche con José de Arimatea, Nicodemo y Manahén.",
+0
+],
+[
+12,
+"ephraim",
+"Mediados de febrero del año 34 · sábado a domingo",
+0,
+561,
+"El saforim Samuel, de sicario a discípulo.",
+0
+],
+[
+12,
+"nazareth",
+"Finales de febrero del año 34",
+0,
+562,
+"Habladurías en Nazaret.",
+0
+],
+[
+12,
+"ephraim",
+"Finales de febrero del año 34",
+0,
+563,
+"Falsos discípulos en Siquem. Curación en Efraím del esclavo mudo de Claudia Prócula.",
+0
+],
+[
+12,
+"ephraim",
+"Principios de marzo del año 34 · viernes",
+0,
+564,
+"El hombre de Jabnia y el final de Hermasteo. Reprensión a los samaritanos que carecen de caridad.",
+0
+],
+[
+12,
+"ephraim",
+"Principios de marzo del año 34",
+0,
+565,
+"Jesús conforta a Samuel, turbado por Judas de Keriot. Lecciones de las abejas y de la vela plegada por el",
+0
+],
+[
+12,
+"ephraim",
+"Finales de marzo del año 34 · domingo",
+0,
+566,
+"En Efraím el día de la llegada de la Madre de Jesús con Lázaro y las discípulas.",
+0
+],
+[
+12,
+"ephraim",
+"Principios de abril del año 34 · lunes",
+0,
+568,
+"Comienzo del viaje por Samaria partiendo de Efraím en dirección a Silo.",
+0
+],
+[
+12,
+"shiloh",
+"Principios de abril del año 34",
+12,
+569,
+"En Silo, la parábola de los malos consejeros.",
+0
+],
+[
+12,
+"lebonah",
+"Principios de abril del año 34",
+3,
+570,
+"En Lebona, la parábola de los mal aconsejados.",
+0
+],
+[
+12,
+"shechem",
+"Principios de abril del año 34",
+11,
+571,
+"Llegada a Siquem y recibimiento.",
+0
+],
+[
+12,
+"shechem",
+"Principios de abril del año 34",
+0,
+572,
+"En Siquem, la última parábola sobre los consejos dados y recibidos.",
+0
+],
+[
+12,
+"shechem",
+"Principios de abril del año 34",
+0,
+573,
+"Partida para Enón después de un tira y afloja entre Judas Iscariote y Elisa, que se quedan en Siquem.",
+0
+],
+[
+12,
+"enon",
+"Principios de abril del año 34 · domingo",
+25,
+574,
+"En Enón, rescatado y acogido el pastorcillo Benjamín. Hacia Tersa.",
+0
+],
+[
+12,
+"tirzah",
+"Principios de abril del año 34 · domingo",
+20,
+575,
+"Mal recibimiento en Tersa. Extremo intento de redimir a Judas Iscariote.",
+0
+],
+[
+12,
+"doco",
+"Principios de abril del año 34 · lunes",
+21,
+576,
+"Encuentro con el joven rico en el camino hacia Doco.",
+0
+],
+[
+12,
+"jericho",
+"Mediados de abril del año 34 · martes",
+0,
+577,
+"Tercer anuncio de la Pasión. María de Alfeo evoca la figura de José. La insensata petición de los hijos de",
+0
+],
+[
+12,
+"jericho",
+"Mediados de abril del año 34 · martes",
+3,
+578,
+"Encuentro con discípulos y hombres de relieve conducidos por Manahén. Llegada a Jericó.",
+0
+],
+[
+12,
+"jericho",
+"Mediados de abril del año 34 · martes",
+0,
+579,
+"Judíos desconocidos refieren las acusaciones recogidas por el Sanedrín. Alegoría dirigida a Jerusalén.",
+0
+],
+[
+12,
+"bethany",
+"Mediados de abril del año 34",
+0,
+580,
+"Delaciones de Judas Iscariote y profecías sobre Israel. Milagros en el camino de Jericó a Betania.",
+0
+],
+[
+12,
+"bethany",
+"Mediados de abril del año 34 · martes",
+12,
+581,
+"En Betania en la casa de Lázaro.",
+0
+],
+[
+12,
+"bethany",
+"Mediados de abril del año 34 · viernes",
+0,
+582,
+"La víspera del sábado anterior a la entrada en Jerusalén. Ofrenda extrema por la salvación de Judas",
+0
+],
+[
+12,
+"bethany",
+"Mediados de abril del año 34 · viernes",
+0,
+583,
+"Víspera del sábado anterior a la entrada en Jerusalén. Despedida de las discípulas. El desdichado nieto de",
+0
+],
+[
+12,
+"bethany",
+"Mediados de abril del año 34 · sábado",
+0,
+584,
+"El sábado anterior a la entrada en Jerusalén. Parábola de las dos lámparas y parábola viva del pequeño",
+0
+],
+[
+12,
+"bethany",
+"Mediados de abril del año 34 · sábado",
+0,
+585,
+"El sábado anterior a la entrada en Jerusalén. Judíos y peregrinos en Betania. El Sanedrín ha decidido.",
+0
+],
+[
+12,
+"bethany",
+"Mediados de abril del año 34 · sábado",
+0,
+586,
+"El sábado anterior a la entrada en Jerusalén. La cena en Betania. Judas de Keriot ha decidido.",
+0
+],
+[
+12,
+"bethany",
+"Mediados de abril del año 34 · sábado",
+0,
+587,
+"El adiós a Lázaro",
+0
+],
+[
+12,
+"jerusalem",
+"Mediados de abril del año 34 · sábado",
+0,
+588,
+"Judas Iscariote con los Jefes del Sanedrín.",
+0
+],
+[
+12,
+"jerusalem",
+"Mediados de abril del año 34 · domingo",
+0,
+589,
+"De Betania a Jerusalén, predisponiendo a los apóstoles en orden a la Pasión inminente",
+0
+],
+[
+12,
+"jerusalem",
+"Mediados de abril del año 34 · domingo",
+2,
+590,
+"El llanto ante Jerusalén y la entrada triunfal en la Ciudad Santa.",
+0
+],
+[
+12,
+"jerusalem",
+"Mediados de abril del año 34 · domingo",
+0,
+591,
+"Por la noche en Getsemaní. Los apóstoles llamados de nuevo a la realidad después de la embriaguez del",
+0
+],
+[
+12,
+"jerusalem",
+"Mediados de abril del año 34 · lunes",
+0,
+592,
+"Lunes santo. Consuelo a la madre de Analía y encuentro con el soldado Vital. La higuera estéril y la",
+0
+],
+[
+12,
+"jerusalem",
+"Mediados de abril del año 34 · lunes",
+0,
+593,
+"El lunes por la noche en el Getsemaní con los apóstoles.",
+0
+],
+[
+12,
+"jerusalem",
+"Mediados de abril del año 34 · martes",
+0,
+594,
+"Martes santo",
+0
+],
+[
+12,
+"jerusalem",
+"Mediados de abril del año 34 · martes",
+0,
+595,
+"El martes por la noche en el Getsemaní con los apóstoles.",
+0
+],
+[
+12,
+"jerusalem",
+"Abril del año 34",
+0,
+596,
+"Miércoles santo. El mayor de los mandamientos y el óbolo de la viuda. Los discursos sobre los escribas y fariseos, sobre el",
+0
+],
+[
+12,
+"jerusalem",
+"Mediados de abril del año 34 · miércoles",
+0,
+596,
+"Miércoles santo. El mayor de los mandamientos y el óbolo de la viuda. Los discursos sobre los escribas y fariseos, sobre el",
+0
+],
+[
+12,
+"jerusalem",
+"Mediados de abril del año 34 · miércoles",
+0,
+596,
+"Miércoles santo. El mayor de los mandamientos y el óbolo de la viuda. Los discursos sobre los escribas y fariseos, sobre el",
+0
+],
+[
+12,
+"jerusalem",
+"Mediados de abril del año 34 · miércoles",
+0,
+597,
+"El miércoles por la noche en el Getsemaní con los apóstoles.",
+0
+],
+[
+12,
+"jerusalem",
+"Mediados de abril del año 34 · jueves",
+0,
+598,
+"Jueves Santo. Preparativos de la Cena pascual. La manifestación del Padre y el homenaje de los Gentiles.",
+0
+],
+[
+12,
+"jerusalem",
+"Mediados de abril del año 34 · jueves",
+0,
+599,
+"",
+0
+],
+[
+12,
+"jerusalem",
+"Mediados de abril del año 34 · jueves",
+0,
+600,
+"La última Cena pascual.",
+0
+],
+[
+12,
+"jerusalem",
+"Mediados de abril del año 34 · jueves",
+0,
+600,
+"La última Cena pascual.",
+0
+],
+[
+12,
+"jerusalem",
+"Mediados de abril del año 34 · jueves",
+0,
+602,
+"Hacia el Getsemaní con once apóstoles. La agonía y el prendimiento.",
+0
+],
+[
+12,
+"jerusalem",
+"Mediados de abril del año 34 · jueves",
+0,
+604,
+"Los procesos. Las negaciones de Pedro. Consideraciones sobre Pilato.",
+0
+],
+[
+12,
+"jerusalem",
+"Finales de abril del año 34 · viernes",
+0,
+605,
+"Desesperación y suicidio de Judas Iscariote. Habría podido salvarse todavía si se hubiera arrepentido.",
+0
+],
+[
+12,
+"jerusalem",
+"Finales de abril del año 34 · viernes",
+0,
+607,
+"Juan va a recoger a la Madre.",
+0
+],
+[
+12,
+"jerusalem",
+"Finales de abril del año 34 · viernes",
+0,
+609,
+"La crucifixión, la muerte y el descendimiento.",
+0
+],
+[
+12,
+"jerusalem",
+"Finales de abril del año 34 · viernes",
+0,
+611,
+"Cierran el Sepulcro. El regreso al Cenáculo.",
+0
+],
+[
+12,
+"jerusalem",
+"Finales de abril del año 34 · viernes",
+0,
+612,
+"La noche del Viernes Santo. Lamento de la Virgen. El velo con el Rostro del Redentor.",
+0
+],
+[
+12,
+"jerusalem",
+"Finales de abril del año 34 · viernes",
+0,
+612,
+"La noche del Viernes Santo. Lamento de la Virgen. El velo con el Rostro del Redentor.",
+0
+],
+[
+12,
+"jerusalem",
+"Abril del año 34",
+0,
+613,
+"La Pasión de Jesús y María y la Compasión de Juan.",
+0
+],
+[
+12,
+"jerusalem",
+"Finales de abril del año 34 · sábado",
+0,
+614,
+"El día del Sábado Santo.",
+0
+],
+[
+12,
+"jerusalem",
+"Finales de abril del año 34 · sábado",
+0,
+615,
+"La noche del Sábado Santo.",
+0
+],
+[
+12,
+"jerusalem",
+"Finales de abril del año 34 · domingo",
+0,
+616,
+"La mañana de la Resurrección. Oración de María.",
+0
+],
+[
+12,
+"jerusalem",
+"Finales de abril del año 34 · domingo",
+0,
+616,
+"La mañana de la Resurrección. Oración de María.",
+0
+],
+[
+12,
+"jerusalem",
+"Finales de abril del año 34 · domingo",
+0,
+617,
+"La Resurrección.",
+0
+],
+[
+12,
+"jerusalem",
+"Finales de abril del año 34 · domingo",
+0,
+618,
+"Jesús resucitado se aparece a su Madre.",
+0
+],
+[
+12,
+"jerusalem",
+"Finales de abril del año 34 · domingo",
+0,
+619,
+"Las pías mujeres al pie del Sepulcro.",
+0
+]
+],
+"fiestas": [
+[
+0,
+15,
+"Pascua",
+"Finales de marzo del año 31"
+],
+[
+2,
+33,
+"Pentecostés",
+"Principios de junio del año 31"
+],
+[
+3,
+80,
+"Fiesta de los Tabernáculos (suspendida)",
+"Finales de octubre del año 31"
+],
+[
+3,
+80,
+"Fiesta de los Tabernáculos (aplazada)",
+"Principios a mediados de noviembre del año 31"
+],
+[
+4,
+111,
+"Fiesta de la Dedicación",
+"Finales de diciembre del año 31"
+],
+[
+6,
+191,
+"Pascua",
+"Mediados de abril del año 32"
+],
+[
+6,
+219,
+"Pentecostés",
+"Principios de junio del año 32"
+],
+[
+10,
+399,
+"Pascua",
+"Principios de abril del año 33 · sábado"
+],
+[
+10,
+434,
+"Pentecostés",
+"Finales de mayo del año 33"
+],
+[
+12,
+648,
+"Pascua",
+"Finales de abril del año 34 · viernes a sábado"
+]
+],
+"chpar": {
+"44": [
+39,
+0
+],
+"45": [
+40,
+0
+],
+"46": [
+41,
+0
+],
+"47": [
+42,
+0
+],
+"48": [
+43,
+0
+],
+"49": [
+44,
+0
+],
+"50": [
+45,
+0
+],
+"51": [
+46,
+0
+],
+"52": [
+47,
+0
+],
+"53": [
+48,
+0
+],
+"54": [
+49,
+0
+],
+"55": [
+50,
+0
+],
+"56": [
+51,
+0
+],
+"57": [
+52,
+0
+],
+"58": [
+53,
+0
+],
+"59": [
+54,
+0
+],
+"60": [
+55,
+0
+],
+"61": [
+56,
+0
+],
+"62": [
+57,
+0
+],
+"63": [
+58,
+0
+],
+"64": [
+59,
+0
+],
+"65": [
+60,
+0
+],
+"66": [
+61,
+0
+],
+"67": [
+62,
+0
+],
+"68": [
+63,
+0
+],
+"69": [
+64,
+0
+],
+"70": [
+65,
+0
+],
+"71": [
+66,
+0
+],
+"72": [
+67,
+0
+],
+"73": [
+67,
+34
+],
+"74": [
+68,
+0
+],
+"75": [
+69,
+0
+],
+"76": [
+70,
+0
+],
+"77": [
+71,
+0
+],
+"78": [
+72,
+0
+],
+"79": [
+73,
+0
+],
+"80": [
+74,
+0
+],
+"81": [
+75,
+0
+],
+"82": [
+76,
+0
+],
+"83": [
+77,
+0
+],
+"84": [
+78,
+0
+],
+"85": [
+79,
+0
+],
+"86": [
+80,
+0
+],
+"87": [
+81,
+0
+],
+"88": [
+82,
+0
+],
+"89": [
+83,
+0
+],
+"90": [
+84,
+0
+],
+"91": [
+85,
+0
+],
+"92": [
+86,
+0
+],
+"93": [
+87,
+0
+],
+"94": [
+88,
+0
+],
+"95": [
+89,
+0
+],
+"96": [
+90,
+0
+],
+"97": [
+91,
+0
+],
+"98": [
+92,
+0
+],
+"99": [
+93,
+0
+],
+"100": [
+94,
+0
+],
+"101": [
+95,
+0
+],
+"102": [
+96,
+0
+],
+"104": [
+98,
+0
+],
+"105": [
+99,
+0
+],
+"106": [
+100,
+0
+],
+"107": [
+102,
+0
+],
+"108": [
+103,
+0
+],
+"109": [
+104,
+0
+],
+"110": [
+105,
+0
+],
+"111": [
+106,
+0
+],
+"112": [
+107,
+0
+],
+"113": [
+108,
+0
+],
+"114": [
+109,
+0
+],
+"115": [
+110,
+0
+],
+"116": [
+111,
+0
+],
+"117": [
+112,
+0
+],
+"118": [
+113,
+0
+],
+"119": [
+114,
+0
+],
+"120": [
+116,
+0
+],
+"121": [
+117,
+0
+],
+"122": [
+118,
+0
+],
+"123": [
+119,
+0
+],
+"124": [
+120,
+0
+],
+"125": [
+121,
+0
+],
+"126": [
+122,
+0
+],
+"127": [
+123,
+0
+],
+"128": [
+124,
+0
+],
+"129": [
+125,
+0
+],
+"130": [
+126,
+0
+],
+"131": [
+127,
+0
+],
+"132": [
+128,
+0
+],
+"133": [
+129,
+0
+],
+"134": [
+131,
+0
+],
+"135": [
+132,
+0
+],
+"136": [
+133,
+0
+],
+"137": [
+134,
+0
+],
+"138": [
+135,
+0
+],
+"139": [
+136,
+0
+],
+"140": [
+137,
+0
+],
+"141": [
+138,
+0
+],
+"142": [
+139,
+0
+],
+"143": [
+140,
+0
+],
+"144": [
+141,
+0
+],
+"145": [
+142,
+0
+],
+"146": [
+143,
+0
+],
+"147": [
+144,
+0
+],
+"148": [
+145,
+0
+],
+"149": [
+146,
+0
+],
+"150": [
+147,
+0
+],
+"151": [
+148,
+0
+],
+"152": [
+149,
+0
+],
+"153": [
+150,
+0
+],
+"154": [
+151,
+0
+],
+"155": [
+152,
+0
+],
+"156": [
+153,
+0
+],
+"157": [
+154,
+0
+],
+"158": [
+155,
+0
+],
+"159": [
+156,
+0
+],
+"160": [
+157,
+0
+],
+"161": [
+158,
+0
+],
+"162": [
+159,
+0
+],
+"163": [
+160,
+0
+],
+"164": [
+161,
+0
+],
+"165": [
+162,
+0
+],
+"166": [
+163,
+0
+],
+"167": [
+164,
+0
+],
+"168": [
+165,
+0
+],
+"169": [
+166,
+0
+],
+"170": [
+167,
+0
+],
+"171": [
+168,
+0
+],
+"172": [
+169,
+0
+],
+"173": [
+170,
+0
+],
+"174": [
+171,
+0
+],
+"175": [
+172,
+4
+],
+"176": [
+173,
+0
+],
+"177": [
+174,
+0
+],
+"178": [
+175,
+0
+],
+"179": [
+176,
+0
+],
+"180": [
+177,
+0
+],
+"181": [
+178,
+0
+],
+"182": [
+178,
+71
+],
+"183": [
+180,
+0
+],
+"184": [
+180,
+53
+],
+"185": [
+182,
+0
+],
+"186": [
+183,
+0
+],
+"187": [
+184,
+0
+],
+"188": [
+185,
+0
+],
+"189": [
+186,
+0
+],
+"190": [
+187,
+0
+],
+"191": [
+188,
+0
+],
+"192": [
+189,
+0
+],
+"193": [
+190,
+0
+],
+"194": [
+191,
+0
+],
+"195": [
+192,
+0
+],
+"196": [
+193,
+0
+],
+"197": [
+194,
+0
+],
+"198": [
+195,
+0
+],
+"199": [
+196,
+0
+],
+"200": [
+197,
+0
+],
+"201": [
+198,
+0
+],
+"202": [
+199,
+0
+],
+"203": [
+200,
+0
+],
+"204": [
+201,
+0
+],
+"205": [
+202,
+0
+],
+"206": [
+203,
+0
+],
+"207": [
+204,
+0
+],
+"208": [
+205,
+0
+],
+"209": [
+206,
+0
+],
+"210": [
+207,
+0
+],
+"211": [
+208,
+0
+],
+"212": [
+209,
+0
+],
+"213": [
+210,
+0
+],
+"214": [
+211,
+0
+],
+"216": [
+213,
+0
+],
+"217": [
+214,
+0
+],
+"218": [
+215,
+0
+],
+"219": [
+216,
+0
+],
+"220": [
+217,
+0
+],
+"221": [
+218,
+0
+],
+"222": [
+219,
+0
+],
+"223": [
+219,
+56
+],
+"224": [
+220,
+41
+],
+"225": [
+222,
+0
+],
+"226": [
+223,
+0
+],
+"228": [
+225,
+0
+],
+"229": [
+226,
+0
+],
+"230": [
+227,
+0
+],
+"231": [
+228,
+0
+],
+"232": [
+229,
+0
+],
+"233": [
+230,
+0
+],
+"234": [
+231,
+0
+],
+"235": [
+231,
+0
+],
+"236": [
+232,
+0
+],
+"237": [
+233,
+0
+],
+"238": [
+234,
+0
+],
+"239": [
+234,
+54
+],
+"240": [
+235,
+0
+],
+"241": [
+236,
+0
+],
+"242": [
+237,
+0
+],
+"243": [
+238,
+0
+],
+"244": [
+239,
+0
+],
+"245": [
+240,
+0
+],
+"246": [
+241,
+0
+],
+"247": [
+242,
+0
+],
+"248": [
+242,
+42
+],
+"249": [
+244,
+0
+],
+"250": [
+245,
+0
+],
+"251": [
+246,
+0
+],
+"252": [
+247,
+1
+],
+"253": [
+248,
+0
+],
+"254": [
+249,
+0
+],
+"255": [
+250,
+0
+],
+"256": [
+251,
+0
+],
+"257": [
+252,
+0
+],
+"258": [
+253,
+0
+],
+"259": [
+254,
+0
+],
+"260": [
+255,
+0
+],
+"261": [
+256,
+0
+],
+"262": [
+257,
+0
+],
+"263": [
+258,
+0
+],
+"264": [
+259,
+0
+],
+"265": [
+260,
+0
+],
+"266": [
+261,
+0
+],
+"267": [
+262,
+0
+],
+"268": [
+262,
+64
+],
+"269": [
+264,
+0
+],
+"270": [
+265,
+0
+],
+"271": [
+266,
+0
+],
+"272": [
+267,
+0
+],
+"273": [
+268,
+0
+],
+"274": [
+268,
+57
+],
+"275": [
+270,
+0
+],
+"276": [
+271,
+0
+],
+"277": [
+272,
+0
+],
+"278": [
+272,
+13
+],
+"279": [
+273,
+0
+],
+"280": [
+274,
+0
+],
+"281": [
+275,
+0
+],
+"282": [
+276,
+0
+],
+"283": [
+277,
+0
+],
+"284": [
+278,
+0
+],
+"285": [
+279,
+0
+],
+"287": [
+282,
+0
+],
+"288": [
+283,
+0
+],
+"289": [
+284,
+0
+],
+"290": [
+285,
+0
+],
+"291": [
+286,
+0
+],
+"292": [
+287,
+0
+],
+"293": [
+288,
+0
+],
+"294": [
+289,
+0
+],
+"295": [
+290,
+0
+],
+"296": [
+291,
+0
+],
+"297": [
+292,
+0
+],
+"298": [
+293,
+0
+],
+"299": [
+294,
+0
+],
+"301": [
+296,
+0
+],
+"302": [
+297,
+0
+],
+"303": [
+298,
+0
+],
+"304": [
+299,
+0
+],
+"305": [
+300,
+0
+],
+"306": [
+301,
+0
+],
+"307": [
+302,
+0
+],
+"308": [
+303,
+0
+],
+"309": [
+304,
+0
+],
+"310": [
+305,
+0
+],
+"311": [
+306,
+0
+],
+"312": [
+307,
+0
+],
+"313": [
+308,
+0
+],
+"314": [
+309,
+0
+],
+"315": [
+310,
+0
+],
+"316": [
+311,
+0
+],
+"317": [
+312,
+0
+],
+"318": [
+313,
+0
+],
+"319": [
+314,
+0
+],
+"320": [
+315,
+0
+],
+"321": [
+316,
+0
+],
+"322": [
+317,
+0
+],
+"323": [
+318,
+0
+],
+"324": [
+319,
+0
+],
+"325": [
+320,
+0
+],
+"326": [
+321,
+0
+],
+"327": [
+322,
+0
+],
+"328": [
+323,
+0
+],
+"329": [
+324,
+0
+],
+"330": [
+325,
+0
+],
+"331": [
+326,
+0
+],
+"332": [
+327,
+0
+],
+"333": [
+328,
+0
+],
+"334": [
+329,
+0
+],
+"335": [
+330,
+0
+],
+"336": [
+331,
+0
+],
+"337": [
+332,
+0
+],
+"338": [
+333,
+0
+],
+"339": [
+334,
+0
+],
+"340": [
+335,
+0
+],
+"341": [
+336,
+0
+],
+"342": [
+337,
+0
+],
+"343": [
+338,
+0
+],
+"344": [
+339,
+0
+],
+"345": [
+340,
+0
+],
+"346": [
+341,
+0
+],
+"347": [
+342,
+0
+],
+"348": [
+343,
+0
+],
+"349": [
+344,
+0
+],
+"350": [
+345,
+0
+],
+"351": [
+346,
+0
+],
+"352": [
+347,
+0
+],
+"353": [
+349,
+0
+],
+"354": [
+350,
+0
+],
+"355": [
+351,
+0
+],
+"356": [
+352,
+0
+],
+"357": [
+353,
+0
+],
+"358": [
+354,
+0
+],
+"359": [
+112,
+9
+],
+"360": [
+356,
+0
+],
+"361": [
+357,
+0
+],
+"362": [
+358,
+0
+],
+"363": [
+359,
+0
+],
+"364": [
+360,
+0
+],
+"365": [
+361,
+0
+],
+"366": [
+362,
+0
+],
+"367": [
+363,
+0
+],
+"368": [
+364,
+0
+],
+"369": [
+365,
+0
+],
+"370": [
+366,
+0
+],
+"371": [
+367,
+0
+],
+"372": [
+368,
+0
+],
+"373": [
+369,
+0
+],
+"374": [
+370,
+0
+],
+"375": [
+371,
+0
+],
+"376": [
+372,
+0
+],
+"377": [
+373,
+0
+],
+"378": [
+374,
+0
+],
+"379": [
+375,
+0
+],
+"380": [
+376,
+0
+],
+"381": [
+377,
+0
+],
+"382": [
+378,
+0
+],
+"383": [
+379,
+0
+],
+"384": [
+380,
+0
+],
+"385": [
+381,
+0
+],
+"386": [
+382,
+0
+],
+"387": [
+383,
+0
+],
+"388": [
+384,
+0
+],
+"389": [
+385,
+0
+],
+"390": [
+386,
+0
+],
+"391": [
+387,
+0
+],
+"392": [
+388,
+0
+],
+"393": [
+389,
+0
+],
+"394": [
+390,
+0
+],
+"395": [
+391,
+0
+],
+"397": [
+393,
+0
+],
+"398": [
+394,
+0
+],
+"399": [
+395,
+0
+],
+"400": [
+396,
+0
+],
+"401": [
+397,
+0
+],
+"402": [
+398,
+0
+],
+"403": [
+399,
+0
+],
+"404": [
+400,
+0
+],
+"405": [
+401,
+0
+],
+"406": [
+402,
+0
+],
+"407": [
+403,
+0
+],
+"408": [
+404,
+0
+],
+"409": [
+405,
+0
+],
+"410": [
+406,
+0
+],
+"411": [
+407,
+0
+],
+"412": [
+408,
+0
+],
+"413": [
+409,
+0
+],
+"414": [
+410,
+0
+],
+"415": [
+411,
+0
+],
+"416": [
+412,
+0
+],
+"417": [
+413,
+0
+],
+"418": [
+414,
+0
+],
+"419": [
+415,
+0
+],
+"420": [
+416,
+0
+],
+"421": [
+417,
+0
+],
+"422": [
+418,
+0
+],
+"423": [
+419,
+0
+],
+"424": [
+420,
+0
+],
+"425": [
+421,
+0
+],
+"426": [
+422,
+0
+],
+"427": [
+423,
+0
+],
+"428": [
+424,
+0
+],
+"429": [
+425,
+0
+],
+"430": [
+426,
+0
+],
+"431": [
+427,
+0
+],
+"432": [
+428,
+0
+],
+"433": [
+429,
+0
+],
+"434": [
+430,
+0
+],
+"435": [
+431,
+0
+],
+"436": [
+432,
+0
+],
+"437": [
+433,
+0
+],
+"438": [
+434,
+0
+],
+"439": [
+435,
+0
+],
+"440": [
+436,
+0
+],
+"441": [
+437,
+0
+],
+"442": [
+438,
+0
+],
+"443": [
+439,
+0
+],
+"444": [
+440,
+0
+],
+"445": [
+441,
+0
+],
+"446": [
+442,
+0
+],
+"447": [
+443,
+0
+],
+"448": [
+444,
+0
+],
+"449": [
+445,
+0
+],
+"450": [
+446,
+0
+],
+"451": [
+447,
+0
+],
+"452": [
+448,
+0
+],
+"453": [
+449,
+0
+],
+"454": [
+450,
+0
+],
+"455": [
+451,
+0
+],
+"456": [
+452,
+0
+],
+"457": [
+453,
+0
+],
+"458": [
+454,
+0
+],
+"459": [
+455,
+0
+],
+"460": [
+456,
+0
+],
+"461": [
+457,
+0
+],
+"462": [
+458,
+0
+],
+"463": [
+459,
+0
+],
+"464": [
+460,
+0
+],
+"465": [
+461,
+0
+],
+"466": [
+462,
+0
+],
+"467": [
+463,
+0
+],
+"468": [
+464,
+0
+],
+"469": [
+465,
+0
+],
+"470": [
+466,
+0
+],
+"471": [
+467,
+0
+],
+"472": [
+468,
+0
+],
+"473": [
+469,
+0
+],
+"474": [
+470,
+0
+],
+"475": [
+471,
+0
+],
+"476": [
+472,
+0
+],
+"477": [
+473,
+0
+],
+"478": [
+474,
+0
+],
+"479": [
+475,
+0
+],
+"480": [
+476,
+0
+],
+"481": [
+477,
+0
+],
+"482": [
+478,
+0
+],
+"483": [
+479,
+0
+],
+"484": [
+480,
+0
+],
+"485": [
+481,
+0
+],
+"486": [
+482,
+0
+],
+"487": [
+483,
+0
+],
+"488": [
+484,
+0
+],
+"489": [
+485,
+0
+],
+"490": [
+486,
+0
+],
+"491": [
+487,
+0
+],
+"492": [
+488,
+0
+],
+"493": [
+489,
+0
+],
+"494": [
+490,
+0
+],
+"495": [
+491,
+0
+],
+"496": [
+492,
+0
+],
+"497": [
+493,
+0
+],
+"498": [
+494,
+0
+],
+"499": [
+495,
+0
+],
+"500": [
+496,
+0
+],
+"501": [
+497,
+0
+],
+"502": [
+498,
+0
+],
+"505": [
+501,
+0
+],
+"506": [
+502,
+0
+],
+"507": [
+503,
+0
+],
+"508": [
+504,
+0
+],
+"510": [
+506,
+0
+],
+"511": [
+507,
+0
+],
+"512": [
+508,
+0
+],
+"513": [
+509,
+0
+],
+"514": [
+510,
+0
+],
+"515": [
+511,
+0
+],
+"516": [
+512,
+0
+],
+"517": [
+513,
+0
+],
+"518": [
+514,
+0
+],
+"519": [
+515,
+0
+],
+"520": [
+516,
+0
+],
+"521": [
+517,
+0
+],
+"522": [
+518,
+0
+],
+"523": [
+519,
+0
+],
+"524": [
+520,
+0
+],
+"525": [
+521,
+0
+],
+"526": [
+522,
+0
+],
+"527": [
+523,
+0
+],
+"528": [
+524,
+0
+],
+"529": [
+525,
+0
+],
+"530": [
+526,
+0
+],
+"531": [
+527,
+0
+],
+"532": [
+528,
+0
+],
+"533": [
+529,
+0
+],
+"534": [
+530,
+0
+],
+"535": [
+531,
+0
+],
+"536": [
+532,
+0
+],
+"537": [
+533,
+0
+],
+"538": [
+534,
+0
+],
+"539": [
+535,
+0
+],
+"540": [
+536,
+0
+],
+"541": [
+537,
+0
+],
+"542": [
+538,
+0
+],
+"543": [
+539,
+0
+],
+"544": [
+540,
+0
+],
+"545": [
+541,
+0
+],
+"547": [
+543,
+0
+],
+"549": [
+545,
+0
+],
+"550": [
+546,
+0
+],
+"551": [
+547,
+0
+],
+"552": [
+548,
+0
+],
+"553": [
+549,
+0
+],
+"554": [
+550,
+0
+],
+"555": [
+551,
+0
+],
+"556": [
+552,
+0
+],
+"557": [
+553,
+0
+],
+"558": [
+554,
+0
+],
+"559": [
+555,
+0
+],
+"560": [
+556,
+0
+],
+"561": [
+557,
+0
+],
+"562": [
+558,
+0
+],
+"563": [
+559,
+0
+],
+"564": [
+560,
+0
+],
+"565": [
+561,
+0
+],
+"566": [
+562,
+0
+],
+"568": [
+564,
+0
+],
+"569": [
+565,
+0
+],
+"570": [
+566,
+0
+],
+"571": [
+567,
+0
+],
+"572": [
+568,
+0
+],
+"573": [
+569,
+0
+],
+"574": [
+570,
+0
+],
+"575": [
+571,
+0
+],
+"576": [
+572,
+0
+],
+"577": [
+573,
+0
+],
+"578": [
+574,
+0
+],
+"579": [
+575,
+0
+],
+"580": [
+576,
+0
+],
+"581": [
+577,
+0
+],
+"582": [
+578,
+0
+],
+"583": [
+579,
+0
+],
+"584": [
+580,
+0
+],
+"585": [
+581,
+0
+],
+"586": [
+582,
+0
+],
+"587": [
+583,
+0
+],
+"588": [
+584,
+0
+],
+"589": [
+585,
+0
+],
+"590": [
+586,
+0
+],
+"591": [
+588,
+0
+],
+"592": [
+589,
+0
+],
+"593": [
+591,
+0
+],
+"594": [
+592,
+0
+],
+"595": [
+593,
+0
+],
+"596": [
+594,
+0
+],
+"597": [
+596,
+0
+],
+"598": [
+597,
+0
+],
+"599": [
+599,
+0
+],
+"600": [
+599,
+0
+],
+"602": [
+600,
+0
+],
+"604": [
+601,
+0
+],
+"605": [
+602,
+0
+],
+"607": [
+603,
+0
+],
+"609": [
+605,
+0
+],
+"611": [
+607,
+0
+],
+"612": [
+608,
+0
+],
+"613": [
+609,
+0
+],
+"614": [
+609,
+0
+],
+"615": [
+610,
+0
+],
+"616": [
+611,
+0
+],
+"617": [
+612,
+0
+],
+"618": [
+613,
+0
+],
+"619": [
+614,
+0
+]
+}
+}

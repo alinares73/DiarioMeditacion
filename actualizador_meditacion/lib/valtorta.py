@@ -42,10 +42,41 @@ def limpia(h):
             out.append(tok)
     return re.sub(r'\s+', ' ', ''.join(out)).strip()
 
-def construir(epub_path, enlaces_path, chunk_kb=260):
-    """Devuelve (chunks, meta, VAL) ; VAL = {libro: {cap_idx: [[v_ini, v_fin, off, alusion], ...]}}"""
+def slug(k): return re.sub(r'[^a-z]', '', k.lower())
+
+def atlas_prep(path):
+    """Itinerario del Atlas de Valtorta: pasos por capítulo y primera línea de cada capítulo."""
+    A = json.load(open(path, encoding='utf-8'))
+    L = {slug(k): v for k, v in A['lugares'].items()}
+    P = [[c, slug(k), f, mi, ch, t, by] for c, k, f, mi, ch, t, by in A['pasos']]
+    porch = {}
+    for i, p in enumerate(P):
+        if p[4]: porch.setdefault(p[4], []).append(i)
+    first = {}
+    for ch, sj in A['chpar'].items():
+        first.setdefault(tuple(sj), []).append(int(ch))
+    return {'L': L, 'C': A['ciclos'], 'P': P, 'F': A['fiestas']}, porch, first
+
+def linea_atlas(ATL, porch, chs):
+    """«📍 Lugar → Lugar · fecha · ciclo» para los capítulos que empiezan en un párrafo."""
+    out = []
+    for ch in sorted(chs):
+        ids = porch.get(ch) or []
+        if not ids: continue
+        P = ATL['P']; names = []
+        for i in ids:
+            n = ATL['L'][P[i][1]][0]
+            if not names or names[-1] != n: names.append(n)
+        p0 = P[ids[0]]; cy = ATL['C'][p0[0]][0].split(' · ')[0]
+        out.append('<div class="vwh"><a href="#/mapa/p/%d">📍 %s</a><span>%s%s</span></div>' % (
+            ids[0], html.escape(' → '.join(names)), html.escape(p0[2] + ' · ' if p0[2] else ''), html.escape(cy)))
+    return ''.join(out)
+
+def construir(epub_path, enlaces_path, chunk_kb=260, atlas_path=None):
+    """Devuelve (chunks, meta, VAL, falt, ATL) ; VAL = {libro: {cap_idx: [[v_ini, v_fin, off, alusion, paso], ...]}}"""
     parts, scenes = leer_epub(epub_path)
     E = json.load(open(enlaces_path, encoding='utf-8'))['enlaces']
+    ATL, porch, first = atlas_prep(atlas_path) if atlas_path else (None, {}, {})
     por_par = {}
     for b, c, a, z, s, j, par, ch in E: por_par.setdefault((s, j), []).append((b, c, a, z, par))
     idx = 1; secs = []; offs = {}; toc = []
@@ -58,6 +89,11 @@ def construir(epub_path, enlaces_path, chunk_kb=260):
         for j, p in enumerate(s['p']):
             refs = por_par.get((s['n'], j))
             po = idx; idx += 1; offs[(s['n'], j)] = po
+            wh = linea_atlas(ATL, porch, first.get((s['n'], j), [])) if ATL else ''
+            if wh:
+                for ch in first[(s['n'], j)]:
+                    for i in porch.get(ch, []): ATL['P'][i].append(po) if len(ATL['P'][i]) == 7 else None
+                h.append(wh)
             if refs:
                 seen = []; lab = []
                 for b, c, a, z, par in sorted(refs, key=lambda r: (BKN[r[0]], r[1], r[2])):
@@ -69,13 +105,15 @@ def construir(epub_path, enlaces_path, chunk_kb=260):
                 h.append('<div class="vrf">%s</div>' % ' · '.join(lab))
                 h.append('<p id="o%d" data-o="%d">%s</p>' % (po, po, limpia(p)))
             else:
-                h.append('<p data-o="%d">%s</p>' % (po, limpia(p)))
+                h.append('<p%s data-o="%d">%s</p>' % (' id="o%d"' % po if wh else '', po, limpia(p)))
         secs.append((o, part, s['t'], '\n'.join(h)))
     # índice
     t0 = ['<p data-o="0" style="text-align:center"><b><span style="font-size:1.3em">La vida de Jesús</span></b></p>',
           '<p style="text-align:center" class="sm">según las visiones de María Valtorta</p>',
           '<p class="sm" style="text-align:center">Los pasajes que tienen correspondencia con los Evangelios llevan encima sus citas: tócalas para ir a la Biblia.</p>',
-          '<h2>Índice</h2>']
+          ]
+    if ATL: t0.append('<p class="vatl"><a href="#/mapa">🗺 Mapa de los viajes</a><a href="#/viajes">📜 Cronología</a><a href="#/lugares">📍 Lugares</a></p>')
+    t0.append('<h2>Índice</h2>')
     last = None
     for o, part, t, _ in secs:
         if part != last: t0.append('<h3>%s</h3>' % html.escape(part)); last = part
@@ -97,7 +135,11 @@ def construir(epub_path, enlaces_path, chunk_kb=260):
     for b, c, a, z, s, j, par, ch in E:
         off = offs.get((s, j))
         if off is None: falt += 1; continue
-        VAL.setdefault(str(BKN[b]), {}).setdefault(str(c - 1), []).append([a, z, off, par])
+        st = (porch.get(ch) or [-1])[0]
+        VAL.setdefault(str(BKN[b]), {}).setdefault(str(c - 1), []).append([a, z, off, par, st])
     for b in VAL:
         for c in VAL[b]: VAL[b][c].sort()
-    return chunks, meta, VAL, falt
+    if ATL:
+        for p in ATL['P']:
+            if len(p) == 7: p.append(0)
+    return chunks, meta, VAL, falt, ATL

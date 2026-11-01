@@ -71,7 +71,7 @@ def sync_tree(src, dst, keep=()):
     return n
 
 # ------------------------------------------------------------------ parches del index.html
-def parchear(src, metas, medi, js, VAL=None, EY=None):
+def parchear(src, metas, medi, js, VAL=None, EY=None, ATL=None):
     def rep(old, new, count=1):
         nonlocal src
         if src.count(old) != count:
@@ -89,7 +89,7 @@ def parchear(src, metas, medi, js, VAL=None, EY=None):
     C = json.loads(m.group(1))
     for k, v in metas.items(): C['docs'][k] = v
     J = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':'))
-    src = src.replace('const CAT=' + m.group(1) + ';\n', 'const CAT=' + J(C) + ';\nconst MEDI=' + J(medi) + ';\nconst VAL=' + J(VAL or {}) + ';\n', 1)
+    src = src.replace('const CAT=' + m.group(1) + ';\n', 'const CAT=' + J(C) + ';\nconst MEDI=' + J(medi) + ';\nconst VAL=' + J(VAL or {}) + ';\nconst ATL=' + J(ATL) + ';\n', 1)
     # nombre de la app: «Diario» (la app de origen se llama ahora «Epacta»)
     src = re.sub(r'<title>[^<]*</title>', '<title>Diario</title>', src, count=1)
     src = re.sub(r'<h1 id="ht">[^<]*</h1>', '<h1 id="ht">Diario</h1>', src, count=1)
@@ -109,7 +109,7 @@ def parchear(src, metas, medi, js, VAL=None, EY=None):
         "M.querySelectorAll('.vs').forEach(e=>{if(hl[b+':'+c+':'+e.dataset.v])e.classList.add('hl');e.addEventListener('click',ev=>{if(ev.target.closest('a'))return;toggleSel(e)})});valDots(b,c);")
     # rutas
     rep("  else if(k==='docs'){setHead('Libros enlazados','#/','doc');renderDocs()}",
-        "  else if(k==='docs'){setHead('Libros','#/','doc');renderDocs()}\n  else if(k==='med'){renderMed(h[1])}\n  else if(k==='resaltados'){renderUH()}")
+        "  else if(k==='docs'){setHead('Libros','#/','doc');renderDocs()}\n  else if(k==='med'){renderMed(h[1])}\n  else if(k==='resaltados'){renderUH()}\n  else if(k==='mapa'){renderMapa(h[1],h[2])}\n  else if(k==='viajes'){renderViajes(h[1])}\n  else if(k==='lugares'){renderLugares()}\n  else if(k==='lugar'){renderLugar(h[1])}")
     rep("$('#fab').style.display='';$('#sfab').style.display='none';$('#hstar').style.display='none';bar(null);window.scrollTo(0,0);",
         "$('#fab').style.display='';$('#sfab').style.display='none';$('#hstar').style.display='none';bar(null);window.scrollTo(0,0);uhCur=null;$('#hval').style.display='none';$('#hlb').classList.remove('on');$('#pop').classList.remove('on');")
     rep("if(doc==='ElYo')eyMarkAll();if(o.i!==undefined)focusPar(o.i,o.q);",
@@ -154,10 +154,53 @@ header #hval{width:24px;height:24px;min-width:24px;border:0;padding:0;margin:0 1
 .bkm{display:grid;grid-template-columns:1fr;gap:10px;margin:0 0 8px}.bkm .btn{justify-content:flex-start;text-align:left;gap:14px;padding:12px 16px}.bkm .btn small{display:block;font:400 14px var(--ui);color:var(--mut);margin-top:2px}.bkm .ic{font-size:26px}
 .uhi{position:relative;padding:12px 30px 12px 4px;border-bottom:1px solid var(--bd)}.uhi a{color:var(--fg);text-decoration:none;display:block;font:17px/1.5 var(--ff)}.uhi b{display:block;font:600 14px var(--ui);color:var(--link);margin-bottom:4px}.uhi small{display:block;margin-top:4px;font-size:13px}.uhi .x{position:absolute;right:0;top:10px}
 .uhf{flex-wrap:wrap}.uhf .btn{flex:0 1 auto;padding:6px 12px;min-height:36px;font-size:14px}
+.rdw .vloc{display:block;margin:-6px 0 8px;padding:0 34px 2px 0;font:500 13px/1.35 var(--ui);color:#e8862b;text-decoration:none}
+#txt .vpl{display:none;margin:.9em 0 .2em;font:600 13px/1.4 var(--ui);color:#e8862b;text-decoration:none}#txt.von .vpl{display:block}
+.doc .vwh{font:600 13px/1.45 var(--ui);margin:1.2em 0 .25em;padding:4px 0 4px 10px;border-left:3px solid #4f9d69;color:var(--mut)}.doc .vwh a{color:#4f9d69;text-decoration:none;margin-right:.5em}.doc .vwh span{font-weight:400}
+.doc .vatl{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;font:600 15px var(--ui)}.doc .vatl a{text-decoration:none}
+.atlr .btn{font-size:15px}
+.atl{margin:-8px -8px 0}
+.achips{display:flex;gap:6px;overflow-x:auto;padding:2px 2px 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch}.achips::-webkit-scrollbar{display:none}
+.achips .chip{flex:none;font:600 13px var(--ui);padding:7px 12px;border-radius:16px;border:1px solid var(--bd);background:var(--card);color:var(--fg);cursor:pointer;user-select:none;-webkit-user-select:none;border-left:4px solid var(--mut)}
+.achips .chip.tG{border-left-color:#4f9d69}.achips .chip.tJ{border-left-color:#e8862b}.achips .chip.on{background:var(--link);color:var(--bg);border-color:var(--link)}
+.mapw{position:relative;height:min(58vh,620px);border:1px solid var(--bd);border-radius:14px;overflow:hidden;background:var(--card)}
+#amap{width:100%;height:100%;display:block;touch-action:none;user-select:none;-webkit-user-select:none;cursor:grab}
+#amap .aland{fill:var(--card)}#amap .asea{fill:var(--link);fill-opacity:.13}#amap .acoast{fill:none;stroke:var(--link);stroke-opacity:.45;stroke-width:1.2;vector-effect:non-scaling-stroke}
+#amap .alake{fill:var(--link);fill-opacity:.22;stroke:var(--link);stroke-opacity:.5;stroke-width:1;vector-effect:non-scaling-stroke}
+#amap .ariv{fill:none;stroke:var(--link);stroke-opacity:.5;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round;vector-effect:non-scaling-stroke}
+#amap .areg text{font:600 calc(var(--s,1)*12px) var(--ui);letter-spacing:.25em;fill:var(--mut);opacity:.55;text-anchor:middle}
+#amap .amt path{fill:var(--mut);opacity:.35}#amap .amt text{font:italic calc(var(--s,1)*10px) var(--ff);fill:var(--mut);opacity:.7}
+#amap .awat text{font:italic calc(var(--s,1)*12px) var(--ff);fill:var(--link);opacity:.6;text-anchor:middle;letter-spacing:.08em}
+#amap .asyr rect{fill:none;stroke:var(--mut);stroke-dasharray:4 4;stroke-opacity:.6;vector-effect:non-scaling-stroke}#amap .asyr text{font:calc(var(--s,1)*9px) var(--ui);fill:var(--mut);text-anchor:middle}
+#amap .ascale path{stroke:var(--fg);stroke-width:1.5;fill:none;vector-effect:non-scaling-stroke}#amap .ascale text{font:11px var(--ui);fill:var(--mut)}#amap .anor{font:700 calc(var(--s,1)*12px) var(--ui);fill:var(--mut)}
+.doc .vwh+p{scroll-margin-top:3.5em}
+#amap .aseg{fill:none;stroke:var(--mut);stroke-opacity:.35;stroke-width:1.6;stroke-dasharray:3 4;vector-effect:non-scaling-stroke;stroke-linecap:round}
+#amap .aseg.done{stroke:#e8862b;stroke-opacity:.9;stroke-width:2.6;stroke-dasharray:none}#amap .aseg.done.boat{stroke-dasharray:6 4}#amap .aseg.last{stroke-width:3.6}
+#amap .aseg.all{stroke:#e8862b;stroke-opacity:.22;stroke-width:1.2;stroke-dasharray:none}
+#amap .apt{fill:var(--bg);stroke:var(--mut);stroke-width:1.4;vector-effect:non-scaling-stroke}#amap .apt.done{fill:#e8862b;stroke:var(--bg)}#amap .apt.sel{fill:var(--link);stroke:var(--bg);stroke-width:2}
+#amap .alb{font-family:var(--ui);font-weight:600;fill:var(--fg);paint-order:stroke;stroke:var(--card);stroke-width:3px;stroke-linejoin:round;pointer-events:none}#amap .alb.fut{fill:var(--mut);font-weight:400}#amap .alb.cur{fill:#e8862b;font-weight:700}
+#amap .acurd{fill:#e8862b;stroke:var(--bg);stroke-width:2;vector-effect:non-scaling-stroke}
+#amap .apulse{fill:#e8862b;fill-opacity:.25;stroke:#e8862b;stroke-width:1.5;vector-effect:non-scaling-stroke;transform-box:fill-box;transform-origin:center;animation:apul 1.6s ease-out infinite}
+@keyframes apul{0%{transform:scale(.6);opacity:1}100%{transform:scale(2.2);opacity:0}}
+.mz{position:absolute;right:8px;bottom:8px;display:flex;flex-direction:column;gap:6px}.mz .btn{width:40px;height:40px;min-height:40px;padding:0;font-size:20px;opacity:.92;box-shadow:0 2px 8px #0004}
+.mapc{margin-top:10px}.mapc .sh{font-size:16px}
+.astep{display:flex;align-items:center;gap:8px;margin:10px 0 8px}.astep .btn{width:48px;min-height:44px;padding:0;font-size:20px;flex:none}.astep .anum{flex:1;text-align:center;font:600 15px var(--ui);color:var(--mut)}
+.aplace b{font:700 18px var(--ui);color:#e8862b;margin-right:8px}.aplace .cap{display:inline}
+.atit{font:17px/1.5 var(--ff);margin:6px 0 4px}
+.ach{font:600 12px var(--ui);letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin:14px 0 2px}
+.ard b{font:500 13px var(--ui);color:var(--mut)}.ard span{color:var(--fg)}
+.aribbon{display:flex;height:30px;border-radius:8px;overflow:hidden;margin:12px 0 6px;gap:2px}.aribbon a{display:flex;align-items:center;justify-content:center;font:700 12px var(--ui);color:#fff;text-decoration:none;min-width:14px}
+.aribbon .tG,.aleg .tG::before{background:#4f9d69}.aribbon .tJ,.aleg .tJ::before{background:#e8862b}.aribbon .tC,.aleg .tC::before{background:var(--mut)}
+.aleg{display:flex;gap:16px;font:13px var(--ui);color:var(--mut);margin-bottom:12px}.aleg span::before{content:'';display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px}
+.acy{border-left:4px solid var(--mut)}.acy.tG{border-left-color:#4f9d69}.acy.tJ{border-left-color:#e8862b}
+.acy details{margin-top:10px}.acy summary{font:600 15px var(--ui);color:var(--link);cursor:pointer;padding:6px 0}
+.arow{padding:9px 0;border-bottom:1px solid var(--bd)}.arow .apl{font:700 15px var(--ui);color:#e8862b;text-decoration:none;margin-right:8px}.arow small{font:13px var(--ui);color:var(--mut)}.arow .atl2{display:block;font:16px/1.45 var(--ff);color:var(--fg);text-decoration:none;margin-top:2px}
+.afest{margin:10px 0 2px;font:700 13px var(--ui);color:var(--link);letter-spacing:.03em}
+.alug{display:flex;justify-content:space-between;align-items:center}.alug b{font:600 13px var(--ui);color:var(--mut);background:var(--bg);border-radius:10px;padding:2px 8px}
 '''
 
 RENDER_DOCS = r'''function renderDocs(){const MB=['MedOD','SCE','HCD','Valtorta'].filter(d=>DOCS[d]),IC={MedOD:'🕯️',SCE:'📿',HCD:'🙏',Valtorta:'🌿'},SUB={MedOD:'Libro de meditaciones · 7 tomos',SCE:'F. Espa y otros · 9 tomos en uno',HCD:'F. Fernández-Carvajal · con enlaces a la Biblia',Valtorta:'Escenas enlazadas con los Evangelios'};const names=Object.keys(DOCS).filter(d=>!MB.includes(d));const nu=uhGroups().length;
-  $('#main').innerHTML='<h2 class="t">Libros</h2><h3 class="thm" style="margin-top:0">Libros de meditación</h3><div class="bkm">'+MB.map(d=>`<a class="btn bk" href="#/dp/${d}/0"><span class="ic">${IC[d]}</span><span>${esc(dTitle(d))}<small>${SUB[d]} · ${Math.round(DOCS[d].kb/102.4)/10} MB</small></span></a>`).join('')+'</div><div class="row" style="margin-top:4px"><a class="btn" href="#/med">🙏 Meditación de hoy</a><a class="btn" href="#/resaltados">🖍 Mis resaltados'+(nu?' ('+nu+')':'')+'</a></div><p class="mut" style="margin:14px 0 0">En cualquier libro puedes buscar con 🔍 y resaltar: selecciona un texto y pulsa «🖍 Resaltar».</p><h3 class="thm">Comentarios y libros enlazados</h3><p class="mut">Se abren también desde los números de versículo de la Biblia y desde los enlaces del propio texto.</p><div class="grid">'+names.map(d=>`<a class="btn bk" href="#/dp/${d}/0" style="flex-direction:column"><span>${esc(dTitle(d))}</span><small class="mut">${Math.round(DOCS[d].kb/102.4)/10} MB</small></a>`).join('')+'</div>'}'''
+  $('#main').innerHTML='<h2 class="t">Libros</h2><h3 class="thm" style="margin-top:0">Libros de meditación</h3><div class="bkm">'+MB.map(d=>`<a class="btn bk" href="#/dp/${d}/0"><span class="ic">${IC[d]}</span><span>${esc(dTitle(d))}<small>${SUB[d]} · ${Math.round(DOCS[d].kb/102.4)/10} MB</small></span></a>`).join('')+'</div>'+(ATL?'<div class="row atlr"><a class="btn" href="#/mapa">🗺 Mapa</a><a class="btn" href="#/viajes">📜 Cronología</a><a class="btn" href="#/lugares">📍 Lugares</a></div><p class="mut" style="margin:2px 0 12px;font-size:14px">Los viajes de Jesús según María Valtorta, a partir del atlas de J. Webster.</p>':'')+'<div class="row" style="margin-top:4px"><a class="btn" href="#/med">🙏 Meditación de hoy</a><a class="btn" href="#/resaltados">🖍 Mis resaltados'+(nu?' ('+nu+')':'')+'</a></div><p class="mut" style="margin:14px 0 0">En cualquier libro puedes buscar con 🔍 y resaltar: selecciona un texto y pulsa «🖍 Resaltar».</p><h3 class="thm">Comentarios y libros enlazados</h3><p class="mut">Se abren también desde los números de versículo de la Biblia y desde los enlaces del propio texto.</p><div class="grid">'+names.map(d=>`<a class="btn bk" href="#/dp/${d}/0" style="flex-direction:column"><span>${esc(dTitle(d))}</span><small class="mut">${Math.round(DOCS[d].kb/102.4)/10} MB</small></a>`).join('')+'</div>'}'''
 
 def parchear_sw(txt, metas, cat_docs):
     m = re.search(r"const DOCV=(\{.*?\});", txt)
@@ -212,10 +255,12 @@ def main():
         metas[bid] = meta; medi[bid] = entries
         log('   %d trozos (%d cambiados), %d KB, %d meditaciones con día asignado' % (len(chunks), ch, meta['kb'], len(entries)))
     # Valtorta
-    VAL = {}
+    VAL = {}; ATL = None
     vep = rel(cfg.get('valtorta', 'valtorta/Valtorta_La_vida_de_Jesus.epub'))
     if os.path.exists(vep):
-        vch, vmeta, VAL, falt = valtorta.construir(vep, os.path.join(HERE, 'valtorta_enlaces.json'))
+        atp = os.path.join(HERE, 'valtorta_atlas.json')
+        vch, vmeta, VAL, falt, ATL = valtorta.construir(vep, os.path.join(HERE, 'valtorta_enlaces.json'), atlas_path=atp if os.path.exists(atp) else None)
+        if ATL: log('Atlas de los viajes: %d pasos en %d lugares, %d enlazados con el libro' % (len(ATL['P']), len(ATL['L']), sum(1 for p in ATL['P'] if p[7])))
         dd = os.path.join(DST, 'docs', 'Valtorta'); ch = 0
         for k, c in enumerate(vch): ch += write_if_changed(os.path.join(dd, '%d.html' % k), c)
         metas['Valtorta'] = vmeta
@@ -227,14 +272,14 @@ def main():
     old = os.path.join(DST, 'docs', 'HCD7')
     if os.path.isdir(old): shutil.rmtree(old, ignore_errors=True)
     # 3. index.html
-    js = '\n'.join(open(os.path.join(HERE, 'js', f), encoding='utf-8').read() for f in ('liturgia.js', 'med_ui.js', 'hl.js', 'valtorta.js'))
+    js = '\n'.join(open(os.path.join(HERE, 'js', f), encoding='utf-8').read() for f in ('liturgia.js', 'med_ui.js', 'hl.js', 'valtorta.js', 'atlas.js'))
     js = js.replace("if(typeof module!=='undefined')module.exports=LIT;", '')
     src = open(os.path.join(DIA, 'index.html'), encoding='utf-8').read()
     EY = None
     epy = glob.glob(os.path.join(DIA, 'actualizador', 'pdb_diario', '*sentir*.epub'))
     if epy:
         EY = elyo.leer(epy[0]); log('Él y yo: %d puntos (separados por capítulo)' % len(EY['p']))
-    out = parchear(src, metas, medi, js, VAL, EY)
+    out = parchear(src, metas, medi, js, VAL, EY, ATL)
     log('index.html', 'actualizado' if write_if_changed(os.path.join(DST, 'index.html'), out) else 'sin cambios', '(%d KB)' % (len(out.encode()) // 1024))
     # 4. sw.js y manifest
     C = json.loads(re.search(r'const CAT=(\{.*?\});\nconst MEDI=', out, re.S).group(1))
