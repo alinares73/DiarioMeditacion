@@ -31,3 +31,11 @@ Solo escribe los archivos que cambian, así Git sube pocos archivos.
   y se contrasta con el título del día del Misal/epacta. Se ha comprobado con los 220 días de 2026 que lo indican.
 - «Aniversario de la elección del Papa» se asigna al 8 de mayo (León XIV). «Aniversario de la ordenación episcopal
   del Padre» no tiene fecha asignada: está en el índice del libro.
+
+## María Valtorta
+- El libro se genera desde `valtorta/Valtorta_La_vida_de_Jesus.epub` (aquí dentro; no se sube a GitHub).
+- `valtorta_enlaces.json` guarda la correlación Evangelios–Valtorta por párrafo (915 enlaces: capítulo según las
+  concordancias de la web de María Valtorta, párrafo localizado comparando textos y revisado a mano los dudosos).
+  Si cambias el ePub de Valtorta (otros párrafos), habría que rehacer esta tabla.
+- En la app: punto naranja junto al Evangelio del día en la portada; en los capítulos de los Evangelios, un círculo
+  naranja junto al título muestra/oculta los puntos de cada pasaje; en el libro, cada pasaje lleva encima sus citas.

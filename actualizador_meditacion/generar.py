@@ -22,6 +22,7 @@ from epublib import read_epub
 from classify import classify
 from buildbooks import build_book
 from hcd_diario import entradas_hcd
+import valtorta
 
 T0 = time.time()
 def log(*a): print('[%3ds]' % (time.time() - T0), *a, flush=True)
@@ -69,7 +70,7 @@ def sync_tree(src, dst, keep=()):
     return n
 
 # ------------------------------------------------------------------ parches del index.html
-def parchear(src, metas, medi, js):
+def parchear(src, metas, medi, js, VAL=None):
     def rep(old, new, count=1):
         nonlocal src
         if src.count(old) != count:
@@ -80,18 +81,23 @@ def parchear(src, metas, medi, js):
     C = json.loads(m.group(1))
     for k, v in metas.items(): C['docs'][k] = v
     J = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':'))
-    src = src.replace('const CAT=' + m.group(1) + ';\n', 'const CAT=' + J(C) + ';\nconst MEDI=' + J(medi) + ';\n', 1)
+    src = src.replace('const CAT=' + m.group(1) + ';\n', 'const CAT=' + J(C) + ';\nconst MEDI=' + J(medi) + ';\nconst VAL=' + J(VAL or {}) + ';\n', 1)
     # nombre de la app: «Diario» (la app de origen se llama ahora «Epacta»)
     src = re.sub(r'<title>[^<]*</title>', '<title>Diario</title>', src, count=1)
     src = re.sub(r'<h1 id="ht">[^<]*</h1>', '<h1 id="ht">Diario</h1>', src, count=1)
     src = re.sub(r"setHead\('(?:Epacta|Diario)',iso===today\?'':'#/'\)", "setHead('Diario',iso===today?'':'#/')", src, count=1)
     rep('<meta name="theme-color" content="#101a2a">', '<meta name="theme-color" content="#101a2a">\n<meta name="description" content="Diario con meditación diaria">')
-    rep("const TITLES={", "const TITLES={MedOD:'Meditaciones (7 tomos)',SCE:'Siempre con Él',")
+    rep("const TITLES={", "const TITLES={MedOD:'Meditaciones (7 tomos)',SCE:'Siempre con Él',Valtorta:'María Valtorta · La vida de Jesús',")
     rep('</style>', CSS + '</style>')
     rep('<div id="sheet">', '<div id="hlb"><button class="btn" id="hlb-do">🖍 Resaltar</button><button class="btn" id="hlb-cp">Copiar</button></div>\n<div id="pop"></div>\n<div id="sheet">')
     # portada: botón nuevo justo debajo de «Sagrada Escritura»
     rep('''<div class="row one"><a class="btn" href="#/biblia">📖 Sagrada Escritura</a></div>''',
         '''<div class="row one"><a class="btn" href="#/biblia">📖 Sagrada Escritura</a></div><div class="row one med"><a class="btn" href="#/med/\'+iso+\'">🙏 Meditación diaria</a></div>''')
+    # Valtorta: punto naranja en las lecturas del día y en los capítulos de los Evangelios
+    rep("h+=D.r.map(r=>r[0]?`<a class=\"rd\" href=\"${r[0]}\"><b>${esc(r[1])}${esc(r[2])}</b><span>${esc(r[3])}</span></a>`:`<div class=\"rd\"><span>${esc(r[1])}</span></div>`).join('');",
+        "h+=D.r.map(rdHtml).join('');")
+    rep("M.querySelectorAll('.vs').forEach(e=>{if(hl[b+':'+c+':'+e.dataset.v])e.classList.add('hl');e.addEventListener('click',ev=>{if(ev.target.closest('a'))return;toggleSel(e)})});",
+        "M.querySelectorAll('.vs').forEach(e=>{if(hl[b+':'+c+':'+e.dataset.v])e.classList.add('hl');e.addEventListener('click',ev=>{if(ev.target.closest('a'))return;toggleSel(e)})});valDots(b,c);")
     # rutas
     rep("  else if(k==='docs'){setHead('Libros enlazados','#/','doc');renderDocs()}",
         "  else if(k==='docs'){setHead('Libros','#/','doc');renderDocs()}\n  else if(k==='med'){renderMed(h[1])}\n  else if(k==='resaltados'){renderUH()}")
@@ -122,6 +128,13 @@ body[data-theme=sepia]{--uh:rgba(138,75,18,.16);--uhb:rgba(138,75,18,.6)}
 .doc h3{font:600 .9em/1.35 var(--ui);letter-spacing:.03em;color:var(--link);margin:1em 0 .6em}
 .doc p.dnx{margin:2.4em 0 1em;text-align:center;font:600 16px var(--ui)}
 .row.one.med{margin-top:12px}
+.rdw{position:relative}.rdw .rd{padding-right:30px}.rdw:not(:last-of-type) .rd{border-bottom:1px solid var(--bd)}.card .rdw:last-of-type .rd{border-bottom:0}
+.vhd,.vdot,.vbtn{background:#e8862b;border-radius:50%;display:inline-block;box-shadow:0 0 0 2px var(--bg)}
+.vhd{position:absolute;right:4px;top:14px;width:14px;height:14px;opacity:.85}
+.vdot{display:none;width:.62em;height:.62em;margin:0 .35em 0 0;vertical-align:.08em;cursor:pointer}.vdot.al{background:transparent;box-shadow:inset 0 0 0 2px #e8862b}
+#txt.von .vdot{display:inline-block}
+.vbtn{width:22px;height:22px;border:0;padding:0;margin:0 10px 0 0;vertical-align:4px;cursor:pointer;opacity:.45;transition:opacity .2s}.vbtn.on{opacity:1;box-shadow:0 0 0 2px var(--bg),0 0 0 4px #e8862b}
+.doc .vrf{font:600 13px/1.5 var(--ui);margin:1.1em 0 .2em;padding:3px 0 3px 10px;border-left:3px solid #e8862b;color:var(--mut)}.doc .vrf a{color:#e8862b;text-decoration:none;white-space:nowrap}.doc .vrf a.al{font-weight:400;font-style:italic}
 .doc b.mtit{display:block;margin-top:1.6em;padding-top:1em;border-top:1px solid var(--bd)}.doc p.mtitp{margin-top:2.2em;padding-top:1em;border-top:1px solid var(--bd)}
 .mtop .dhero{text-align:center}.mtop .dnum{font-size:clamp(72px,20vw,120px)}.mtop .dmon{font-size:clamp(22px,5.8vw,32px)}
 .mbh{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}.mbh .sh{margin:0;font-size:15px}.mbh .cap{margin:0}
@@ -132,7 +145,7 @@ body[data-theme=sepia]{--uh:rgba(138,75,18,.16);--uhb:rgba(138,75,18,.6)}
 .uhf{flex-wrap:wrap}.uhf .btn{flex:0 1 auto;padding:6px 12px;min-height:36px;font-size:14px}
 '''
 
-RENDER_DOCS = r'''function renderDocs(){const MB=['MedOD','SCE','HCD'].filter(d=>DOCS[d]),IC={MedOD:'🕯️',SCE:'📿',HCD:'🙏'},SUB={MedOD:'Libro de meditaciones · 7 tomos',SCE:'F. Espa y otros · 9 tomos en uno',HCD:'F. Fernández-Carvajal · con enlaces a la Biblia'};const names=Object.keys(DOCS).filter(d=>!MB.includes(d));const nu=uhGroups().length;
+RENDER_DOCS = r'''function renderDocs(){const MB=['MedOD','SCE','HCD','Valtorta'].filter(d=>DOCS[d]),IC={MedOD:'🕯️',SCE:'📿',HCD:'🙏',Valtorta:'🌿'},SUB={MedOD:'Libro de meditaciones · 7 tomos',SCE:'F. Espa y otros · 9 tomos en uno',HCD:'F. Fernández-Carvajal · con enlaces a la Biblia',Valtorta:'Escenas enlazadas con los Evangelios'};const names=Object.keys(DOCS).filter(d=>!MB.includes(d));const nu=uhGroups().length;
   $('#main').innerHTML='<h2 class="t">Libros</h2><h3 class="thm" style="margin-top:0">Libros de meditación</h3><div class="bkm">'+MB.map(d=>`<a class="btn bk" href="#/dp/${d}/0"><span class="ic">${IC[d]}</span><span>${esc(dTitle(d))}<small>${SUB[d]} · ${Math.round(DOCS[d].kb/102.4)/10} MB</small></span></a>`).join('')+'</div><div class="row" style="margin-top:4px"><a class="btn" href="#/med">🙏 Meditación de hoy</a><a class="btn" href="#/resaltados">🖍 Mis resaltados'+(nu?' ('+nu+')':'')+'</a></div><p class="mut" style="margin:14px 0 0">En cualquier libro puedes buscar con 🔍 y resaltar: selecciona un texto y pulsa «🖍 Resaltar».</p><h3 class="thm">Comentarios y libros enlazados</h3><p class="mut">Se abren también desde los números de versículo de la Biblia y desde los enlaces del propio texto.</p><div class="grid">'+names.map(d=>`<a class="btn bk" href="#/dp/${d}/0" style="flex-direction:column"><span>${esc(dTitle(d))}</span><small class="mut">${Math.round(DOCS[d].kb/102.4)/10} MB</small></a>`).join('')+'</div>'}'''
 
 def parchear_sw(txt, metas, cat_docs):
@@ -168,7 +181,7 @@ def main():
                 s, d = os.path.join(DIA, f), os.path.join(DST, f)
                 if not os.path.exists(d) or os.stat(s).st_size != os.stat(d).st_size: shutil.copy2(s, d); n += 1
         n += sync_tree(os.path.join(DIA, 'data'), os.path.join(DST, 'data'))
-        n += sync_tree(os.path.join(DIA, 'docs'), os.path.join(DST, 'docs'), keep=('MedOD', 'SCE'))
+        n += sync_tree(os.path.join(DIA, 'docs'), os.path.join(DST, 'docs'), keep=('MedOD', 'SCE', 'Valtorta'))
         log('copiados desde el Diario: %d archivos' % n)
     # 2. libros de meditación
     metas, medi = {}, {}
@@ -187,15 +200,26 @@ def main():
                 except OSError: pass
         metas[bid] = meta; medi[bid] = entries
         log('   %d trozos (%d cambiados), %d KB, %d meditaciones con día asignado' % (len(chunks), ch, meta['kb'], len(entries)))
+    # Valtorta
+    VAL = {}
+    vep = rel(cfg.get('valtorta', 'valtorta/Valtorta_La_vida_de_Jesus.epub'))
+    if os.path.exists(vep):
+        vch, vmeta, VAL, falt = valtorta.construir(vep, os.path.join(HERE, 'valtorta_enlaces.json'))
+        dd = os.path.join(DST, 'docs', 'Valtorta'); ch = 0
+        for k, c in enumerate(vch): ch += write_if_changed(os.path.join(dd, '%d.html' % k), c)
+        metas['Valtorta'] = vmeta
+        log('María Valtorta: %d trozos (%d cambiados), %d KB, %d enlaces con los Evangelios%s' % (len(vch), ch, vmeta['kb'], sum(len(x) for b in VAL.values() for x in b.values()), (', %d sin párrafo' % falt) if falt else ''))
+    else:
+        log('AVISO: no encuentro %s; la app se genera sin el libro de Valtorta.' % vep)
     medi['HCD'] = entradas_hcd(DIA)
     log('Hablar con Dios (del Diario): %d meditaciones con día asignado' % sum(1 for e in medi['HCD'] if e[2]))
     old = os.path.join(DST, 'docs', 'HCD7')
     if os.path.isdir(old): shutil.rmtree(old, ignore_errors=True)
     # 3. index.html
-    js = '\n'.join(open(os.path.join(HERE, 'js', f), encoding='utf-8').read() for f in ('liturgia.js', 'med_ui.js', 'hl.js'))
+    js = '\n'.join(open(os.path.join(HERE, 'js', f), encoding='utf-8').read() for f in ('liturgia.js', 'med_ui.js', 'hl.js', 'valtorta.js'))
     js = js.replace("if(typeof module!=='undefined')module.exports=LIT;", '')
     src = open(os.path.join(DIA, 'index.html'), encoding='utf-8').read()
-    out = parchear(src, metas, medi, js)
+    out = parchear(src, metas, medi, js, VAL)
     log('index.html', 'actualizado' if write_if_changed(os.path.join(DST, 'index.html'), out) else 'sin cambios', '(%d KB)' % (len(out.encode()) // 1024))
     # 4. sw.js y manifest
     C = json.loads(re.search(r'const CAT=(\{.*?\});\nconst MEDI=', out, re.S).group(1))
