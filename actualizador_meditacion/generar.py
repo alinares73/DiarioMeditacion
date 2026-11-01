@@ -106,7 +106,12 @@ def parchear(src, metas, medi, js, VAL=None, EY=None, ATL=None):
     rep("h+=D.r.map(r=>r[0]?`<a class=\"rd\" href=\"${r[0]}\"><b>${esc(r[1])}${esc(r[2])}</b><span>${esc(r[3])}</span></a>`:`<div class=\"rd\"><span>${esc(r[1])}</span></div>`).join('');",
         "h+=D.r.map(rdHtml).join('');")
     rep("M.querySelectorAll('.vs').forEach(e=>{if(hl[b+':'+c+':'+e.dataset.v])e.classList.add('hl');e.addEventListener('click',ev=>{if(ev.target.closest('a'))return;toggleSel(e)})});",
-        "M.querySelectorAll('.vs').forEach(e=>{if(hl[b+':'+c+':'+e.dataset.v])e.classList.add('hl');e.addEventListener('click',ev=>{if(ev.target.closest('a'))return;toggleSel(e)})});valDots(b,c);")
+        "vsWrap(M);M.querySelectorAll('.vs').forEach(e=>{if(hl[b+':'+c+':'+e.dataset.v])e.classList.add('hl');e.addEventListener('click',ev=>{if(ev.target.closest('a'))return;toggleSel(e)})});valDots(b,c);")
+    # copiar versículos: con sus números y con los saltos de párrafo del libro
+    rep("const t=vs.map(e=>[...e.querySelectorAll('p')].map(p=>p.textContent.replace(/^\\s*\\d+[a-z]?\\s*/,'').trim()).join(' ')).join(' ');const nums=vs.map(e=>e.dataset.v);",
+        "const t=vs.map(e=>[...e.querySelectorAll('p')].map(p=>p.textContent.replace(/\\s+/g,' ').trim()).filter(Boolean).join('\\n')).join('\\n');const nums=[...new Set(vs.map(e=>e.dataset.v))];")
+    rep("function selVerses(){return [...selSet].sort((a,b)=>parseInt(a.dataset.v)-parseInt(b.dataset.v))}",
+        "function selVerses(){return [...selSet].sort((a,b)=>a.compareDocumentPosition(b)&2?1:-1)}")
     # rutas
     rep("  else if(k==='docs'){setHead('Libros enlazados','#/','doc');renderDocs()}",
         "  else if(k==='docs'){setHead('Libros','#/','doc');renderDocs()}\n  else if(k==='med'){renderMed(h[1])}\n  else if(k==='resaltados'){renderUH()}\n  else if(k==='mapa'){renderMapa(h[1],h[2])}\n  else if(k==='viajes'){renderViajes(h[1])}\n  else if(k==='lugares'){renderLugares()}\n  else if(k==='lugar'){renderLugar(h[1])}")

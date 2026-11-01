@@ -20,3 +20,9 @@ function valDots(b,c){
   const set=on=>{valOn=on;tx.classList.toggle('von',on);bt.classList.toggle('on',on)};set(valOn);
   bt.onclick=e=>{e.stopPropagation();if(!document.contains(tx))return;set(!valOn);if(valOn){const d=tx.querySelector('.vdot');d&&d.closest('.vs').scrollIntoView({block:'center',behavior:'smooth'})}};
 }
+/* Biblia: los trozos de versículo que quedan sueltos tras un título (p. ej. «Tomaron a Jesús,» en Jn 19)
+   se envuelven como el versículo al que pertenecen, para poder seleccionarlos y copiarlos */
+function vsWrap(M){const tx=M.querySelector('#txt');if(!tx)return;
+  [...tx.querySelectorAll(':scope > p')].forEach(p=>{let v=null;for(let e=p.previousElementSibling;e;e=e.previousElementSibling)if(e.classList.contains('vs')){v=e.dataset.v;break}
+    if(v===null)for(let e=p.nextElementSibling;e;e=e.nextElementSibling)if(e.classList.contains('vs')){v=e.dataset.v;break}
+    if(v===null)return;const d=document.createElement('div');d.className='vs vsc';d.dataset.v=v;p.replaceWith(d);d.appendChild(p)})}

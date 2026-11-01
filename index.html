@@ -243,7 +243,7 @@ async function render(){
     cur={b,c};LS.set('last',{b,c});
     const ch=bk.ch[c];const hl=LS.get('hl',{});
     M.innerHTML=`<div id="txt"><h2>${esc(BK[b].name)}<br><small style="font-size:.7em;color:var(--mut)">${esc(ch.t)}</small>${ch.k?`<br><a class="cm" href="#/d/Comentarios/${ch.k}">Comentario al capítulo →</a>`:''}</h2>${ch.h}</div>`;
-    M.querySelectorAll('.vs').forEach(e=>{if(hl[b+':'+c+':'+e.dataset.v])e.classList.add('hl');e.addEventListener('click',ev=>{if(ev.target.closest('a'))return;toggleSel(e)})});valDots(b,c);
+    vsWrap(M);M.querySelectorAll('.vs').forEach(e=>{if(hl[b+':'+c+':'+e.dataset.v])e.classList.add('hl');e.addEventListener('click',ev=>{if(ev.target.closest('a'))return;toggleSel(e)})});valDots(b,c);
     const p=prev(b,c),n=next(b,c),bm=LS.get('bm',[]).some(x=>x.b===b&&x.c===c);
     bar(`<a class="btn" ${p?`href="#/r/${p[0]}/${p[1]}"`:'disabled'} aria-label="Anterior">‹</a><a class="btn mid" href="#/b/${b}">${esc(BK[b].ab)} ${esc(chLabel(b,c))} ▾</a><button class="btn" id="bmk" aria-label="Marcador">${bm?'★':'☆'}</button><a class="btn" ${n?`href="#/r/${n[0]}/${n[1]}"`:'disabled'} aria-label="Siguiente">›</a>`);
     $('#bmk').onclick=()=>{let l=LS.get('bm',[]);const i=l.findIndex(x=>x.b===b&&x.c===c);if(i>=0)l.splice(i,1);else l.unshift({b,c});LS.set('bm',l);$('#bmk').textContent=i>=0?'☆':'★'};
@@ -575,6 +575,12 @@ function valDots(b,c){
   const set=on=>{valOn=on;tx.classList.toggle('von',on);bt.classList.toggle('on',on)};set(valOn);
   bt.onclick=e=>{e.stopPropagation();if(!document.contains(tx))return;set(!valOn);if(valOn){const d=tx.querySelector('.vdot');d&&d.closest('.vs').scrollIntoView({block:'center',behavior:'smooth'})}};
 }
+/* Biblia: los trozos de versículo que quedan sueltos tras un título (p. ej. «Tomaron a Jesús,» en Jn 19)
+   se envuelven como el versículo al que pertenecen, para poder seleccionarlos y copiarlos */
+function vsWrap(M){const tx=M.querySelector('#txt');if(!tx)return;
+  [...tx.querySelectorAll(':scope > p')].forEach(p=>{let v=null;for(let e=p.previousElementSibling;e;e=e.previousElementSibling)if(e.classList.contains('vs')){v=e.dataset.v;break}
+    if(v===null)for(let e=p.nextElementSibling;e;e=e.nextElementSibling)if(e.classList.contains('vs')){v=e.dataset.v;break}
+    if(v===null)return;const d=document.createElement('div');d.className='vs vsc';d.dataset.v=v;p.replaceWith(d);d.appendChild(p)})}
 
 /* ===== Atlas de los viajes de Jesús según María Valtorta: mapa, cronología y lugares ===== */
 /* ATL = {L:{clave:[nombre,lat,lon,región]}, C:[[ciclo,periodo,G|J|C]], P:[[ciclo,clave,fecha,millas,capCEV,título,barca,off]], F:[[ciclo,antesDelPaso,fiesta,fecha]]} */
@@ -810,9 +816,9 @@ function notFound(){$('#main').innerHTML='<p class="mut" style="text-align:cente
 /* selección de versículos */
 function toggleSel(e){e.classList.toggle('sel');if(e.classList.contains('sel'))selSet.add(e);else selSet.delete(e);$('#sel').classList.toggle('on',selSet.size>0);$('#fab').style.display=selSet.size?'none':''}
 function closeSel(){selSet.forEach(e=>e.classList.remove('sel'));selSet.clear();$('#sel').classList.remove('on')}
-function selVerses(){return [...selSet].sort((a,b)=>parseInt(a.dataset.v)-parseInt(b.dataset.v))}
+function selVerses(){return [...selSet].sort((a,b)=>a.compareDocumentPosition(b)&2?1:-1)}
 $('#sx').onclick=()=>{closeSel();$('#fab').style.display=''};
-$('#scopy').onclick=async()=>{const vs=selVerses();if(!vs.length)return;const t=vs.map(e=>[...e.querySelectorAll('p')].map(p=>p.textContent.replace(/^\s*\d+[a-z]?\s*/,'').trim()).join(' ')).join(' ');const nums=vs.map(e=>e.dataset.v);const ref=BK[cur.b].ab+' '+chLabel(cur.b,cur.c)+','+(nums.length>1?nums[0]+'-'+nums[nums.length-1]:nums[0]);const out='«'+t+'» ('+ref+')';try{await navigator.clipboard.writeText(out)}catch(e){const ta=document.createElement('textarea');ta.value=out;document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(_){}ta.remove()}closeSel();$('#fab').style.display='';toast('Copiado')};
+$('#scopy').onclick=async()=>{const vs=selVerses();if(!vs.length)return;const t=vs.map(e=>[...e.querySelectorAll('p')].map(p=>p.textContent.replace(/\s+/g,' ').trim()).filter(Boolean).join('\n')).join('\n');const nums=[...new Set(vs.map(e=>e.dataset.v))];const ref=BK[cur.b].ab+' '+chLabel(cur.b,cur.c)+','+(nums.length>1?nums[0]+'-'+nums[nums.length-1]:nums[0]);const out='«'+t+'» ('+ref+')';try{await navigator.clipboard.writeText(out)}catch(e){const ta=document.createElement('textarea');ta.value=out;document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(_){}ta.remove()}closeSel();$('#fab').style.display='';toast('Copiado')};
 $('#shl').onclick=()=>{const hl=LS.get('hl',{});const vs=selVerses();const all=vs.every(e=>e.classList.contains('hl'));vs.forEach(e=>{const key=cur.b+':'+cur.c+':'+e.dataset.v;if(all){delete hl[key];e.classList.remove('hl')}else{hl[key]=1;e.classList.add('hl')}});LS.set('hl',hl);closeSel();$('#fab').style.display=''};
 function toast(t){const d=document.createElement('div');d.textContent=t;d.style.cssText='position:fixed;left:50%;bottom:130px;transform:translateX(-50%);background:#000c;color:#fff;padding:10px 18px;border-radius:20px;z-index:60;font:15px var(--ui)';document.body.appendChild(d);setTimeout(()=>d.remove(),1400)}
 /* búsqueda */
