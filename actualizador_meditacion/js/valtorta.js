@@ -10,12 +10,10 @@ function rdHtml(r){
 }
 function valDots(b,c){
   const L=VAL&&VAL[b]&&VAL[b][c],tx=$('#txt');if(!L||!tx)return;
-  const h=tx.querySelector('h2');if(!h)return;
-  const bt=document.createElement('button');bt.type='button';bt.className='vbtn';bt.title='Pasajes en María Valtorta';bt.setAttribute('aria-label','Mostrar u ocultar los pasajes de María Valtorta');
-  h.insertBefore(bt,h.firstChild);
+  const bt=$('#hval');if(!bt)return;bt.style.display='';
   const by=new Map();L.forEach(x=>{if(!by.has(x[0]))by.set(x[0],[]);const a=by.get(x[0]);if(!a.some(y=>y[2]===x[2]))a.push(x)});
   for(const [v,xs] of by){const vs=tx.querySelector('.vs[data-v="'+v+'"]');if(!vs)continue;const p=vs.querySelector('p')||vs;
     xs.slice(0,3).reverse().forEach(x=>{const a=document.createElement('a');a.className='vdot'+(x[3]?' al':'');a.href='#/d/Valtorta/'+x[2];a.title='María Valtorta: '+BK[b].ab+' '+(c*1+1)+','+x[0]+(x[1]>x[0]?'-'+x[1]:'')+(x[3]?' (alusión)':'');p.insertBefore(a,p.firstChild)})}
   const set=on=>{valOn=on;tx.classList.toggle('von',on);bt.classList.toggle('on',on)};set(valOn);
-  bt.onclick=e=>{e.stopPropagation();set(!valOn);if(valOn){const d=tx.querySelector('.vdot');d&&d.closest('.vs').scrollIntoView({block:'center',behavior:'smooth'})}};
+  bt.onclick=e=>{e.stopPropagation();if(!document.contains(tx))return;set(!valOn);if(valOn){const d=tx.querySelector('.vdot');d&&d.closest('.vs').scrollIntoView({block:'center',behavior:'smooth'})}};
 }

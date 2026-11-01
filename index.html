@@ -116,11 +116,11 @@ body[data-theme=sepia]{--uh:rgba(138,75,18,.16);--uhb:rgba(138,75,18,.6)}
 .doc p.dnx{margin:2.4em 0 1em;text-align:center;font:600 16px var(--ui)}
 .row.one.med{margin-top:12px}
 .rdw{position:relative}.rdw .rd{padding-right:30px}.rdw:not(:last-of-type) .rd{border-bottom:1px solid var(--bd)}.card .rdw:last-of-type .rd{border-bottom:0}
-.vhd,.vdot,.vbtn{background:#e8862b;border-radius:50%;display:inline-block;box-shadow:0 0 0 2px var(--bg)}
-.vhd{position:absolute;right:4px;top:14px;width:14px;height:14px;opacity:.85}
+.vdot,#hval{background:#e8862b;border-radius:50%;display:inline-block;box-shadow:0 0 0 2px var(--bg)}
+.vhd{position:absolute;right:-6px;top:2px;width:44px;height:44px;background:none;box-shadow:none;border-radius:0;z-index:2}.vhd::after{content:'';position:absolute;right:10px;top:12px;width:16px;height:16px;border-radius:50%;background:#e8862b;box-shadow:0 0 0 2px var(--card)}
 .vdot{display:none;width:.62em;height:.62em;margin:0 .35em 0 0;vertical-align:.08em;cursor:pointer}.vdot.al{background:transparent;box-shadow:inset 0 0 0 2px #e8862b}
 #txt.von .vdot{display:inline-block}
-.vbtn{width:22px;height:22px;border:0;padding:0;margin:0 10px 0 0;vertical-align:4px;cursor:pointer;opacity:.45;transition:opacity .2s}.vbtn.on{opacity:1;box-shadow:0 0 0 2px var(--bg),0 0 0 4px #e8862b}
+header #hval{width:24px;height:24px;min-width:24px;border:0;padding:0;margin:0 10px 0 4px;cursor:pointer;opacity:.5;transition:opacity .2s;flex:none}header #hval.on{opacity:1;box-shadow:0 0 0 2px var(--bar),0 0 0 4px #e8862b}
 .doc .vrf{font:600 13px/1.5 var(--ui);margin:1.1em 0 .2em;padding:3px 0 3px 10px;border-left:3px solid #e8862b;color:var(--mut)}.doc .vrf a{color:#e8862b;text-decoration:none;white-space:nowrap}.doc .vrf a.al{font-weight:400;font-style:italic}
 .doc b.mtit{display:block;margin-top:1.6em;padding-top:1em;border-top:1px solid var(--bd)}.doc p.mtitp{margin-top:2.2em;padding-top:1em;border-top:1px solid var(--bd)}
 .mtop .dhero{text-align:center}.mtop .dnum{font-size:clamp(72px,20vw,120px)}.mtop .dmon{font-size:clamp(22px,5.8vw,32px)}
@@ -133,7 +133,7 @@ body[data-theme=sepia]{--uh:rgba(138,75,18,.16);--uhb:rgba(138,75,18,.6)}
 </style>
 </head>
 <body data-theme="dark">
-<header><button id="hb" aria-label="Atrás">←</button><h1 id="ht">Diario</h1><button id="hstar" aria-label="Puntos marcados" style="display:none">★</button><button id="hh" aria-label="Inicio">⌂</button></header>
+<header><button id="hb" aria-label="Atrás">←</button><h1 id="ht">Diario</h1><button id="hstar" aria-label="Puntos marcados" style="display:none">★</button><button id="hval" aria-label="Mostrar u ocultar los pasajes de María Valtorta" title="Pasajes en María Valtorta" style="display:none"></button><button id="hh" aria-label="Inicio">⌂</button></header>
 <main id="main"></main>
 <div id="sel"><button class="btn" id="scopy">Copiar</button><button class="btn" id="shl">Resaltar</button><button class="btn" id="sx">✕</button></div>
 <div id="bar" hidden></div>
@@ -172,7 +172,7 @@ async function render(){
   closeSel();
   { const hs=location.hash||'#/'; if(!backing&&NAV[NAV.length-1]!==hs){const L=NAV[NAV.length-1]||'';const dp=/^#\/dp\/([^/]+)\//.exec(hs);if(dp&&L.startsWith('#/dp/'+dp[1]+'/'))NAV[NAV.length-1]=hs;else{NAV.push(hs);if(NAV.length>200)NAV.shift()}} backing=false }
   const h=(location.hash||'#/').slice(2).split('/');const k=h[0]||'';const M=$('#main');
-  $('#fab').style.display='';$('#sfab').style.display='none';$('#hstar').style.display='none';bar(null);window.scrollTo(0,0);uhCur=null;$('#hlb').classList.remove('on');$('#pop').classList.remove('on');
+  $('#fab').style.display='';$('#sfab').style.display='none';$('#hstar').style.display='none';bar(null);window.scrollTo(0,0);uhCur=null;$('#hval').style.display='none';$('#hlb').classList.remove('on');$('#pop').classList.remove('on');
   try{
   if(k===''||k==='dia'){
     renderHome(k==='dia'?h[1]:null);
@@ -504,14 +504,12 @@ function rdHtml(r){
 }
 function valDots(b,c){
   const L=VAL&&VAL[b]&&VAL[b][c],tx=$('#txt');if(!L||!tx)return;
-  const h=tx.querySelector('h2');if(!h)return;
-  const bt=document.createElement('button');bt.type='button';bt.className='vbtn';bt.title='Pasajes en María Valtorta';bt.setAttribute('aria-label','Mostrar u ocultar los pasajes de María Valtorta');
-  h.insertBefore(bt,h.firstChild);
+  const bt=$('#hval');if(!bt)return;bt.style.display='';
   const by=new Map();L.forEach(x=>{if(!by.has(x[0]))by.set(x[0],[]);const a=by.get(x[0]);if(!a.some(y=>y[2]===x[2]))a.push(x)});
   for(const [v,xs] of by){const vs=tx.querySelector('.vs[data-v="'+v+'"]');if(!vs)continue;const p=vs.querySelector('p')||vs;
     xs.slice(0,3).reverse().forEach(x=>{const a=document.createElement('a');a.className='vdot'+(x[3]?' al':'');a.href='#/d/Valtorta/'+x[2];a.title='María Valtorta: '+BK[b].ab+' '+(c*1+1)+','+x[0]+(x[1]>x[0]?'-'+x[1]:'')+(x[3]?' (alusión)':'');p.insertBefore(a,p.firstChild)})}
   const set=on=>{valOn=on;tx.classList.toggle('von',on);bt.classList.toggle('on',on)};set(valOn);
-  bt.onclick=e=>{e.stopPropagation();set(!valOn);if(valOn){const d=tx.querySelector('.vdot');d&&d.closest('.vs').scrollIntoView({block:'center',behavior:'smooth'})}};
+  bt.onclick=e=>{e.stopPropagation();if(!document.contains(tx))return;set(!valOn);if(valOn){const d=tx.querySelector('.vdot');d&&d.closest('.vs').scrollIntoView({block:'center',behavior:'smooth'})}};
 }
 
 function renderDocs(){const MB=['MedOD','SCE','HCD','Valtorta'].filter(d=>DOCS[d]),IC={MedOD:'🕯️',SCE:'📿',HCD:'🙏',Valtorta:'🌿'},SUB={MedOD:'Libro de meditaciones · 7 tomos',SCE:'F. Espa y otros · 9 tomos en uno',HCD:'F. Fernández-Carvajal · con enlaces a la Biblia',Valtorta:'Escenas enlazadas con los Evangelios'};const names=Object.keys(DOCS).filter(d=>!MB.includes(d));const nu=uhGroups().length;

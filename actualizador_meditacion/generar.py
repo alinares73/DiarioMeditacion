@@ -89,6 +89,7 @@ def parchear(src, metas, medi, js, VAL=None):
     rep('<meta name="theme-color" content="#101a2a">', '<meta name="theme-color" content="#101a2a">\n<meta name="description" content="Diario con meditación diaria">')
     rep("const TITLES={", "const TITLES={MedOD:'Meditaciones (7 tomos)',SCE:'Siempre con Él',Valtorta:'María Valtorta · La vida de Jesús',")
     rep('</style>', CSS + '</style>')
+    rep('<button id="hh" aria-label="Inicio">⌂</button>', '<button id="hval" aria-label="Mostrar u ocultar los pasajes de María Valtorta" title="Pasajes en María Valtorta" style="display:none"></button><button id="hh" aria-label="Inicio">⌂</button>')
     rep('<div id="sheet">', '<div id="hlb"><button class="btn" id="hlb-do">🖍 Resaltar</button><button class="btn" id="hlb-cp">Copiar</button></div>\n<div id="pop"></div>\n<div id="sheet">')
     # portada: botón nuevo justo debajo de «Sagrada Escritura»
     rep('''<div class="row one"><a class="btn" href="#/biblia">📖 Sagrada Escritura</a></div>''',
@@ -102,7 +103,7 @@ def parchear(src, metas, medi, js, VAL=None):
     rep("  else if(k==='docs'){setHead('Libros enlazados','#/','doc');renderDocs()}",
         "  else if(k==='docs'){setHead('Libros','#/','doc');renderDocs()}\n  else if(k==='med'){renderMed(h[1])}\n  else if(k==='resaltados'){renderUH()}")
     rep("$('#fab').style.display='';$('#sfab').style.display='none';$('#hstar').style.display='none';bar(null);window.scrollTo(0,0);",
-        "$('#fab').style.display='';$('#sfab').style.display='none';$('#hstar').style.display='none';bar(null);window.scrollTo(0,0);uhCur=null;$('#hlb').classList.remove('on');$('#pop').classList.remove('on');")
+        "$('#fab').style.display='';$('#sfab').style.display='none';$('#hstar').style.display='none';bar(null);window.scrollTo(0,0);uhCur=null;$('#hval').style.display='none';$('#hlb').classList.remove('on');$('#pop').classList.remove('on');")
     rep("if(doc==='ElYo')eyMarkAll();if(o.i!==undefined)focusPar(o.i,o.q);",
         "if(doc==='ElYo')eyMarkAll();hcdSep(doc);uhApply(doc,k);if(o.i!==undefined)focusPar(o.i,o.q);")
     # pantalla Libros
@@ -129,11 +130,11 @@ body[data-theme=sepia]{--uh:rgba(138,75,18,.16);--uhb:rgba(138,75,18,.6)}
 .doc p.dnx{margin:2.4em 0 1em;text-align:center;font:600 16px var(--ui)}
 .row.one.med{margin-top:12px}
 .rdw{position:relative}.rdw .rd{padding-right:30px}.rdw:not(:last-of-type) .rd{border-bottom:1px solid var(--bd)}.card .rdw:last-of-type .rd{border-bottom:0}
-.vhd,.vdot,.vbtn{background:#e8862b;border-radius:50%;display:inline-block;box-shadow:0 0 0 2px var(--bg)}
-.vhd{position:absolute;right:4px;top:14px;width:14px;height:14px;opacity:.85}
+.vdot,#hval{background:#e8862b;border-radius:50%;display:inline-block;box-shadow:0 0 0 2px var(--bg)}
+.vhd{position:absolute;right:-6px;top:2px;width:44px;height:44px;background:none;box-shadow:none;border-radius:0;z-index:2}.vhd::after{content:'';position:absolute;right:10px;top:12px;width:16px;height:16px;border-radius:50%;background:#e8862b;box-shadow:0 0 0 2px var(--card)}
 .vdot{display:none;width:.62em;height:.62em;margin:0 .35em 0 0;vertical-align:.08em;cursor:pointer}.vdot.al{background:transparent;box-shadow:inset 0 0 0 2px #e8862b}
 #txt.von .vdot{display:inline-block}
-.vbtn{width:22px;height:22px;border:0;padding:0;margin:0 10px 0 0;vertical-align:4px;cursor:pointer;opacity:.45;transition:opacity .2s}.vbtn.on{opacity:1;box-shadow:0 0 0 2px var(--bg),0 0 0 4px #e8862b}
+header #hval{width:24px;height:24px;min-width:24px;border:0;padding:0;margin:0 10px 0 4px;cursor:pointer;opacity:.5;transition:opacity .2s;flex:none}header #hval.on{opacity:1;box-shadow:0 0 0 2px var(--bar),0 0 0 4px #e8862b}
 .doc .vrf{font:600 13px/1.5 var(--ui);margin:1.1em 0 .2em;padding:3px 0 3px 10px;border-left:3px solid #e8862b;color:var(--mut)}.doc .vrf a{color:#e8862b;text-decoration:none;white-space:nowrap}.doc .vrf a.al{font-weight:400;font-style:italic}
 .doc b.mtit{display:block;margin-top:1.6em;padding-top:1em;border-top:1px solid var(--bd)}.doc p.mtitp{margin-top:2.2em;padding-top:1em;border-top:1px solid var(--bd)}
 .mtop .dhero{text-align:center}.mtop .dnum{font-size:clamp(72px,20vw,120px)}.mtop .dmon{font-size:clamp(22px,5.8vw,32px)}
