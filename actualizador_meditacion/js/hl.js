@@ -75,3 +75,7 @@ function renderUH(){
 
 /* Hablar con Dios (libro del Diario): separar cada meditación de la anterior */
 function hcdSep(doc){if(doc!=='HCD')return;document.querySelectorAll('#dx b>span[style*="1.17em"]').forEach(sp=>{const b=sp.parentElement,p=b.closest('p');if(!p)return;const r=document.createRange();r.setStart(p,0);r.setEndBefore(b);if(r.toString().trim())b.classList.add('mtit');else p.classList.add('mtitp')})}
+
+/* Evitar la barra «Tocar para buscar» de Google (Chrome Android) al seleccionar texto:
+   Chrome no la muestra si el texto está dentro de un elemento enfocable y con manejador de toques */
+function noTTS(){const dx=$('#dx');if(!dx)return;dx.tabIndex=-1;const f=()=>{};dx.addEventListener('click',f);dx.addEventListener('touchstart',f,{passive:true})}

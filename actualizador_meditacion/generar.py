@@ -113,7 +113,7 @@ def parchear(src, metas, medi, js, VAL=None, EY=None):
     rep("$('#fab').style.display='';$('#sfab').style.display='none';$('#hstar').style.display='none';bar(null);window.scrollTo(0,0);",
         "$('#fab').style.display='';$('#sfab').style.display='none';$('#hstar').style.display='none';bar(null);window.scrollTo(0,0);uhCur=null;$('#hval').style.display='none';$('#hlb').classList.remove('on');$('#pop').classList.remove('on');")
     rep("if(doc==='ElYo')eyMarkAll();if(o.i!==undefined)focusPar(o.i,o.q);",
-        "if(doc==='ElYo')eyMarkAll();hcdSep(doc);uhApply(doc,k);if(o.i!==undefined)focusPar(o.i,o.q);")
+        "if(doc==='ElYo')eyMarkAll();hcdSep(doc);noTTS();uhApply(doc,k);if(o.i!==undefined)focusPar(o.i,o.q);")
     # pantalla Libros
     a = src.index('function renderDocs(){'); b = src.index('\n', a)
     src = src[:a] + RENDER_DOCS + src[b:]
@@ -127,7 +127,7 @@ body[data-theme=sepia]{--uh:rgba(138,75,18,.16);--uhb:rgba(138,75,18,.6)}
 .doc mark.uh,.uht{background:var(--uh);color:inherit;border-radius:3px;box-shadow:inset 0 -2px 0 var(--uhb);-webkit-box-decoration-break:clone;box-decoration-break:clone;cursor:pointer}
 .doc mark.uh mark{background:var(--hl)}
 #hlb{position:fixed;left:12px;right:84px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:30;display:none;gap:8px;max-width:520px}
-#hlb.on{display:flex}#hlb{-webkit-user-select:none;user-select:none}#hlb .btn{flex:1;min-height:48px;font-size:17px;box-shadow:0 4px 14px #0006}#hlb .btn:first-child{background:var(--link);color:var(--bg);border-color:var(--link)}
+#hlb.on{display:flex}#dx:focus,#txt:focus{outline:none}#hlb{-webkit-user-select:none;user-select:none}#hlb .btn{flex:1;min-height:48px;font-size:17px;box-shadow:0 4px 14px #0006}#hlb .btn:first-child{background:var(--link);color:var(--bg);border-color:var(--link)}
 #pop{position:fixed;left:12px;right:12px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:45;display:none;background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:14px 40px 14px 16px;box-shadow:0 6px 24px #0008;max-width:736px;margin:0 auto;max-height:50vh;overflow:auto}
 #pop.on{display:block}#pop .x{position:absolute;top:8px;right:6px}.pnote{font:16px/1.5 var(--ff)}.pnote b:first-child{color:var(--link);margin-right:.3em}.pact{display:flex;gap:10px}.pact .btn{flex:1;min-height:46px;font-size:16px}
 .doc a.fn{font:600 .62em/1 var(--ui);vertical-align:super;color:var(--link);text-decoration:none;padding:3px 3px;margin-left:1px;cursor:pointer}
