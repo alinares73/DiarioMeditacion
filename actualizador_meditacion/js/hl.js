@@ -32,8 +32,14 @@ function uhFromSel(){
 }
 function uhRemove(id){uhSave(uhAll().filter(r=>r.id!==id));document.querySelectorAll('mark.uh[data-h="'+id+'"]').forEach(m=>{m.replaceWith(...m.childNodes)});const dx=$('#dx');if(dx)dx.normalize()}
 /* barra flotante al seleccionar */
-let uhT=0;
-document.addEventListener('selectionchange',()=>{clearTimeout(uhT);uhT=setTimeout(()=>{const sel=window.getSelection(),dx=$('#dx');const on=!!(sel&&!sel.isCollapsed&&dx&&uhCur&&sel.rangeCount&&dx.contains(sel.getRangeAt(0).commonAncestorContainer)&&sel.toString().trim());$('#hlb').classList.toggle('on',on)},120)});
+let uhT=0,uhTouch=false;
+/* la barra «Resaltar» solo aparece cuando la selección está quieta y el dedo levantado:
+   así no estorba mientras se arrastran los tiradores de la selección */
+function uhCheck(){const sel=window.getSelection(),dx=$('#dx');const on=!uhTouch&&!!(sel&&!sel.isCollapsed&&dx&&uhCur&&sel.rangeCount&&dx.contains(sel.getRangeAt(0).commonAncestorContainer)&&sel.toString().trim());$('#hlb').classList.toggle('on',on)}
+document.addEventListener('selectionchange',()=>{clearTimeout(uhT);$('#hlb').classList.remove('on');uhT=setTimeout(uhCheck,650)});
+document.addEventListener('touchstart',()=>{uhTouch=true},{passive:true});
+document.addEventListener('touchend',()=>{uhTouch=false;clearTimeout(uhT);uhT=setTimeout(uhCheck,500)},{passive:true});
+document.addEventListener('touchcancel',()=>{uhTouch=false},{passive:true});
 $('#hlb-do').addEventListener('mousedown',e=>e.preventDefault());
 $('#hlb-do').onclick=()=>{if(uhFromSel())toast('Resaltado');$('#hlb').classList.remove('on')};
 $('#hlb-cp').addEventListener('mousedown',e=>e.preventDefault());

@@ -23,6 +23,7 @@ from classify import classify
 from buildbooks import build_book
 from hcd_diario import entradas_hcd
 import valtorta
+import elyo
 
 T0 = time.time()
 def log(*a): print('[%3ds]' % (time.time() - T0), *a, flush=True)
@@ -70,12 +71,19 @@ def sync_tree(src, dst, keep=()):
     return n
 
 # ------------------------------------------------------------------ parches del index.html
-def parchear(src, metas, medi, js, VAL=None):
+def parchear(src, metas, medi, js, VAL=None, EY=None):
     def rep(old, new, count=1):
         nonlocal src
         if src.count(old) != count:
             sys.exit('No encuentro en index.html el trozo a modificar (%d veces, esperaba %d):\n   %s\n¿Ha cambiado la app Diario? Hay que adaptar generar.py.' % (src.count(old), count, old[:100]))
         src = src.replace(old, new)
+    if EY:
+        me = re.search(r'\nconst EY=(\{.*?\});\n', src, re.S)
+        if me: src = src[:me.start(1)] + json.dumps(EY, ensure_ascii=False, separators=(',', ':')) + src[me.end(1):]
+        # número del apunte (sin el decimal que distingue capítulos)
+        src = src.replace('<div class="ph"><b>${p[0]}</b>', '<div class="ph"><b>${Math.floor(p[0])}</b>')
+        src = src.replace("(first?'**'+p[0]+'.** ':'')", "(first?'**'+Math.floor(p[0])+'.** ':'')")
+        src = src.replace("(first?'{\\\\b '+p[0]+'.} ':'')", "(first?'{\\\\b '+Math.floor(p[0])+'.} ':'')")
     m = re.search(r'const CAT=(\{.*?\});\nconst DAY=', src, re.S)
     if not m: sys.exit('No encuentro CAT/DAY en el index.html del Diario.')
     C = json.loads(m.group(1))
@@ -119,7 +127,7 @@ body[data-theme=sepia]{--uh:rgba(138,75,18,.16);--uhb:rgba(138,75,18,.6)}
 .doc mark.uh,.uht{background:var(--uh);color:inherit;border-radius:3px;box-shadow:inset 0 -2px 0 var(--uhb);-webkit-box-decoration-break:clone;box-decoration-break:clone;cursor:pointer}
 .doc mark.uh mark{background:var(--hl)}
 #hlb{position:fixed;left:12px;right:84px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:30;display:none;gap:8px;max-width:520px}
-#hlb.on{display:flex}#hlb .btn{flex:1;min-height:48px;font-size:17px;box-shadow:0 4px 14px #0006}#hlb .btn:first-child{background:var(--link);color:var(--bg);border-color:var(--link)}
+#hlb.on{display:flex}#hlb{-webkit-user-select:none;user-select:none}#hlb .btn{flex:1;min-height:48px;font-size:17px;box-shadow:0 4px 14px #0006}#hlb .btn:first-child{background:var(--link);color:var(--bg);border-color:var(--link)}
 #pop{position:fixed;left:12px;right:12px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:45;display:none;background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:14px 40px 14px 16px;box-shadow:0 6px 24px #0008;max-width:736px;margin:0 auto;max-height:50vh;overflow:auto}
 #pop.on{display:block}#pop .x{position:absolute;top:8px;right:6px}.pnote{font:16px/1.5 var(--ff)}.pnote b:first-child{color:var(--link);margin-right:.3em}.pact{display:flex;gap:10px}.pact .btn{flex:1;min-height:46px;font-size:16px}
 .doc a.fn{font:600 .62em/1 var(--ui);vertical-align:super;color:var(--link);text-decoration:none;padding:3px 3px;margin-left:1px;cursor:pointer}
@@ -220,7 +228,11 @@ def main():
     js = '\n'.join(open(os.path.join(HERE, 'js', f), encoding='utf-8').read() for f in ('liturgia.js', 'med_ui.js', 'hl.js', 'valtorta.js'))
     js = js.replace("if(typeof module!=='undefined')module.exports=LIT;", '')
     src = open(os.path.join(DIA, 'index.html'), encoding='utf-8').read()
-    out = parchear(src, metas, medi, js, VAL)
+    EY = None
+    epy = glob.glob(os.path.join(DIA, 'actualizador', 'pdb_diario', '*sentir*.epub'))
+    if epy:
+        EY = elyo.leer(epy[0]); log('Él y yo: %d puntos (separados por capítulo)' % len(EY['p']))
+    out = parchear(src, metas, medi, js, VAL, EY)
     log('index.html', 'actualizado' if write_if_changed(os.path.join(DST, 'index.html'), out) else 'sin cambios', '(%d KB)' % (len(out.encode()) // 1024))
     # 4. sw.js y manifest
     C = json.loads(re.search(r'const CAT=(\{.*?\});\nconst MEDI=', out, re.S).group(1))
