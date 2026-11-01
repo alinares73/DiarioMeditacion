@@ -1,7 +1,7 @@
 # Diario (con meditación diaria) — cómo actualizar
 
 Esta carpeta genera la app **Diario** (la carpeta de arriba, repositorio `DiarioMeditacion`) a partir de la app **Epacta**
-(carpeta «Diario app», que nunca se modifica) y de los ePub de meditaciones de `C:\Users\alina\Desktop\medis`.
+(carpeta «Diario app», que nunca se modifica) y de los ePub de meditaciones de la carpeta `medis` (aquí dentro; no se sube a GitHub).
 
 ## Cuándo ejecutarlo
 - Cada vez que actualices la app Diario (después de `actualizar_diario.py`), para que la nueva app
