@@ -78,4 +78,4 @@ function hcdSep(doc){if(doc!=='HCD')return;document.querySelectorAll('#dx b>span
 
 /* Evitar la barra «Tocar para buscar» de Google (Chrome Android) al seleccionar texto:
    Chrome no la muestra si el texto está dentro de un elemento enfocable y con manejador de toques */
-function noTTS(){const dx=$('#dx');if(!dx)return;dx.tabIndex=-1;const f=()=>{};dx.addEventListener('click',f);dx.addEventListener('touchstart',f,{passive:true})}
+function noTTS(){const dx=$('#dx');if(!dx)return;const f=()=>{};dx.addEventListener('click',f)}
