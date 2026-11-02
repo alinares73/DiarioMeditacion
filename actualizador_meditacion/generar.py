@@ -94,6 +94,8 @@ def parchear(src, metas, medi, js, VAL=None, EY=None, ATL=None):
     src = re.sub(r'<title>[^<]*</title>', '<title>Diario</title>', src, count=1)
     src = re.sub(r'<h1 id="ht">[^<]*</h1>', '<h1 id="ht">Diario</h1>', src, count=1)
     src = re.sub(r"setHead\('(?:Epacta|Diario)',iso===today\?'':'#/'\)", "setHead('Diario',iso===today?'':'#/')", src, count=1)
+    rep('<link rel="icon" href="icon-192.png">', '<link rel="icon" href="favicon-48.png" sizes="48x48"><link rel="icon" href="icon-192.png" sizes="192x192">')
+    rep('<link rel="apple-touch-icon" href="icon-192.png">', '<link rel="apple-touch-icon" href="apple-touch-icon.png">')
     rep('<meta name="theme-color" content="#101a2a">', '<meta name="theme-color" content="#101a2a">\n<meta name="description" content="Diario con meditación diaria">')
     rep("const TITLES={", "const TITLES={MedOD:'Meditaciones (7 tomos)',SCE:'Siempre con Él',Valtorta:'María Valtorta · La vida de Jesús',")
     rep('</style>', CSS + '</style>')
@@ -208,7 +210,9 @@ header #hval{width:24px;height:24px;min-width:24px;border:0;padding:0;margin:0 1
 RENDER_DOCS = r'''function renderDocs(){const MB=['MedOD','SCE','HCD','Valtorta'].filter(d=>DOCS[d]),IC={MedOD:'🕯️',SCE:'📿',HCD:'🙏',Valtorta:'🌿'},SUB={MedOD:'Libro de meditaciones · 7 tomos',SCE:'F. Espa y otros · 9 tomos en uno',HCD:'F. Fernández-Carvajal · con enlaces a la Biblia',Valtorta:'Escenas enlazadas con los Evangelios'};const names=Object.keys(DOCS).filter(d=>!MB.includes(d));const nu=uhGroups().length;
   $('#main').innerHTML='<h2 class="t">Libros</h2><h3 class="thm" style="margin-top:0">Libros de meditación</h3><div class="bkm">'+MB.map(d=>`<a class="btn bk" href="#/dp/${d}/0"><span class="ic">${IC[d]}</span><span>${esc(dTitle(d))}<small>${SUB[d]} · ${Math.round(DOCS[d].kb/102.4)/10} MB</small></span></a>`).join('')+'</div>'+(ATL?'<div class="row atlr"><a class="btn" href="#/mapa">🗺 Mapa</a><a class="btn" href="#/viajes">📜 Cronología</a><a class="btn" href="#/lugares">📍 Lugares</a></div><p class="mut" style="margin:2px 0 12px;font-size:14px">Los viajes de Jesús según María Valtorta, a partir del atlas de J. Webster.</p>':'')+'<div class="row" style="margin-top:4px"><a class="btn" href="#/med">🙏 Meditación de hoy</a><a class="btn" href="#/resaltados">🖍 Mis resaltados'+(nu?' ('+nu+')':'')+'</a></div><p class="mut" style="margin:14px 0 0">En cualquier libro puedes buscar con 🔍 y resaltar: selecciona un texto y pulsa «🖍 Resaltar».</p><h3 class="thm">Comentarios y libros enlazados</h3><p class="mut">Se abren también desde los números de versículo de la Biblia y desde los enlaces del propio texto.</p><div class="grid">'+names.map(d=>`<a class="btn bk" href="#/dp/${d}/0" style="flex-direction:column"><span>${esc(dTitle(d))}</span><small class="mut">${Math.round(DOCS[d].kb/102.4)/10} MB</small></a>`).join('')+'</div>'}'''
 
-def parchear_sw(txt, metas, cat_docs):
+ICONS = ['icon-192.png', 'icon-512.png', 'icon-maskable-192.png', 'icon-maskable-512.png', 'apple-touch-icon.png', 'favicon-48.png']
+
+def parchear_sw(txt, metas, cat_docs, salt=b''):
     m = re.search(r"const DOCV=(\{.*?\});", txt)
     if not m: sys.exit('No encuentro DOCV en sw.js del Diario.')
     docv = json.loads(m.group(1))
@@ -217,7 +221,8 @@ def parchear_sw(txt, metas, cat_docs):
     txt = re.sub(r"const CACHE='[^']*';", "const CACHE='diariomed';", txt)
     txt = txt.replace("for(const k of await caches.keys())if(k!==CACHE)await caches.delete(k);",
                       "for(const k of await caches.keys())if(k!==CACHE&&k.startsWith('diariomed'))await caches.delete(k);")
-    b = hashlib.md5(json.dumps(docv, sort_keys=True).encode() + txt.encode()).hexdigest()[:10]
+    txt = re.sub(r"const SHELL=\[[^\]]*\];", 'const SHELL=' + json.dumps(['./', 'index.html', 'manifest.webmanifest'] + ICONS) + ';', txt)
+    b = hashlib.md5(json.dumps(docv, sort_keys=True).encode() + txt.encode() + salt).hexdigest()[:10]
     txt = re.sub(r"const BUILD='[^']*';", "const BUILD='m%s';" % b, txt)
     return txt.replace('/* Generado automaticamente por actualizar.py - no editar a mano */', '/* Generado por actualizador_meditacion/generar.py - no editar a mano */')
 
@@ -236,7 +241,7 @@ def main():
     # 1. copiar lo de la app Diario
     if not a.sin_copiar:
         n = 0
-        for f in ('icon-192.png', 'icon-512.png', 'catalog.json'):
+        for f in ('catalog.json',):  # los iconos de Diario son propios (no se copian de Epacta)
             if os.path.exists(os.path.join(DIA, f)):
                 s, d = os.path.join(DIA, f), os.path.join(DST, f)
                 if not os.path.exists(d) or os.stat(s).st_size != os.stat(d).st_size: shutil.copy2(s, d); n += 1
@@ -291,10 +296,15 @@ def main():
     log('index.html', 'actualizado' if write_if_changed(os.path.join(DST, 'index.html'), out) else 'sin cambios', '(%d KB)' % (len(out.encode()) // 1024))
     # 4. sw.js y manifest
     C = json.loads(re.search(r'const CAT=(\{.*?\});\nconst MEDI=', out, re.S).group(1))
-    sw = parchear_sw(open(os.path.join(DIA, 'sw.js'), encoding='utf-8').read(), metas, C['docs'])
+    salt = b''.join(open(os.path.join(DST, f), 'rb').read() for f in ICONS if os.path.exists(os.path.join(DST, f)))
+    sw = parchear_sw(open(os.path.join(DIA, 'sw.js'), encoding='utf-8').read(), metas, C['docs'], salt)
     write_if_changed(os.path.join(DST, 'sw.js'), sw)
     man = json.load(open(os.path.join(DIA, 'manifest.webmanifest'), encoding='utf-8'))
-    man.update(name='Diario', short_name='Diario')
+    man.update(name='Diario', short_name='Diario', background_color='#021e4b', icons=[
+        {'src': 'icon-192.png', 'sizes': '192x192', 'type': 'image/png', 'purpose': 'any'},
+        {'src': 'icon-512.png', 'sizes': '512x512', 'type': 'image/png', 'purpose': 'any'},
+        {'src': 'icon-maskable-192.png', 'sizes': '192x192', 'type': 'image/png', 'purpose': 'maskable'},
+        {'src': 'icon-maskable-512.png', 'sizes': '512x512', 'type': 'image/png', 'purpose': 'maskable'}])
     write_if_changed(os.path.join(DST, 'manifest.webmanifest'), json.dumps(man, ensure_ascii=False))
     log('Listo.')
 
