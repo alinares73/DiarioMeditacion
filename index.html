@@ -277,7 +277,7 @@ function renderHome(arg){
   let h=`<div class="dtop"><div class="dhero"><div class="dnum">${d}</div><div class="dmon">${MESES[m-1]}</div><div class="dwk">${DIAS[dt.getDay()]} · ${y}</div></div><div class="cal" id="cal"></div></div>`;
   h+=`<div class="dnav"><a class="btn" href="#/dia/${addDays(iso,-1)}" aria-label="Día anterior">‹</a><a class="btn" href="#/">Hoy</a><a class="btn" href="#/dia/${addDays(iso,1)}" aria-label="Día siguiente">›</a></div>`;
   const kv=(l,t)=>t?`<div class="kv"><small>${l}</small>${esc(t)}</div>`:'';
-  const alm=D&&D.n?`<div class="kv"><small>Notas de Almudi</small>${D.n}</div>`:'';
+  const alm=(D&&D.n?`<div class="kv"><small>Notas de Almudi</small>${D.n}</div>`:'')+(D?`<a class="cm" href="#/d/Misal/${D.o}" style="margin-top:12px">Ver el día completo en el Misal →</a>`:'');
   if(E){
     const dots=E.c.map(c=>`<span class="dot c-${c}" title="${esc(COLN[c]||c)}" role="img" aria-label="${esc(COLN[c]||c)}"></span>`).join('<span class="or">/</span>');
     let tg='';if(E.tp)tg+=`<span class="tag f">Fiesta ${esc(E.tp)}</span>`;if(E.cat)tg+=`<span class="tag">${esc(E.cat)}</span>`;
@@ -289,7 +289,7 @@ function renderHome(arg){
     h+=D.r.map(rdHtml).join('');
     h+=D.ob.map(t=>`<p class="cap">${esc(t)}</p>`).join('');
     h+=D.b.map(b=>`<a class="btn" href="#/d/Misal/${b[1]}">${esc(b[0])}</a>`).join('');
-    h+=`</section><a class="cm" href="#/d/Misal/${D.o}" style="margin-bottom:14px">Ver el día completo en el Misal →</a>`;
+    h+=`</section>`;
   }
   if(!E&&!D)h+='<p class="mut" style="text-align:center">No hay datos litúrgicos para esta fecha.</p>';
   h+='<div class="row one"><a class="btn" href="#/biblia">📖 Sagrada Escritura</a></div><div class="row one med"><a class="btn" href="#/med/'+iso+'">🙏 Meditación diaria</a></div><div class="row two"><a class="btn" href="#/docs">📚 Libros</a><a class="btn" href="#/elyyo">🕊️ Él y yo</a></div>';

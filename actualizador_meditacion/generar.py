@@ -121,6 +121,10 @@ def parchear(src, metas, medi, js, VAL=None, EY=None, ATL=None):
         "$('#fab').style.display='';$('#sfab').style.display='none';$('#hstar').style.display='none';bar(null);window.scrollTo(0,0);uhCur=null;$('#hval').style.display='none';$('#hlb').classList.remove('on');$('#pop').classList.remove('on');")
     rep("if(doc==='ElYo')eyMarkAll();if(o.i!==undefined)focusPar(o.i,o.q);",
         "if(doc==='ElYo')eyMarkAll();hcdSep(doc);noTTS();uhApply(doc,k);if(o.i!==undefined)focusPar(o.i,o.q);")
+    # portada: «Ver el día completo en el Misal» dentro de la tarjeta del día, justo después de las Notas de Almudi
+    rep("const alm=D&&D.n?`<div class=\"kv\"><small>Notas de Almudi</small>${D.n}</div>`:'';",
+        "const alm=(D&&D.n?`<div class=\"kv\"><small>Notas de Almudi</small>${D.n}</div>`:'')+(D?`<a class=\"cm\" href=\"#/d/Misal/${D.o}\" style=\"margin-top:12px\">Ver el día completo en el Misal →</a>`:'');")
+    rep("h+=`</section><a class=\"cm\" href=\"#/d/Misal/${D.o}\" style=\"margin-bottom:14px\">Ver el día completo en el Misal →</a>`;", "h+=`</section>`;")
     # pantalla Libros
     a = src.index('function renderDocs(){'); b = src.index('\n', a)
     src = src[:a] + RENDER_DOCS + src[b:]
