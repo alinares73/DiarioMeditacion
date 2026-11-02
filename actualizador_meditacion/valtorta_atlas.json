@@ -2,56 +2,56 @@
 "lugares": {
 "achzib": [
 "Aczib",
-33.05,
-35.102,
+33.048598,
+35.102341,
 "Fenicia"
 ],
 "aera": [
 "Aera",
-32.99,
-35.96,
+33.084518,
+36.176642,
 "Gaulanítide"
 ],
 "alexandroscene": [
 "Alexandroscene",
-33.15,
-35.15,
+33.151128,
+35.167704,
 "Fenicia"
 ],
 "antigonea": [
 "Antigonia (Siria)",
-36.18,
-36.1,
+36.152878,
+36.153837,
 "Siria"
 ],
 "antioch": [
 "Antioquía (Siria)",
-36.2,
-36.16,
+36.199047,
+36.156807,
 "Siria"
 ],
 "aphek": [
 "Afeq",
-32.78,
-35.7,
+32.780084,
+35.704174,
 "Decápolis"
 ],
 "arbela": [
-"Arbela",
-32.818,
-35.497,
+"Arbela (de Galilea)",
+32.812494,
+35.488979,
 "Galilea"
 ],
 "arimathea": [
 "Arimatea",
-32.05,
-35.01,
+32.026954,
+35.016692,
 "Judea"
 ],
 "ashkelon": [
 "Ascalón",
-31.667,
-34.565,
+31.663368,
+34.547738,
 "Llanura filistea"
 ],
 "ashkelon plain": [
@@ -62,74 +62,74 @@
 ],
 "azotus": [
 "Azoto",
-31.8,
-34.645,
+31.756534,
+34.660155,
 "Llanura filistea"
 ],
 "beeroth": [
 "Beerot",
-31.905,
-35.212,
+31.906185,
+35.217374,
 "Judea"
 ],
 "beth-hoglah": [
 "Bet-Hoglá",
-31.82,
-35.51,
+31.827327,
+35.51391,
 "Judea"
 ],
 "beth-horon": [
 "Bet-Horón",
-31.88,
-35.12,
+31.880751,
+35.123635,
 "Judea"
 ],
 "bethabara": [
 "Betábara (Jordán)",
-31.838,
-35.55,
+31.853185,
+35.549929,
 "Perea"
 ],
 "bethany": [
 "Betania",
-31.771,
-35.261,
+31.7714,
+35.257843,
 "Judea"
 ],
 "bethel": [
 "Betel",
-31.93,
-35.222,
+31.924157,
+35.235587,
 "Judea"
 ],
 "bether": [
 "Beter",
-31.73,
-35.137,
+31.723682,
+35.137083,
 "Judea"
 ],
 "bethjabbok": [
 "Betjaboc",
-32.15,
-35.57,
+32.194555,
+35.623771,
 "Perea"
 ],
 "bethlehem": [
 "Belén",
-31.705,
-35.2,
+31.704433,
+35.207612,
 "Judea"
 ],
 "bethlehem of galilee": [
 "Belén de Galilea",
-32.735,
-35.191,
+32.735894,
+35.192405,
 "Galilea"
 ],
 "bethphage": [
 "Betfagé",
-31.779,
-35.25,
+31.775822,
+35.251106,
 "Judea"
 ],
 "bethsaida": [
@@ -140,44 +140,44 @@
 ],
 "bethzur": [
 "Bet-Sur",
-31.59,
-35.1,
+31.589446,
+35.094182,
 "Judea"
 ],
 "bozrah": [
 "Bosra",
-32.518,
-36.481,
+32.514657,
+36.463612,
 "Auranítide"
 ],
 "caesarea": [
 "Cesarea Marítima",
-32.5,
-34.892,
+32.502034,
+34.892737,
 "Samaria"
 ],
 "caesarea philippi": [
 "Cesarea de Filipo",
-33.248,
-35.694,
+33.24708,
+35.694125,
 "Tetrarquía de Filipo"
 ],
 "callirhoe": [
 "Calírroe",
-31.6,
-35.565,
+31.596999,
+35.559428,
 "Perea"
 ],
 "cameleer": [
 "Fuente del Camellero",
-32.38,
-36.15,
+32.352217,
+36.22791,
 "Decápolis"
 ],
 "cana": [
 "Caná",
-32.747,
-35.339,
+32.738539,
+35.348487,
 "Galilea"
 ],
 "capernaum": [
@@ -188,14 +188,14 @@
 ],
 "chuza": [
 "Finca de Cusa",
-32.69,
-35.585,
+32.664676,
+35.613393,
 "Galilea"
 ],
 "clear water": [
 "Agua Clara",
-31.92,
-35.58,
+31.950348,
+35.509346,
 "Perea"
 ],
 "decapolis": [
@@ -206,86 +206,86 @@
 ],
 "doco": [
 "Doc",
-31.875,
-35.43,
+31.896959,
+35.422814,
 "Judea"
 ],
 "dora": [
 "Dora",
-32.615,
-34.918,
+32.612293,
+34.920023,
 "Samaria"
 ],
 "dothan": [
 "Dotán",
-32.42,
-35.24,
+32.412796,
+35.238898,
 "Samaria"
 ],
 "ekron": [
 "Ecrón",
-31.78,
-34.85,
+31.860068,
+34.822977,
 "Llanura filistea"
 ],
 "emmaus": [
 "Emaús del monte",
-31.836,
-35.13,
+31.841967,
+35.129713,
 "Judea"
 ],
 "emmaus of tiberias": [
 "Emaús de Tiberíades",
-32.775,
-35.545,
+32.766209,
+35.549956,
 "Galilea"
 ],
 "emmaus on mt": [
 "Emaús del monte",
-31.836,
-35.13,
+31.841967,
+35.129713,
 "Judea"
 ],
 "emmaus on the plain": [
 "Emaús de la llanura",
-31.839,
-34.989,
+31.838905,
+34.988922,
 "Judea"
 ],
 "en-shemesh": [
 "En-Semes",
-31.77,
-35.29,
+31.774216,
+35.270198,
 "Judea"
 ],
 "endor": [
 "Endor",
-32.632,
-35.395,
+32.626667,
+35.384852,
 "Galilea"
 ],
 "engannim": [
 "En-Ganim",
-32.46,
-35.3,
+32.460082,
+35.296326,
 "Samaria"
 ],
 "engedi": [
 "Engadí",
-31.462,
-35.392,
+31.45252,
+35.382493,
 "Judea"
 ],
 "enon": [
 "Enón",
-32.37,
-35.545,
+32.384452,
+35.533125,
 "Samaria"
 ],
 "ephraim": [
 "Efraím",
-31.955,
-35.3,
+31.948228,
+35.292784,
 "Judea"
 ],
 "esdraelon": [
@@ -296,8 +296,8 @@
 ],
 "gadara": [
 "Gádara",
-32.655,
-35.678,
+32.6554,
+35.67875,
 "Decápolis"
 ],
 "galilee": [
@@ -308,14 +308,14 @@
 ],
 "gamala": [
 "Gamala",
-32.902,
-35.736,
+32.720415,
+35.682724,
 "Gaulanítide"
 ],
 "gerasa": [
 "Gerasa",
-32.272,
-35.891,
+32.281699,
+35.89268,
 "Decápolis"
 ],
 "gherghesa": [
@@ -326,56 +326,56 @@
 ],
 "gibeon": [
 "Gabaón",
-31.847,
-35.185,
+31.84777,
+35.185199,
 "Judea"
 ],
 "giscala": [
 "Giscala",
-33.02,
-35.45,
+33.02652,
+35.445008,
 "Galilea"
 ],
 "hebron": [
 "Hebrón",
-31.53,
-35.1,
+31.532851,
+35.108694,
 "Judea"
 ],
 "heshbon": [
 "Jesbón",
-31.8,
-35.808,
+31.801011,
+35.80966,
 "Perea"
 ],
 "hippo": [
 "Hipos",
-32.778,
-35.661,
+32.779039,
+35.659743,
 "Decápolis"
 ],
 "jabesh-gilead": [
 "Jabés de Galaad",
-32.37,
-35.63,
+32.379627,
+35.612313,
 "Decápolis"
 ],
 "jabneel": [
 "Yamnia",
-31.867,
-34.745,
+31.876359,
+34.734308,
 "Llanura filistea"
 ],
 "jala": [
 "Jala",
-31.72,
-35.18,
+31.716669,
+35.183336,
 "Judea"
 ],
 "jericho": [
 "Jericó",
-31.871,
-35.444,
+31.869143,
+35.442149,
 "Judea"
 ],
 "jerusalem": [
@@ -386,26 +386,26 @@
 ],
 "jezreel": [
 "Jezrael",
-32.557,
-35.33,
+32.55761,
+35.328226,
 "Galilea"
 ],
 "jiphthahel": [
 "Jiftael",
-32.85,
-35.26,
+32.818398,
+35.247756,
 "Galilea"
 ],
 "joppa": [
 "Jope",
-32.054,
-34.752,
+32.054541,
+34.753788,
 "Llanura filistea"
 ],
 "jordan ford": [
 "Vado del Jordán",
-31.84,
-35.545,
+31.837254,
+35.546716,
 "Judea"
 ],
 "jordan near doco": [
@@ -422,26 +422,26 @@
 ],
 "jutta": [
 "Yuta",
-31.45,
-35.095,
+31.451118,
+35.08556,
 "Judea"
 ],
 "kedesh": [
 "Cades de Neftalí",
-33.112,
-35.53,
+33.110298,
+35.53071,
 "Galilea"
 ],
 "kerioth": [
 "Keriot",
-31.36,
-35.11,
+31.344993,
+35.12405,
 "Judea"
 ],
 "korazim": [
 "Corozaín",
-32.911,
-35.564,
+32.910811,
+35.56637,
 "Galilea"
 ],
 "korazim plain": [
@@ -458,14 +458,14 @@
 ],
 "lebonah": [
 "Lebona",
-32.07,
-35.24,
+32.061278,
+35.248054,
 "Samaria"
 ],
 "machaerus": [
 "Maqueronte",
-31.562,
-35.627,
+31.568653,
+35.635635,
 "Perea"
 ],
 "magdala": [
@@ -476,56 +476,56 @@
 ],
 "magdalgad": [
 "Magdalgad",
-31.62,
-34.7,
+31.669579,
+34.602046,
 "Llanura filistea"
 ],
 "masada": [
 "Masada",
-31.316,
-35.354,
+31.317856,
+35.353829,
 "Judea"
 ],
 "megiddo": [
 "Meguido",
-32.585,
-35.185,
+32.585487,
+35.184646,
 "Galilea"
 ],
 "merom": [
 "Merón",
-32.995,
-35.41,
+32.983474,
+35.438151,
 "Galilea"
 ],
 "modin": [
 "Modín",
-31.93,
-35.02,
+31.934919,
+34.994431,
 "Judea"
 ],
 "mt adomin": [
 "Monte Adomín",
-31.81,
-35.33,
+31.791701,
+35.280997,
 "Judea"
 ],
 "mt carmel": [
 "Monte Carmelo",
-32.735,
-35.045,
+32.719999,
+35.049461,
 "Galilea"
 ],
 "mt cherith": [
 "Monte Querit",
-31.85,
-35.4,
+31.857557,
+35.337956,
 "Judea"
 ],
 "mt nebo": [
 "Monte Nebo",
-31.768,
-35.725,
+31.767487,
+35.725461,
 "Perea"
 ],
 "mt of fasting": [
@@ -536,38 +536,38 @@
 ],
 "mt tabor": [
 "Monte Tabor",
-32.687,
-35.39,
+32.687543,
+35.38774,
 "Galilea"
 ],
 "nain": [
 "Naím",
-32.63,
-35.348,
+32.634037,
+35.34891,
 "Galilea"
 ],
 "nazareth": [
 "Nazaret",
-32.702,
-35.297,
+32.702086,
+35.299772,
 "Galilea"
 ],
 "nike": [
 "Casa de Nike (Jericó)",
-31.85,
-35.46,
+31.8542,
+35.443034,
 "Judea"
 ],
 "nob": [
 "Nob",
-31.792,
-35.238,
+31.792358,
+35.246455,
 "Judea"
 ],
 "pella": [
 "Pela",
-32.449,
-35.616,
+32.449759,
+35.615457,
 "Decápolis"
 ],
 "philistine plain": [
@@ -578,8 +578,8 @@
 ],
 "ptolemais": [
 "Tolemaida",
-32.923,
-35.07,
+32.921223,
+35.074232,
 "Fenicia"
 ],
 "ramah": [
@@ -590,20 +590,20 @@
 ],
 "ramoth gilead": [
 "Ramot de Galaad",
-32.55,
-35.85,
+32.03872,
+35.727281,
 "Perea"
 ],
 "samaria": [
 "Samaria",
-32.28,
-35.195,
+32.278916,
+35.189874,
 "Samaria"
 ],
 "saphet": [
 "Safed",
-32.965,
-35.496,
+32.969895,
+35.495472,
 "Galilea"
 ],
 "sea of galilee": [
@@ -614,50 +614,50 @@
 ],
 "seleucia": [
 "Seleucia (Siria)",
-36.12,
-35.93,
+36.115017,
+35.939386,
 "Siria"
 ],
 "sephoris": [
 "Séforis",
-32.753,
-35.279,
+32.753566,
+35.27876,
 "Galilea"
 ],
 "shechem": [
 "Siquem",
-32.213,
-35.282,
+32.213542,
+35.282032,
 "Samaria"
 ],
 "shiloh": [
 "Siló",
-32.055,
-35.29,
+32.052079,
+35.29629,
 "Samaria"
 ],
 "sicaminon": [
 "Sicaminón",
-32.83,
-34.975,
+32.825232,
+34.955623,
 "Fenicia"
 ],
 "solomon's village": [
 "Aldea de Salomón",
-31.86,
-35.62,
+31.856807,
+35.543716,
 "Perea"
 ],
 "steps of tyre": [
 "Escala de Tiro",
-33.09,
-35.11,
+33.094113,
+35.107752,
 "Fenicia"
 ],
 "sychar": [
 "Sicar",
-32.21,
-35.295,
+32.212745,
+35.301456,
 "Samaria"
 ],
 "tarichea": [
@@ -674,8 +674,8 @@
 ],
 "tekoah": [
 "Tecoa",
-31.633,
-35.218,
+31.639525,
+35.214381,
 "Judea"
 ],
 "tiberias": [
@@ -686,14 +686,14 @@
 ],
 "tirzah": [
 "Tirsá",
-32.288,
-35.36,
+32.139826,
+35.492184,
 "Samaria"
 ],
 "tyre": [
 "Tiro",
-33.272,
-35.196,
+33.273198,
+35.194114,
 "Fenicia"
 ],
 "wilderness of temptation": [
@@ -710,9 +710,15 @@
 ],
 "ramah benjamin": [
 "Ramá (de Benjamín)",
-31.85,
-35.231,
+31.852912,
+35.230796,
 "Judea"
+],
+"arbela decapolis": [
+"Arbela (Decápolis)",
+32.564981,
+35.906654,
+"Decápolis"
 ]
 },
 "ciclos": [
@@ -3458,7 +3464,7 @@
 ],
 [
 8,
-"arbela",
+"arbela decapolis",
 "Principios de noviembre del año 32 · miércoles",
 0,
 294,
@@ -3467,7 +3473,7 @@
 ],
 [
 8,
-"arbela",
+"arbela decapolis",
 "Principios de noviembre del año 32 · miércoles a jueves",
 36,
 295,
