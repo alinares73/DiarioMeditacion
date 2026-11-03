@@ -183,7 +183,7 @@ header #hval{width:24px;height:24px;min-width:24px;border:0;padding:0;margin:0 1
 #amap .areg text{font:600 calc(var(--s,1)*12px) var(--ui);letter-spacing:.25em;fill:var(--mut);opacity:.75;text-anchor:middle;paint-order:stroke;stroke:var(--card);stroke-width:2px;stroke-opacity:.6}
 #amap .amt path{fill:var(--mut);opacity:0}#amap .amt text{font:italic calc(var(--s,1)*10px) var(--ff);fill:var(--mut);opacity:.7}
 #amap .awat text{font:italic calc(var(--s,1)*12px) var(--ff);fill:var(--fg);opacity:.55;text-anchor:middle;letter-spacing:.08em}
-#amap .asyr rect{fill:none;stroke:var(--mut);stroke-dasharray:4 4;stroke-opacity:.6;vector-effect:non-scaling-stroke}#amap .asyr text{font:calc(var(--s,1)*9px) var(--ui);fill:var(--mut);text-anchor:middle}
+#amap .asyrb{fill:none;stroke:var(--mut);stroke-dasharray:5 4;stroke-opacity:.8;stroke-width:1.2;vector-effect:non-scaling-stroke}#amap .asyrs{font-weight:400!important}#amap .asyrt{font:600 calc(var(--s,1)*10px) var(--ui);fill:var(--mut);text-anchor:start;letter-spacing:.04em;paint-order:stroke;stroke:var(--card);stroke-width:3px}#amap .asyrr{font:600 calc(var(--s,1)*11px) var(--ui);letter-spacing:.25em;fill:var(--mut);opacity:.75;text-anchor:middle}#amap .asyrw{font:italic calc(var(--s,1)*10px) var(--ff);fill:var(--ariv)}
 #amap .ascale path{stroke:var(--fg);stroke-width:1.5;fill:none;vector-effect:non-scaling-stroke}#amap .ascale text{font:11px var(--ui);fill:var(--mut)}#amap .anor{font:700 calc(var(--s,1)*12px) var(--ui);fill:var(--mut)}
 .doc .vwh+p{scroll-margin-top:3.5em}
 #amap .aseg{fill:none;stroke:var(--mut);stroke-opacity:.35;stroke-width:1.6;stroke-dasharray:3 4;vector-effect:non-scaling-stroke;stroke-linecap:round}
