@@ -62,3 +62,28 @@ def leer(path):
         for k, (ti, fr, _) in enumerate(porTema):
             P.append([n if k == 0 else round(n + k / 100, 2), fr, [ti]])
     return {'th': themes, 'p': P}
+
+def offsets(doc_dir, EY):
+    """Posición en el libro (docs/ElYo) de cada punto y de cada capítulo: EY['o'] y EY['to']."""
+    import glob, os, re, unicodedata
+    nrm = lambda s: re.sub(r'\W+', ' ', unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode().lower()).strip()
+    files = sorted(glob.glob(os.path.join(doc_dir, '*.html')), key=lambda f: int(os.path.basename(f).split('.')[0]))
+    cap = None; caps = {}; pts = {}; anyn = {}
+    for f in files:
+        t = open(f, encoding='utf-8').read()
+        for m in re.finditer(r'<h2 id="o(\d+)"[^>]*>(\d+)\.\s*(.*?)</h2>|<p class="pn" data-o="(\d+)"><b class="nm">(\d+)\.</b>', t):
+            if m.group(1):
+                cap = int(m.group(2)) - 1; caps[cap] = (int(m.group(1)), nrm(re.sub('<[^>]+>', '', m.group(3))))
+            else:
+                n = int(m.group(5)); o = int(m.group(4))
+                pts.setdefault((cap, n), o); anyn.setdefault(n, o)
+    to = []
+    for i, th in enumerate(EY['th']):
+        hit = next((o for c, (o, nm) in caps.items() if nm == nrm(th)), None)
+        to.append(hit if hit is not None else caps.get(i, (0,))[0])
+    oo = []
+    for p in EY['p']:
+        n = int(p[0]); th = p[2][0] if p[2] else None
+        oo.append(pts.get((th, n)) or anyn.get(n) or (to[th] if th is not None else 0))
+    EY['o'] = oo; EY['to'] = to
+    return sum(1 for p in EY['p'] if pts.get((p[2][0] if p[2] else None, int(p[0])))), len(caps)

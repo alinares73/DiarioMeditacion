@@ -121,10 +121,17 @@ def parchear(src, metas, medi, js, VAL=None, EY=None, ATL=None):
         "$('#fab').style.display='';$('#sfab').style.display='none';$('#hstar').style.display='none';bar(null);window.scrollTo(0,0);uhCur=null;$('#hval').style.display='none';$('#hlb').classList.remove('on');$('#pop').classList.remove('on');")
     rep("if(doc==='ElYo')eyMarkAll();if(o.i!==undefined)focusPar(o.i,o.q);",
         "if(doc==='ElYo')eyMarkAll();hcdSep(doc);noTTS();uhApply(doc,k);if(o.i!==undefined)focusPar(o.i,o.q);")
-    # portada: «Ver el día completo en el Misal» dentro de la tarjeta del día, justo después de las Notas de Almudi
+    # portada: el rótulo «Notas de Almudi →» lleva al día completo en el Misal (sin botón aparte)
     rep("const alm=D&&D.n?`<div class=\"kv\"><small>Notas de Almudi</small>${D.n}</div>`:'';",
-        "const alm=(D&&D.n?`<div class=\"kv\"><small>Notas de Almudi</small>${D.n}</div>`:'')+(D?`<a class=\"cm\" href=\"#/d/Misal/${D.o}\" style=\"margin-top:12px\">Ver el día completo en el Misal →</a>`:'');")
+        "const alm=D?`<div class=\"kv\"><small><a class=\"kvl\" href=\"#/d/Misal/${D.o}\">${D.n?'Notas de Almudi':'Día completo en el Misal'} →</a></small>${D.n||''}</div>`:'';")
     rep("h+=`</section><a class=\"cm\" href=\"#/d/Misal/${D.o}\" style=\"margin-bottom:14px\">Ver el día completo en el Misal →</a>`;", "h+=`</section>`;")
+    # Él y yo: número y capítulo enlazan con el libro; botón ◀ para ver puntos de días anteriores
+    if EY:
+        rep("<div class=\"ph\"><b>${Math.floor(p[0])}</b><span>${p[2].map(t=>esc(EY.th[t])).join(' · ')}</span>",
+            "<div class=\"ph\"><a class=\"eyn\" href=\"#/d/ElYo/${EY.o?EY.o[i]:0}\">${Math.floor(p[0])}</a><span>${p[2].map(t=>`<a class=\"eyt\" href=\"#/d/ElYo/${EY.to?EY.to[t]:0}\">${esc(EY.th[t])}</a>`).join(' · ')}</span>")
+        rep('<button class="btn" id="eymore" style="width:100%;margin-top:6px">Cargar más puntos…</button>',
+            '<div class="row eyrow"><button class="btn" id="eyprev" aria-label="Puntos de días anteriores" title="Puntos de días anteriores">◀</button><button class="btn" id="eymore">Cargar más puntos…</button></div>')
+        rep("$('#eymore').onclick=", "eyPrevInit(st);$('#eymore').onclick=")
     # pantalla Libros
     a = src.index('function renderDocs(){'); b = src.index('\n', a)
     src = src[:a] + RENDER_DOCS + src[b:]
@@ -209,6 +216,10 @@ header #hval{width:24px;height:24px;min-width:24px;border:0;padding:0;margin:0 1
 .arow{padding:9px 0;border-bottom:1px solid var(--bd)}.arow .apl{font:700 15px var(--ui);color:#e8862b;text-decoration:none;margin-right:8px}.arow small{font:13px var(--ui);color:var(--mut)}.arow .atl2{display:block;font:16px/1.45 var(--ff);color:var(--fg);text-decoration:none;margin-top:2px}
 .afest{margin:10px 0 2px;font:700 13px var(--ui);color:var(--link);letter-spacing:.03em}
 .alug{display:flex;justify-content:space-between;align-items:center}.alug b{font:600 13px var(--ui);color:var(--mut);background:var(--bg);border-radius:10px;padding:2px 8px}
+.kv a.kvl{color:var(--link);text-decoration:none}
+.ph a.eyn{font:700 18px var(--ui);color:var(--link);text-decoration:none;padding:4px 6px 4px 0}.ph a.eyt{color:var(--mut);text-decoration:none;border-bottom:1px dotted var(--bd)}.ph a.eyt:active,.ph a.eyn:active{color:var(--fg)}
+.eyrow{margin-top:6px;gap:8px}.eyrow #eyprev{flex:0 0 64px;font-size:18px}.eyrow #eymore{flex:1}.eyrow #eyprev:disabled{opacity:.35}
+.eysep{font:600 12px var(--ui);letter-spacing:.06em;text-transform:uppercase;margin:18px 0 8px}
 '''
 
 RENDER_DOCS = r'''function renderDocs(){const MB=['MedOD','SCE','HCD','Valtorta'].filter(d=>DOCS[d]),IC={MedOD:'🕯️',SCE:'📿',HCD:'🙏',Valtorta:'🌿'},SUB={MedOD:'Libro de meditaciones · 7 tomos',SCE:'F. Espa y otros · 9 tomos en uno',HCD:'F. Fernández-Carvajal · con enlaces a la Biblia',Valtorta:'Escenas enlazadas con los Evangelios'};const names=Object.keys(DOCS).filter(d=>!MB.includes(d));const nu=uhGroups().length;
@@ -287,7 +298,7 @@ def main():
     old = os.path.join(DST, 'docs', 'HCD7')
     if os.path.isdir(old): shutil.rmtree(old, ignore_errors=True)
     # 3. index.html
-    js = '\n'.join(open(os.path.join(HERE, 'js', f), encoding='utf-8').read() for f in ('liturgia.js', 'med_ui.js', 'hl.js', 'valtorta.js', 'atlas.js'))
+    js = '\n'.join(open(os.path.join(HERE, 'js', f), encoding='utf-8').read() for f in ('liturgia.js', 'med_ui.js', 'hl.js', 'valtorta.js', 'atlas.js', 'elyo.js'))
     js = js.replace("if(typeof module!=='undefined')module.exports=LIT;", '')
     rel_img = os.path.join(HERE, 'relieve.webp')
     js = js.replace('__RELIEVE__', ('data:image/webp;base64,' + base64.b64encode(open(rel_img, 'rb').read()).decode()) if os.path.exists(rel_img) else '')
@@ -296,6 +307,7 @@ def main():
     epy = glob.glob(os.path.join(DIA, 'actualizador', 'pdb_diario', '*sentir*.epub'))
     if epy:
         EY = elyo.leer(epy[0]); log('Él y yo: %d puntos (separados por capítulo)' % len(EY['p']))
+        okp, nc = elyo.offsets(os.path.join(DST, 'docs', 'ElYo'), EY); log('   enlazados con el libro: %d puntos, %d capítulos' % (okp, nc))
     out = parchear(src, metas, medi, js, VAL, EY, ATL)
     log('index.html', 'actualizado' if write_if_changed(os.path.join(DST, 'index.html'), out) else 'sin cambios', '(%d KB)' % (len(out.encode()) // 1024))
     # 4. sw.js y manifest
