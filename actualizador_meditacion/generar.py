@@ -248,7 +248,7 @@ def main():
     a = ap.parse_args()
     cfgp = os.path.join(HERE, 'config.json'); cfg = json.load(open(cfgp, encoding='utf-8')) if os.path.exists(cfgp) else {}
     rel = lambda p: p if os.path.isabs(p) else os.path.normpath(os.path.join(HERE, p))
-    DIA = rel(a.diario or cfg.get('diario', '../../Diario app')); MED = rel(a.medis or cfg.get('medis', 'C:/Users/alina/Desktop/medis'))
+    DIA = rel(a.diario or cfg.get('diario', '../../Diario app')); MED = rel(a.medis or cfg.get('medis', 'medis'))
     DST = rel(a.destino or cfg.get('destino', '..'))
     if os.path.normcase(os.path.abspath(DIA)) == os.path.normcase(os.path.abspath(DST)): sys.exit('El destino no puede ser la carpeta de la app Diario.')
     if not os.path.exists(os.path.join(DIA, 'index.html')): sys.exit('No encuentro %s/index.html' % DIA)
