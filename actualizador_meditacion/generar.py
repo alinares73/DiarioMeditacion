@@ -98,7 +98,7 @@ def parchear(src, metas, medi, js, VAL=None, EY=None, ATL=None):
     rep('<link rel="icon" href="icon-192.png">', '<link rel="icon" href="favicon-48.png" sizes="48x48"><link rel="icon" href="icon-192.png" sizes="192x192">')
     rep('<link rel="apple-touch-icon" href="icon-192.png">', '<link rel="apple-touch-icon" href="apple-touch-icon.png">')
     rep('<meta name="theme-color" content="#101a2a">', '<meta name="theme-color" content="#101a2a">\n<meta name="description" content="Diario con meditación diaria">')
-    rep("const TITLES={", "const TITLES={MedOD:'Meditaciones (7 tomos)',SCE:'Siempre con Él',MAL:'Meditaciones del año litúrgico',Valtorta:'María Valtorta · La vida de Jesús',")
+    rep("const TITLES={", "const TITLES={MedOD:'Meditaciones (7 tomos)',SCE:'Siempre con Él',MAL:'Meditaciones Web Opus Dei',Valtorta:'María Valtorta · La vida de Jesús',")
     rep('</style>', CSS + '</style>')
     rep('<button id="hh" aria-label="Inicio">⌂</button>', '<button id="hval" aria-label="Mostrar u ocultar los pasajes de María Valtorta" title="Pasajes en María Valtorta" style="display:none"></button><button id="hh" aria-label="Inicio">⌂</button>')
     rep('<div id="sheet">', '<div id="hlb"><button class="btn" id="hlb-do">🖍 Resaltar</button><button class="btn" id="hlb-cp">Copiar</button></div>\n<div id="pop"></div>\n<div id="sheet">')

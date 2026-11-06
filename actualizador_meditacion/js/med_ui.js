@@ -1,5 +1,5 @@
 /* ===== Meditación diaria: pantalla ===== */
-const MBOOKS=[['MedOD','Meditaciones','Libro de meditaciones · 7 tomos'],['MAL','Meditaciones del año litúrgico','VV. AA.'],['SCE','Siempre con Él','F. Espa y otros · 9 tomos'],['HCD','Hablar con Dios','F. Fernández-Carvajal']];
+const MBOOKS=[['MedOD','Meditaciones','Libro de meditaciones · 7 tomos'],['MAL','Meditaciones Web Opus Dei','VV. AA.'],['SCE','Siempre con Él','F. Espa y otros · 9 tomos'],['HCD','Hablar con Dios','F. Fernández-Carvajal']];
 const MKEY=(()=>{const m=new Map();for(const [b] of MBOOKS)(MEDI[b]||[]).forEach((e,i)=>e[2].forEach(k=>{if(!m.has(k))m.set(k,[]);m.get(k).push([b,i])}));return m})();
 const GRP={f:'Fiesta del día',t:'Tiempo litúrgico',x:'Devoción'};
 function medFor(iso){

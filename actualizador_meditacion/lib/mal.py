@@ -155,7 +155,7 @@ def construir(path, chunk_kb=260):
                 o = idx; idx += 1; h.append('<p class="fnn" id="n%s" data-o="%d"><b>%s.</b> %s</p>' % (nid, o, num, body))
         meds.append({'t': t, 'h': '\n'.join(h), 'o': off, 'k': keys, 'cs': cycles(lab), 'sec': SEASON[u['grp']]})
         if not keys: falt.append(t)
-    toc = ['<p data-o="0" style="text-align:center"><b><span style="font-size:1.3em">Meditaciones del año litúrgico</span></b></p>',
+    toc = ['<p data-o="0" style="text-align:center"><b><span style="font-size:1.3em">Meditaciones Web Opus Dei</span></b></p>',
            '<p style="text-align:center" class="sm">VV. AA.</p>', '<h2>Índice</h2>']
     last = None
     for m in meds:
@@ -171,7 +171,7 @@ def construir(path, chunk_kb=260):
     N = len(chunks)
     for k in range(1, N):
         chunks[k] += '\n<p class="toc dnx"><a href="#/dp/MAL/0">☰ Índice</a>%s</p>' % ((' · <a href="#/dp/MAL/%d">Seguir leyendo →</a>' % (k + 1)) if k + 1 < N else '')
-    meta = {'title': 'Meditaciones del año litúrgico', 'starts': starts, 'x': {},
+    meta = {'title': 'Meditaciones Web Opus Dei', 'starts': starts, 'x': {},
             'v': hashlib.md5(''.join(chunks).encode()).hexdigest()[:8], 'kb': sum(len(c.encode()) for c in chunks) // 1024}
     entries = []
     for m in meds:
