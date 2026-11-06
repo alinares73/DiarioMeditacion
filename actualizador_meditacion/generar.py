@@ -25,6 +25,8 @@ from hcd_diario import entradas_hcd
 import valtorta
 import elyo
 import mal
+import fixrefs
+DOCFIX = {}
 
 T0 = time.time()
 def log(*a): print('[%3ds]' % (time.time() - T0), *a, flush=True)
@@ -89,6 +91,12 @@ def parchear(src, metas, medi, js, VAL=None, EY=None, ATL=None):
     if not m: sys.exit('No encuentro CAT/DAY en el index.html del Diario.')
     C = json.loads(m.group(1))
     for k, v in metas.items(): C['docs'][k] = v
+    md = re.search(r'const DAY=(\{.*?\});\n', src, re.S)
+    if md:
+        DY = json.loads(md.group(1)); nfix = fixrefs.fix_day(DY, fixrefs.versos(os.path.join(DST, 'data')))
+        if nfix: src = src[:md.start(1)] + json.dumps(DY, ensure_ascii=False, separators=(',', ':')) + src[md.end(1):]
+    for k in DOCFIX:
+        if k in C['docs']: C['docs'][k]['v'] = hashlib.md5((C['docs'][k]['v'] + 'refs1').encode()).hexdigest()[:8]
     J = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':'))
     src = src.replace('const CAT=' + m.group(1) + ';\n', 'const CAT=' + J(C) + ';\nconst MEDI=' + J(medi) + ';\nconst VAL=' + J(VAL or {}) + ';\nconst ATL=' + J(ATL) + ';\n', 1)
     # nombre de la app: «Diario» (la app de origen se llama ahora «Epacta»)
@@ -250,6 +258,7 @@ def main():
     cfgp = os.path.join(HERE, 'config.json'); cfg = json.load(open(cfgp, encoding='utf-8')) if os.path.exists(cfgp) else {}
     rel = lambda p: p if os.path.isabs(p) else os.path.normpath(os.path.join(HERE, p))
     DIA = rel(a.diario or cfg.get('diario', '../../Diario app')); MED = rel(a.medis or cfg.get('medis', 'medis'))
+    global DST
     DST = rel(a.destino or cfg.get('destino', '..'))
     if os.path.normcase(os.path.abspath(DIA)) == os.path.normcase(os.path.abspath(DST)): sys.exit('El destino no puede ser la carpeta de la app Diario.')
     if not os.path.exists(os.path.join(DIA, 'index.html')): sys.exit('No encuentro %s/index.html' % DIA)
@@ -264,6 +273,9 @@ def main():
         n += sync_tree(os.path.join(DIA, 'data'), os.path.join(DST, 'data'))
         n += sync_tree(os.path.join(DIA, 'docs'), os.path.join(DST, 'docs'), keep=('MedOD', 'SCE', 'Valtorta', 'MAL'))
         log('copiados desde el Diario: %d archivos' % n)
+    # enlaces bíblicos partidos en los libros del Diario (p. ej. «Lc 14, 1»+«5-24»)
+    hoy, todos = fixrefs.fix_docs(DST, skip=('MedOD', 'SCE', 'Valtorta', 'MAL')); DOCFIX.update(todos)
+    if hoy: log('enlaces bíblicos corregidos: %d (%s)' % (sum(hoy.values()), ', '.join('%s %d' % kv for kv in sorted(hoy.items()))))
     # 2. libros de meditación
     metas, medi = {}, {}
     for bid, title, author, pat, numrx in BOOKS:
