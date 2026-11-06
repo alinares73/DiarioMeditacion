@@ -1,5 +1,5 @@
 /* ===== Meditación diaria: pantalla ===== */
-const MBOOKS=[['MedOD','Meditaciones','Libro de meditaciones · 7 tomos'],['SCE','Siempre con Él','F. Espa y otros · 9 tomos'],['HCD','Hablar con Dios','F. Fernández-Carvajal']];
+const MBOOKS=[['MedOD','Meditaciones','Libro de meditaciones · 7 tomos'],['MAL','Meditaciones del año litúrgico','VV. AA.'],['SCE','Siempre con Él','F. Espa y otros · 9 tomos'],['HCD','Hablar con Dios','F. Fernández-Carvajal']];
 const MKEY=(()=>{const m=new Map();for(const [b] of MBOOKS)(MEDI[b]||[]).forEach((e,i)=>e[2].forEach(k=>{if(!m.has(k))m.set(k,[]);m.get(k).push([b,i])}));return m})();
 const GRP={f:'Fiesta del día',t:'Tiempo litúrgico',x:'Devoción'};
 function medFor(iso){
@@ -22,6 +22,7 @@ function renderMed(arg){
   h+=`<section class="card"><div class="lh">${dots}<h2>${esc(cel||L.name)}</h2></div>${cel&&norm(cel)!==norm(L.name)?`<p class="cap" style="margin:8px 0 0">${esc(L.name)}${/Domingo|Ramos|Resurrección|Pentecostés|Trinidad|Cuerpo|Ascensión|Rey del/.test(L.name)?' · ciclo '+L.cyc:''}</p>`:''}${E&&E.tp?`<div class="tags"><span class="tag f">Fiesta ${esc(E.tp)}</span>${E.cat?`<span class="tag">${esc(E.cat)}</span>`:''}</div>`:''}</section>`;
   for(const [b,tit,sub] of MBOOKS){
     const l=out[b];
+    if(b==='MAL'&&(!l.length||!DOCS.MAL))continue;   // si no trae meditación para ese día, no se muestra
     h+=`<section class="card mbk"><div class="mbh"><h3 class="sh">${esc(tit)}</h3><span class="cap">${esc(sub)}</span></div>`;
     if(!l.length)h+=`<p class="cap" style="margin:6px 0 0">Este libro no trae una meditación propia para este día.</p>`;
     let lastG='';

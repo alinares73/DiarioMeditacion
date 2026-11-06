@@ -24,6 +24,7 @@ from buildbooks import build_book
 from hcd_diario import entradas_hcd
 import valtorta
 import elyo
+import mal
 
 T0 = time.time()
 def log(*a): print('[%3ds]' % (time.time() - T0), *a, flush=True)
@@ -97,7 +98,7 @@ def parchear(src, metas, medi, js, VAL=None, EY=None, ATL=None):
     rep('<link rel="icon" href="icon-192.png">', '<link rel="icon" href="favicon-48.png" sizes="48x48"><link rel="icon" href="icon-192.png" sizes="192x192">')
     rep('<link rel="apple-touch-icon" href="icon-192.png">', '<link rel="apple-touch-icon" href="apple-touch-icon.png">')
     rep('<meta name="theme-color" content="#101a2a">', '<meta name="theme-color" content="#101a2a">\n<meta name="description" content="Diario con meditación diaria">')
-    rep("const TITLES={", "const TITLES={MedOD:'Meditaciones (7 tomos)',SCE:'Siempre con Él',Valtorta:'María Valtorta · La vida de Jesús',")
+    rep("const TITLES={", "const TITLES={MedOD:'Meditaciones (7 tomos)',SCE:'Siempre con Él',MAL:'Meditaciones del año litúrgico',Valtorta:'María Valtorta · La vida de Jesús',")
     rep('</style>', CSS + '</style>')
     rep('<button id="hh" aria-label="Inicio">⌂</button>', '<button id="hval" aria-label="Mostrar u ocultar los pasajes de María Valtorta" title="Pasajes en María Valtorta" style="display:none"></button><button id="hh" aria-label="Inicio">⌂</button>')
     rep('<div id="sheet">', '<div id="hlb"><button class="btn" id="hlb-do">🖍 Resaltar</button><button class="btn" id="hlb-cp">Copiar</button></div>\n<div id="pop"></div>\n<div id="sheet">')
@@ -222,7 +223,7 @@ header #hval{width:24px;height:24px;min-width:24px;border:0;padding:0;margin:0 1
 .eysep{font:600 12px var(--ui);letter-spacing:.06em;text-transform:uppercase;margin:18px 0 8px}
 '''
 
-RENDER_DOCS = r'''function renderDocs(){const MB=['MedOD','SCE','HCD','Valtorta'].filter(d=>DOCS[d]),IC={MedOD:'🕯️',SCE:'📿',HCD:'🙏',Valtorta:'🌿'},SUB={MedOD:'Libro de meditaciones · 7 tomos',SCE:'F. Espa y otros · 9 tomos en uno',HCD:'F. Fernández-Carvajal · con enlaces a la Biblia',Valtorta:'Escenas enlazadas con los Evangelios'};const names=Object.keys(DOCS).filter(d=>!MB.includes(d));const nu=uhGroups().length;
+RENDER_DOCS = r'''function renderDocs(){const MB=['MedOD','MAL','SCE','HCD','Valtorta'].filter(d=>DOCS[d]),IC={MedOD:'🕯️',MAL:'📖',SCE:'📿',HCD:'🙏',Valtorta:'🌿'},SUB={MedOD:'Libro de meditaciones · 7 tomos',MAL:'VV. AA. · para cada día del año litúrgico',SCE:'F. Espa y otros · 9 tomos en uno',HCD:'F. Fernández-Carvajal · con enlaces a la Biblia',Valtorta:'Escenas enlazadas con los Evangelios'};const names=Object.keys(DOCS).filter(d=>!MB.includes(d));const nu=uhGroups().length;
   $('#main').innerHTML='<h2 class="t">Libros</h2><h3 class="thm" style="margin-top:0">Libros de meditación</h3><div class="bkm">'+MB.map(d=>`<a class="btn bk" href="#/dp/${d}/0"><span class="ic">${IC[d]}</span><span>${esc(dTitle(d))}<small>${SUB[d]} · ${Math.round(DOCS[d].kb/102.4)/10} MB</small></span></a>`).join('')+'</div>'+(ATL?'<div class="row atlr"><a class="btn" href="#/mapa">🗺 Mapa</a><a class="btn" href="#/viajes">📜 Cronología</a><a class="btn" href="#/lugares">📍 Lugares</a></div><p class="mut" style="margin:2px 0 12px;font-size:14px">Los viajes de Jesús según María Valtorta, a partir del atlas de J. Webster.</p>':'')+'<div class="row" style="margin-top:4px"><a class="btn" href="#/med">🙏 Meditación de hoy</a><a class="btn" href="#/resaltados">🖍 Mis resaltados'+(nu?' ('+nu+')':'')+'</a></div><p class="mut" style="margin:14px 0 0">En cualquier libro puedes buscar con 🔍 y resaltar: selecciona un texto y pulsa «🖍 Resaltar».</p><h3 class="thm">Comentarios y libros enlazados</h3><p class="mut">Se abren también desde los números de versículo de la Biblia y desde los enlaces del propio texto.</p><div class="grid">'+names.map(d=>`<a class="btn bk" href="#/dp/${d}/0" style="flex-direction:column"><span>${esc(dTitle(d))}</span><small class="mut">${Math.round(DOCS[d].kb/102.4)/10} MB</small></a>`).join('')+'</div>'}'''
 
 ICONS = ['icon-192.png', 'icon-512.png', 'icon-maskable-192.png', 'icon-maskable-512.png', 'apple-touch-icon.png', 'favicon-48.png']
@@ -261,13 +262,14 @@ def main():
                 s, d = os.path.join(DIA, f), os.path.join(DST, f)
                 if not os.path.exists(d) or os.stat(s).st_size != os.stat(d).st_size: shutil.copy2(s, d); n += 1
         n += sync_tree(os.path.join(DIA, 'data'), os.path.join(DST, 'data'))
-        n += sync_tree(os.path.join(DIA, 'docs'), os.path.join(DST, 'docs'), keep=('MedOD', 'SCE', 'Valtorta'))
+        n += sync_tree(os.path.join(DIA, 'docs'), os.path.join(DST, 'docs'), keep=('MedOD', 'SCE', 'Valtorta', 'MAL'))
         log('copiados desde el Diario: %d archivos' % n)
     # 2. libros de meditación
     metas, medi = {}, {}
     for bid, title, author, pat, numrx in BOOKS:
         files = glob.glob(os.path.join(MED, pat))
         if bid == 'HCD7': files = [f for f in files if re.search(numrx, os.path.basename(f))]
+        if bid == 'MedOD': files = [f for f in files if not re.search(r'a.o.lit.rgico', os.path.basename(f), re.I)]
         if numrx: files.sort(key=lambda f: int(re.search(numrx, os.path.basename(f)).group(1)))
         if not files: sys.exit('No encuentro los ePub de %s (%s) en %s' % (title, pat, MED))
         log('%s: %d ePub' % (title, len(files)))
@@ -280,6 +282,20 @@ def main():
                 except OSError: pass
         metas[bid] = meta; medi[bid] = entries
         log('   %d trozos (%d cambiados), %d KB, %d meditaciones con día asignado' % (len(chunks), ch, meta['kb'], len(entries)))
+    # Meditaciones del año litúrgico (VV. AA.)
+    mep = sorted(glob.glob(os.path.join(MED, '*editaciones*a?o*lit?rgico*.epub')))
+    if mep:
+        mch, mmeta, ment, mfalt = mal.construir(mep[-1])
+        dd = os.path.join(DST, 'docs', 'MAL'); ch = 0
+        for k, c in enumerate(mch): ch += write_if_changed(os.path.join(dd, '%d.html' % k), c)
+        for f in glob.glob(os.path.join(dd, '*.html')):
+            if int(os.path.basename(f).split('.')[0]) >= len(mch):
+                try: os.remove(f)
+                except OSError: pass
+        metas['MAL'] = mmeta; medi['MAL'] = ment
+        log('Meditaciones del año litúrgico: %d trozos (%d cambiados), %d KB, %d meditaciones con día asignado%s' % (len(mch), ch, mmeta['kb'], len(ment), (' · sin día: ' + ', '.join(mfalt)) if mfalt else ''))
+    else:
+        log('AVISO: no encuentro «Meditaciones del año litúrgico» en %s; la app se genera sin ese libro.' % MED)
     # Valtorta
     VAL = {}; ATL = None
     vep = rel(cfg.get('valtorta', 'valtorta/Valtorta_La_vida_de_Jesus.epub'))
