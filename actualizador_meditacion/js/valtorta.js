@@ -26,3 +26,8 @@ function vsWrap(M){const tx=M.querySelector('#txt');if(!tx)return;
   [...tx.querySelectorAll(':scope > p')].forEach(p=>{let v=null;for(let e=p.previousElementSibling;e;e=e.previousElementSibling)if(e.classList.contains('vs')){v=e.dataset.v;break}
     if(v===null)for(let e=p.nextElementSibling;e;e=e.nextElementSibling)if(e.classList.contains('vs')){v=e.dataset.v;break}
     if(v===null)return;const d=document.createElement('div');d.className='vs vsc';d.dataset.v=v;p.replaceWith(d);d.appendChild(p)})}
+/* Libros: al tocar una cita de la Biblia dentro de un capítulo largo, se recuerda el párrafo para que «volver» regrese a él */
+document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href^="#/r/"]');if(!a||!a.closest('.doc'))return;
+  const m=location.hash.match(/^#\/(?:d|dp)\/([^/]+)/);if(!m)return;
+  let el=a.closest('.vrf')?a.closest('.vrf').nextElementSibling:a.closest('[data-o]');
+  if(el&&el.dataset&&el.dataset.o)history.replaceState(null,'','#/d/'+m[1]+'/'+el.dataset.o)},true);

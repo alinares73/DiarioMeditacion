@@ -229,6 +229,7 @@ header #hval{width:24px;height:24px;min-width:24px;border:0;padding:0;margin:0 1
 .ph a.eyn{font:700 18px var(--ui);color:var(--link);text-decoration:none;padding:4px 6px 4px 0}.ph a.eyt{color:var(--mut);text-decoration:none;border-bottom:1px dotted var(--bd)}.ph a.eyt:active,.ph a.eyn:active{color:var(--fg)}
 .eyrow{margin-top:6px;gap:8px}.eyrow #eyprev{flex:0 0 64px;font-size:18px}.eyrow #eymore{flex:1}.eyrow #eyprev:disabled{opacity:.35}
 .eysep{font:600 12px var(--ui);letter-spacing:.06em;text-transform:uppercase;margin:18px 0 8px}
+.dtop .dhero{text-align:center;align-items:center}
 '''
 
 RENDER_DOCS = r'''function renderDocs(){const MB=['MedOD','MAL','SCE','HCD','Valtorta'].filter(d=>DOCS[d]),IC={MedOD:'🕯️',MAL:'📖',SCE:'📿',HCD:'🙏',Valtorta:'🌿'},SUB={MedOD:'Libro de meditaciones · 7 tomos',MAL:'VV. AA. · para cada día del año litúrgico',SCE:'F. Espa y otros · 9 tomos en uno',HCD:'F. Fernández-Carvajal · con enlaces a la Biblia',Valtorta:'Escenas enlazadas con los Evangelios'};const names=Object.keys(DOCS).filter(d=>!MB.includes(d));const nu=uhGroups().length;

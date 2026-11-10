@@ -180,6 +180,7 @@ header #hval{width:24px;height:24px;min-width:24px;border:0;padding:0;margin:0 1
 .ph a.eyn{font:700 18px var(--ui);color:var(--link);text-decoration:none;padding:4px 6px 4px 0}.ph a.eyt{color:var(--mut);text-decoration:none;border-bottom:1px dotted var(--bd)}.ph a.eyt:active,.ph a.eyn:active{color:var(--fg)}
 .eyrow{margin-top:6px;gap:8px}.eyrow #eyprev{flex:0 0 64px;font-size:18px}.eyrow #eymore{flex:1}.eyrow #eyprev:disabled{opacity:.35}
 .eysep{font:600 12px var(--ui);letter-spacing:.06em;text-transform:uppercase;margin:18px 0 8px}
+.dtop .dhero{text-align:center;align-items:center}
 </style>
 </head>
 <body data-theme="dark">
@@ -587,6 +588,11 @@ function vsWrap(M){const tx=M.querySelector('#txt');if(!tx)return;
     if(v===null)for(let e=p.nextElementSibling;e;e=e.nextElementSibling)if(e.classList.contains('vs')){v=e.dataset.v;break}
     if(v===null)return;const d=document.createElement('div');d.className='vs vsc';d.dataset.v=v;p.replaceWith(d);d.appendChild(p)})}
 
+/* Libros: al tocar una cita de la Biblia dentro de un capítulo largo, se recuerda el párrafo para que «volver» regrese a él */
+document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href^="#/r/"]');if(!a||!a.closest('.doc'))return;
+  const m=location.hash.match(/^#\/(?:d|dp)\/([^/]+)/);if(!m)return;
+  let el=a.closest('.vrf')?a.closest('.vrf').nextElementSibling:a.closest('[data-o]');
+  if(el&&el.dataset&&el.dataset.o)history.replaceState(null,'','#/d/'+m[1]+'/'+el.dataset.o)},true);
 /* ===== Atlas de los viajes de Jesús según María Valtorta: mapa, cronología y lugares ===== */
 /* ATL = {L:{clave:[nombre,lat,lon,región]}, C:[[ciclo,periodo,G|J|C]], P:[[ciclo,clave,fecha,millas,capCEV,título,barca,off]], F:[[ciclo,antesDelPaso,fiesta,fecha]]} */
 const ATLX=(()=>{if(typeof ATL==='undefined'||!ATL)return null;
