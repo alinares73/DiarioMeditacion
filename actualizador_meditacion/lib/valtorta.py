@@ -72,6 +72,18 @@ def linea_atlas(ATL, porch, chs):
             ids[0], html.escape(' → '.join(names)), html.escape(p0[2] + ' · ' if p0[2] else ''), html.escape(cy)))
     return ''.join(out)
 
+def navegacion(chunks):
+    """Flechas ◀ ▶ junto al título de cada punto para pasar al anterior o al siguiente."""
+    rx = re.compile(r'<h2 id="o(\d+)" data-o="\1">(.*?)</h2>')
+    offs = [int(m.group(1)) for c in chunks[1:] for m in rx.finditer(c)]
+    pos = {o: i for i, o in enumerate(offs)}
+    def rep(m):
+        o = int(m.group(1)); i = pos[o]
+        prv = '<a class="vnv" href="#/d/Valtorta/%d" aria-label="Punto anterior">◀</a>' % offs[i - 1] if i > 0 else '<span class="vnv off">◀</span>'
+        nxt = '<a class="vnv" href="#/d/Valtorta/%d" aria-label="Punto siguiente">▶</a>' % offs[i + 1] if i + 1 < len(offs) else '<span class="vnv off">▶</span>'
+        return '<div class="vhd2">%s%s%s</div>' % (prv, m.group(0), nxt)
+    return [chunks[0]] + [rx.sub(rep, c) for c in chunks[1:]]
+
 def construir(epub_path, enlaces_path, chunk_kb=260, atlas_path=None):
     """Devuelve (chunks, meta, VAL, falt, ATL) ; VAL = {libro: {cap_idx: [[v_ini, v_fin, off, alusion, paso], ...]}}"""
     parts, scenes = leer_epub(epub_path)
@@ -137,6 +149,7 @@ def construir(epub_path, enlaces_path, chunk_kb=260, atlas_path=None):
         if not cur: cs = o
         cur.append(h); n += len(h)
     if cur: chunks.append('\n'.join(cur)); starts.append(cs)
+    chunks = navegacion(chunks)
     N = len(chunks)
     for k in range(1, N):
         chunks[k] += '\n<p class="toc dnx"><a href="#/dp/Valtorta/0">☰ Índice</a>%s</p>' % ((' · <a href="#/dp/Valtorta/%d">Seguir leyendo →</a>' % (k + 1)) if k + 1 < N else '')
