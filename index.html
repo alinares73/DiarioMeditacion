@@ -603,7 +603,6 @@ function vsWrap(M){const tx=M.querySelector('#txt');if(!tx)return;
   [...tx.querySelectorAll(':scope > p')].forEach(p=>{let v=null;for(let e=p.previousElementSibling;e;e=e.previousElementSibling)if(e.classList.contains('vs')){v=e.dataset.v;break}
     if(v===null)for(let e=p.nextElementSibling;e;e=e.nextElementSibling)if(e.classList.contains('vs')){v=e.dataset.v;break}
     if(v===null)return;const d=document.createElement('div');d.className='vs vsc';d.dataset.v=v;p.replaceWith(d);d.appendChild(p)})}
-
 /* Libros: al tocar una cita de la Biblia dentro de un capítulo, se guarda el párrafo y la posición exacta del enlace en
    pantalla; al volver con la flecha, la página queda tal como estaba (mismo enlace a la misma altura) */
 document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href^="#/r/"]');if(!a||!a.closest('.doc'))return;
@@ -624,6 +623,7 @@ function vgoGo(){const i=document.getElementById('vgo');if(!i)return;const n=par
 document.addEventListener('click',e=>{if(e.target&&e.target.id==='vgob')vgoGo()});
 document.addEventListener('keydown',e=>{if(e.target&&e.target.id==='vgo'&&e.key==='Enter')vgoGo()});
 document.addEventListener('toggle',e=>{const d=e.target;if(d&&d.classList&&d.classList.contains('vpart')&&d.open){d.scrollIntoView({block:'start',behavior:'smooth'});setTimeout(()=>window.scrollBy(0,-64),320)}},true);
+
 /* ===== Atlas de los viajes de Jesús según María Valtorta: mapa, cronología y lugares ===== */
 /* ATL = {L:{clave:[nombre,lat,lon,región]}, C:[[ciclo,periodo,G|J|C]], P:[[ciclo,clave,fecha,millas,capCEV,título,barca,off]], F:[[ciclo,antesDelPaso,fiesta,fecha]]} */
 const ATLX=(()=>{if(typeof ATL==='undefined'||!ATL)return null;
