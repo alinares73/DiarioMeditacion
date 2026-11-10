@@ -26,8 +26,17 @@ function vsWrap(M){const tx=M.querySelector('#txt');if(!tx)return;
   [...tx.querySelectorAll(':scope > p')].forEach(p=>{let v=null;for(let e=p.previousElementSibling;e;e=e.previousElementSibling)if(e.classList.contains('vs')){v=e.dataset.v;break}
     if(v===null)for(let e=p.nextElementSibling;e;e=e.nextElementSibling)if(e.classList.contains('vs')){v=e.dataset.v;break}
     if(v===null)return;const d=document.createElement('div');d.className='vs vsc';d.dataset.v=v;p.replaceWith(d);d.appendChild(p)})}
-/* Libros: al tocar una cita de la Biblia dentro de un capítulo largo, se recuerda el párrafo para que «volver» regrese a él */
+/* Libros: al tocar una cita de la Biblia dentro de un capítulo, se guarda el párrafo y la posición exacta del enlace en
+   pantalla; al volver con la flecha, la página queda tal como estaba (mismo enlace a la misma altura) */
 document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href^="#/r/"]');if(!a||!a.closest('.doc'))return;
   const m=location.hash.match(/^#\/(?:d|dp)\/([^/]+)/);if(!m)return;
-  let el=a.closest('.vrf')?a.closest('.vrf').nextElementSibling:a.closest('[data-o]');
-  if(el&&el.dataset&&el.dataset.o)history.replaceState(null,'','#/d/'+m[1]+'/'+el.dataset.o)},true);
+  const el=a.closest('.vrf')?a.closest('.vrf').nextElementSibling:a.closest('[data-o]');
+  if(!el||!el.dataset||!el.dataset.o)return;
+  const L=[...el.parentNode.querySelectorAll('a[href="'+a.getAttribute('href')+'"]')];
+  try{sessionStorage.setItem('bkpos',JSON.stringify({doc:m[1],off:+el.dataset.o,href:a.getAttribute('href'),i:L.indexOf(a),dy:a.getBoundingClientRect().top}))}catch(_){}
+  history.replaceState(null,'','#/d/'+m[1]+'/'+el.dataset.o)},true);
+function bkRestore(doc,off){let s;try{s=JSON.parse(sessionStorage.getItem('bkpos')||'null')}catch(_){}
+  if(!s||s.doc!==doc||s.off!==off)return false;
+  const fix=()=>{const L=[...document.querySelectorAll('#dx a[href="'+s.href+'"]')],a=L[s.i]||L[0];if(!a)return;window.scrollBy(0,a.getBoundingClientRect().top-s.dy)};
+  fix();requestAnimationFrame(fix);setTimeout(fix,250);setTimeout(()=>{fix();try{sessionStorage.removeItem('bkpos')}catch(_){}},700);
+  return true}

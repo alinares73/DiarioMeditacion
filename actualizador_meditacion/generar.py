@@ -130,6 +130,9 @@ def parchear(src, metas, medi, js, VAL=None, EY=None, ATL=None):
         "$('#fab').style.display='';$('#sfab').style.display='none';$('#hstar').style.display='none';bar(null);window.scrollTo(0,0);uhCur=null;$('#hval').style.display='none';$('#hlb').classList.remove('on');$('#pop').classList.remove('on');")
     rep("if(doc==='ElYo')eyMarkAll();if(o.i!==undefined)focusPar(o.i,o.q);",
         "if(doc==='ElYo')eyMarkAll();hcdSep(doc);noTTS();uhApply(doc,k);if(o.i!==undefined)focusPar(o.i,o.q);")
+    # al volver de una cita bíblica, la página queda en la misma posición (sin resaltar el párrafo)
+    rep("if(p){p.scrollIntoView({block:'start'});window.scrollBy&&window.scrollBy(0,-70);p.classList.add('flash')}}",
+        "if(p){p.scrollIntoView({block:'start'});window.scrollBy&&window.scrollBy(0,-70);if(!bkRestore(doc,o.off))p.classList.add('flash')}}")
     # portada: el rótulo «Notas de Almudi →» lleva al día completo en el Misal (sin botón aparte)
     rep("const alm=D&&D.n?`<div class=\"kv\"><small>Notas de Almudi</small>${D.n}</div>`:'';",
         "const alm=D?`<div class=\"kv\"><small><a class=\"kvl\" href=\"#/d/Misal/${D.o}\">${D.n?'Notas de Almudi':'Día completo en el Misal'} →</a></small>${D.n||''}</div>`:'';")

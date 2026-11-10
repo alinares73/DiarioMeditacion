@@ -588,11 +588,20 @@ function vsWrap(M){const tx=M.querySelector('#txt');if(!tx)return;
     if(v===null)for(let e=p.nextElementSibling;e;e=e.nextElementSibling)if(e.classList.contains('vs')){v=e.dataset.v;break}
     if(v===null)return;const d=document.createElement('div');d.className='vs vsc';d.dataset.v=v;p.replaceWith(d);d.appendChild(p)})}
 
-/* Libros: al tocar una cita de la Biblia dentro de un capítulo largo, se recuerda el párrafo para que «volver» regrese a él */
+/* Libros: al tocar una cita de la Biblia dentro de un capítulo, se guarda el párrafo y la posición exacta del enlace en
+   pantalla; al volver con la flecha, la página queda tal como estaba (mismo enlace a la misma altura) */
 document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href^="#/r/"]');if(!a||!a.closest('.doc'))return;
   const m=location.hash.match(/^#\/(?:d|dp)\/([^/]+)/);if(!m)return;
-  let el=a.closest('.vrf')?a.closest('.vrf').nextElementSibling:a.closest('[data-o]');
-  if(el&&el.dataset&&el.dataset.o)history.replaceState(null,'','#/d/'+m[1]+'/'+el.dataset.o)},true);
+  const el=a.closest('.vrf')?a.closest('.vrf').nextElementSibling:a.closest('[data-o]');
+  if(!el||!el.dataset||!el.dataset.o)return;
+  const L=[...el.parentNode.querySelectorAll('a[href="'+a.getAttribute('href')+'"]')];
+  try{sessionStorage.setItem('bkpos',JSON.stringify({doc:m[1],off:+el.dataset.o,href:a.getAttribute('href'),i:L.indexOf(a),dy:a.getBoundingClientRect().top}))}catch(_){}
+  history.replaceState(null,'','#/d/'+m[1]+'/'+el.dataset.o)},true);
+function bkRestore(doc,off){let s;try{s=JSON.parse(sessionStorage.getItem('bkpos')||'null')}catch(_){}
+  if(!s||s.doc!==doc||s.off!==off)return false;
+  const fix=()=>{const L=[...document.querySelectorAll('#dx a[href="'+s.href+'"]')],a=L[s.i]||L[0];if(!a)return;window.scrollBy(0,a.getBoundingClientRect().top-s.dy)};
+  fix();requestAnimationFrame(fix);setTimeout(fix,250);setTimeout(()=>{fix();try{sessionStorage.removeItem('bkpos')}catch(_){}},700);
+  return true}
 /* ===== Atlas de los viajes de Jesús según María Valtorta: mapa, cronología y lugares ===== */
 /* ATL = {L:{clave:[nombre,lat,lon,región]}, C:[[ciclo,periodo,G|J|C]], P:[[ciclo,clave,fecha,millas,capCEV,título,barca,off]], F:[[ciclo,antesDelPaso,fiesta,fecha]]} */
 const ATLX=(()=>{if(typeof ATL==='undefined'||!ATL)return null;
@@ -831,7 +840,7 @@ async function renderDoc(doc,o){
   M.innerHTML='<div class="doc'+(doc==='Misal'||doc==='Comentarios'?'':' just')+'" id="dx">'+t+'</div>';sfDoc=doc;$('#sfab').style.display=doc==='Comentarios'?'none':'';$('#hstar').style.display=doc==='ElYo'?'':'none';if(doc==='ElYo')eyMarkAll();hcdSep(doc);noTTS();uhApply(doc,k);if(o.i!==undefined)focusPar(o.i,o.q);
   if(o.off){let e=M.querySelector('#o'+o.off);let p=e&&(e.closest('p')||e);if(p&&!p.textContent.trim()&&!p.dataset.o){p=p.nextElementSibling||p}
     if(!p){const ps=[...M.querySelectorAll('p[data-o]')];for(const q of ps){if(+q.dataset.o<=o.off)p=q;else break}}
-    if(p){p.scrollIntoView({block:'start'});window.scrollBy&&window.scrollBy(0,-70);p.classList.add('flash')}}
+    if(p){p.scrollIntoView({block:'start'});window.scrollBy&&window.scrollBy(0,-70);if(!bkRestore(doc,o.off))p.classList.add('flash')}}
 }
 function notFound(){$('#main').innerHTML='<p class="mut" style="text-align:center">Página no encontrada.<br><br><a class="btn" href="#/">Inicio</a></p>'}
 /* selección de versículos */
