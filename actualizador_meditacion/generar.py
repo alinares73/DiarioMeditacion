@@ -233,6 +233,18 @@ header #hval{width:24px;height:24px;min-width:24px;border:0;padding:0;margin:0 1
 .eyrow{margin-top:6px;gap:8px}.eyrow #eyprev{flex:0 0 64px;font-size:18px}.eyrow #eymore{flex:1}.eyrow #eyprev:disabled{opacity:.35}
 .eysep{font:600 12px var(--ui);letter-spacing:.06em;text-transform:uppercase;margin:18px 0 8px}
 .dtop .dhero{text-align:center;align-items:center}
+.doc .vgo{display:flex;gap:8px;margin:14px 0 18px}.doc .vgo input{flex:1;min-width:0;font:16px var(--ui);padding:10px 14px;border-radius:12px;border:1px solid var(--bd);background:var(--card);color:var(--fg)}.doc .vgo .btn{flex:0 0 64px}
+.doc details.vpart{background:var(--card);border:1px solid var(--bd);border-radius:14px;margin:0 0 10px}
+.doc details.vpart>summary{list-style:none;display:flex;align-items:center;gap:14px;padding:14px 14px 14px 12px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.doc details.vpart>summary::-webkit-details-marker{display:none}
+.doc details.vpart>summary::after{content:'›';margin-left:auto;font:400 26px/1 var(--ui);color:var(--mut);transition:transform .2s}
+.doc details.vpart[open]>summary::after{transform:rotate(90deg)}
+.doc .vpn{flex:0 0 46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#e8862b;color:#fff;font:700 15px var(--ui);letter-spacing:.02em}
+.doc .vpt{display:flex;flex-direction:column;gap:3px;min-width:0}.doc .vpt b{font:600 17px/1.3 var(--ff);color:var(--fg)}.doc .vpt small{font:13px var(--ui);color:var(--mut)}
+.doc details.vpart[open]>summary{border-bottom:1px solid var(--bd);position:sticky;top:0;background:var(--card);z-index:1}
+.doc .vpl{padding:4px 0 8px}
+.doc a.vsc{display:flex;gap:12px;align-items:baseline;padding:10px 16px;text-decoration:none;color:var(--fg);font:16px/1.35 var(--ff);border-bottom:1px solid var(--bd)}
+.doc a.vsc:last-child{border-bottom:0}.doc a.vsc span{flex:0 0 34px;text-align:right;font:600 13px var(--ui);color:#e8862b}.doc a.vsc:active{background:var(--bg)}
 '''
 
 RENDER_DOCS = r'''function renderDocs(){const MB=['MedOD','MAL','SCE','HCD','Valtorta'].filter(d=>DOCS[d]),IC={MedOD:'🕯️',MAL:'📖',SCE:'📿',HCD:'🙏',Valtorta:'🌿'},SUB={MedOD:'Libro de meditaciones · 7 tomos',MAL:'VV. AA. · para cada día del año litúrgico',SCE:'F. Espa y otros · 9 tomos en uno',HCD:'F. Fernández-Carvajal · con enlaces a la Biblia',Valtorta:'Escenas enlazadas con los Evangelios'};const names=Object.keys(DOCS).filter(d=>!MB.includes(d));const nu=uhGroups().length;

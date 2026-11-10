@@ -113,11 +113,23 @@ def construir(epub_path, enlaces_path, chunk_kb=260, atlas_path=None):
           '<p class="sm" style="text-align:center">Los pasajes que tienen correspondencia con los Evangelios llevan encima sus citas: tócalas para ir a la Biblia.</p>',
           ]
     if ATL: t0.append('<p class="vatl"><a href="#/mapa">🗺 Mapa de los viajes</a><a href="#/viajes">📜 Cronología</a><a href="#/lugares">📍 Lugares</a></p>')
+    # índice agrupado por las ocho partes: cada parte se despliega con sus puntos
     t0.append('<h2>Índice</h2>')
-    last = None
+    t0.append('<div class="vgo"><input id="vgo" type="number" inputmode="numeric" min="1" max="%d" placeholder="Ir al punto nº…" aria-label="Ir al punto número"><button class="btn" id="vgob">Ir</button></div>' % len(secs))
+    grupos = []
     for o, part, t, _ in secs:
-        if part != last: t0.append('<h3>%s</h3>' % html.escape(part)); last = part
-        t0.append('<p class="toc"><a href="#/d/Valtorta/%d">%s</a></p>' % (o, html.escape(t)))
+        if not grupos or grupos[-1][0] != part: grupos.append((part, []))
+        grupos[-1][1].append((o, t))
+    for part, items in grupos:
+        m = re.match(r'Parte\s+([IVXL]+)\s*·\s*(.*)', part)
+        num, tit = (m.group(1), m.group(2)) if m else ('', part)
+        nn = [re.match(r'(\d+)\.\s*(.*)', t) for _, t in items]
+        a_, z_ = (nn[0].group(1), nn[-1].group(1)) if nn[0] and nn[-1] else ('', '')
+        t0.append('<details class="vpart" name="vpart"><summary><span class="vpn">%s</span><span class="vpt"><b>%s</b><small>%d puntos · %s–%s</small></span></summary><div class="vpl">' % (num, html.escape(tit), len(items), a_, z_))
+        for (o, t), mm in zip(items, nn):
+            n_, tt = (mm.group(1), mm.group(2)) if mm else ('', t)
+            t0.append('<a class="vsc" data-n="%s" href="#/d/Valtorta/%d"><span>%s</span>%s</a>' % (n_, o, n_, html.escape(tt)))
+        t0.append('</div></details>')
     chunks = ['\n'.join(t0)]; starts = [0]; cur = []; n = 0; cs = None
     for o, part, t, h in secs:
         if cur and n + len(h) > chunk_kb * 1024:

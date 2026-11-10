@@ -34,9 +34,15 @@ document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest
   if(!el||!el.dataset||!el.dataset.o)return;
   const L=[...el.parentNode.querySelectorAll('a[href="'+a.getAttribute('href')+'"]')];
   try{sessionStorage.setItem('bkpos',JSON.stringify({doc:m[1],off:+el.dataset.o,href:a.getAttribute('href'),i:L.indexOf(a),dy:a.getBoundingClientRect().top}))}catch(_){}
-  history.replaceState(null,'','#/d/'+m[1]+'/'+el.dataset.o)},true);
+  const nh='#/d/'+m[1]+'/'+el.dataset.o;history.replaceState(null,'',nh);if(typeof NAV!=='undefined'&&NAV.length)NAV[NAV.length-1]=nh},true);
 function bkRestore(doc,off){let s;try{s=JSON.parse(sessionStorage.getItem('bkpos')||'null')}catch(_){}
   if(!s||s.doc!==doc||s.off!==off)return false;
   const fix=()=>{const L=[...document.querySelectorAll('#dx a[href="'+s.href+'"]')],a=L[s.i]||L[0];if(!a)return;window.scrollBy(0,a.getBoundingClientRect().top-s.dy)};
   fix();requestAnimationFrame(fix);setTimeout(fix,250);setTimeout(()=>{fix();try{sessionStorage.removeItem('bkpos')}catch(_){}},700);
   return true}
+/* Índice de Valtorta: «Ir al punto nº…» */
+function vgoGo(){const i=document.getElementById('vgo');if(!i)return;const n=parseInt(i.value,10);const a=document.querySelector('#dx a.vsc[data-n="'+n+'"]');
+  if(a)location.hash=a.getAttribute('href');else{i.value='';i.placeholder='No existe ese punto'}}
+document.addEventListener('click',e=>{if(e.target&&e.target.id==='vgob')vgoGo()});
+document.addEventListener('keydown',e=>{if(e.target&&e.target.id==='vgo'&&e.key==='Enter')vgoGo()});
+document.addEventListener('toggle',e=>{const d=e.target;if(d&&d.classList&&d.classList.contains('vpart')&&d.open){d.scrollIntoView({block:'start',behavior:'smooth'});setTimeout(()=>window.scrollBy(0,-64),320)}},true);
