@@ -84,7 +84,7 @@ def navegacion(chunks):
         return '<div class="vhd2">%s%s%s</div>' % (prv, m.group(0), nxt)
     return [chunks[0]] + [rx.sub(rep, c) for c in chunks[1:]]
 
-def construir(epub_path, enlaces_path, chunk_kb=260, atlas_path=None):
+def construir(epub_path, enlaces_path, chunk_kb=260, atlas_path=None, subt_path=None):
     """Devuelve (chunks, meta, VAL, falt, ATL) ; VAL = {libro: {cap_idx: [[v_ini, v_fin, off, alusion, paso], ...]}}"""
     parts, scenes = leer_epub(epub_path)
     E = json.load(open(enlaces_path, encoding='utf-8'))['enlaces']
@@ -92,6 +92,12 @@ def construir(epub_path, enlaces_path, chunk_kb=260, atlas_path=None):
     por_par = {}
     for b, c, a, z, s, j, par, ch in E: por_par.setdefault((s, j), []).append((b, c, a, z, par))
     idx = 1; secs = []; offs = {}; toc = []
+    SUBT = {}
+    if subt_path:
+        for k, l in json.load(open(subt_path, encoding='utf-8')).items():
+            if not k.startswith('_'):
+                for j, t in l: SUBT[(int(k), j)] = t
+    subs = {}
     for s in scenes:
         part = parts[s['part'] - 1] if s['part'] else ''
         o = idx; idx += 1
@@ -102,6 +108,9 @@ def construir(epub_path, enlaces_path, chunk_kb=260, atlas_path=None):
             refs = por_par.get((s['n'], j))
             po = idx; idx += 1; offs[(s['n'], j)] = po
             wh = linea_atlas(ATL, porch, first.get((s['n'], j), [])) if ATL else ''
+            st = SUBT.get((s['n'], j))
+            if st:   # subtítulo dentro de un punto largo (lleva el ancla del párrafo)
+                h.append('<h3 class="vsub" id="o%d">%s</h3>' % (po, html.escape(st))); subs.setdefault(o, []).append((po, st))
             if wh:
                 for ch in first[(s['n'], j)]:
                     for i in porch.get(ch, []): ATL['P'][i].append(po) if len(ATL['P'][i]) == 7 else None
@@ -115,9 +124,9 @@ def construir(epub_path, enlaces_path, chunk_kb=260, atlas_path=None):
                     t = '%s %d,%d%s' % (b, c, a, '' if a == z else '-%d' % z)
                     lab.append('<a href="#/r/%d/%d/%d"%s>%s</a>' % (BKN[b], c - 1, a, ' class="al" title="alusión"' if par else '', t))
                 h.append('<div class="vrf">%s</div>' % ' · '.join(lab))
-                h.append('<p id="o%d" data-o="%d">%s</p>' % (po, po, limpia(p)))
+                h.append('<p%s data-o="%d">%s</p>' % ('' if st else ' id="o%d"' % po, po, limpia(p)))
             else:
-                h.append('<p%s data-o="%d">%s</p>' % (' id="o%d"' % po if wh else '', po, limpia(p)))
+                h.append('<p%s data-o="%d">%s</p>' % (' id="o%d"' % po if wh and not st else '', po, limpia(p)))
         secs.append((o, part, s['t'], '\n'.join(h)))
     # índice
     t0 = ['<p data-o="0" style="text-align:center"><b><span style="font-size:1.3em">La vida de Jesús</span></b></p>',
@@ -141,6 +150,8 @@ def construir(epub_path, enlaces_path, chunk_kb=260, atlas_path=None):
         for (o, t), mm in zip(items, nn):
             n_, tt = (mm.group(1), mm.group(2)) if mm else ('', t)
             t0.append('<a class="vsc" data-n="%s" href="#/d/Valtorta/%d"><span>%s</span>%s</a>' % (n_, o, n_, html.escape(tt)))
+            for po_, st_ in subs.get(o, []):
+                t0.append('<a class="vss" href="#/d/Valtorta/%d">%s</a>' % (po_, html.escape(st_)))
         t0.append('</div></details>')
     chunks = ['\n'.join(t0)]; starts = [0]; cur = []; n = 0; cs = None
     for o, part, t, h in secs:

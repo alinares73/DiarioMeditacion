@@ -247,6 +247,8 @@ header #hval{width:24px;height:24px;min-width:24px;border:0;padding:0;margin:0 1
 .doc a.vsc:last-child{border-bottom:0}.doc a.vsc span{flex:0 0 34px;text-align:right;font:600 13px var(--ui);color:#e8862b}.doc a.vsc:active{background:var(--bg)}
 .doc .vhd2{display:flex;align-items:center;gap:6px}.doc .vhd2 h2{flex:1;min-width:0}
 .doc a.vnv,.doc span.vnv{flex:0 0 40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:15px;color:#e8862b;text-decoration:none;background:var(--card);border:1px solid var(--bd)}.doc span.vnv.off{opacity:.25}.doc a.vnv:active{background:var(--bd)}
+.doc h3.vsub{font:600 19px/1.3 var(--ff);color:#e8862b;margin:1.8em 0 .5em;padding-top:.6em;border-top:1px solid var(--bd)}
+.doc a.vss{display:block;padding:7px 16px 7px 62px;text-decoration:none;color:var(--mut);font:italic 15px/1.35 var(--ff);border-bottom:1px solid var(--bd)}.doc a.vss::before{content:'— ';color:#e8862b}
 '''
 
 RENDER_DOCS = r'''function renderDocs(){const MB=['MedOD','MAL','SCE','HCD','Valtorta'].filter(d=>DOCS[d]),IC={MedOD:'🕯️',MAL:'📖',SCE:'📿',HCD:'🙏',Valtorta:'🌿'},SUB={MedOD:'Libro de meditaciones · 7 tomos',MAL:'VV. AA. · para cada día del año litúrgico',SCE:'F. Espa y otros · 9 tomos en uno',HCD:'F. Fernández-Carvajal · con enlaces a la Biblia',Valtorta:'Escenas enlazadas con los Evangelios'};const names=Object.keys(DOCS).filter(d=>!MB.includes(d));const nu=uhGroups().length;
@@ -331,7 +333,7 @@ def main():
     vep = rel(cfg.get('valtorta', 'valtorta/Valtorta_La_vida_de_Jesus.epub'))
     if os.path.exists(vep):
         atp = os.path.join(HERE, 'valtorta_atlas.json')
-        vch, vmeta, VAL, falt, ATL = valtorta.construir(vep, os.path.join(HERE, 'valtorta_enlaces.json'), atlas_path=atp if os.path.exists(atp) else None)
+        vch, vmeta, VAL, falt, ATL = valtorta.construir(vep, os.path.join(HERE, 'valtorta_enlaces.json'), atlas_path=atp if os.path.exists(atp) else None, subt_path=os.path.join(HERE, 'valtorta_subtitulos.json'))
         if ATL: log('Atlas de los viajes: %d pasos en %d lugares, %d enlazados con el libro' % (len(ATL['P']), len(ATL['L']), sum(1 for p in ATL['P'] if p[7])))
         dd = os.path.join(DST, 'docs', 'Valtorta'); ch = 0
         for k, c in enumerate(vch): ch += write_if_changed(os.path.join(dd, '%d.html' % k), c)
